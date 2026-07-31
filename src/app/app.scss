@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.app-header {
+  background-color: #002855;
+  color: #fff;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  &__logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__nav-link {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    &.active {
+      background-color: #e20015;
+      color: #fff;
+    }
+  }
+}
+
+.app-main {
+  min-height: calc(100vh - 64px - 56px);
+}
+
+.app-footer {
+  background-color: #002855;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.85rem;
+}

@@ -1,0 +1,17 @@
+<header class="app-header">
+  <div class="app-header__logo">
+    <span class="app-header__logo-text">{{ title }}</span>
+  </div>
+  <nav class="app-header__nav">
+    <a routerLink="/home" routerLinkActive="active" class="app-header__nav-link">Home</a>
+    <a routerLink="/about" routerLinkActive="active" class="app-header__nav-link">About</a>
+  </nav>
+</header>
+
+<main class="app-main">
+  <router-outlet />
+</main>
+
+<footer class="app-footer">
+  <p>&copy; 2024 Bosch HC Frontend Kit. All rights reserved.</p>
+</footer>
