@@ -1,0 +1,65 @@
+<section class="about-hero">
+  <div class="about-hero__content">
+    <h1 class="about-hero__title">About Bosch HC Frontend Kit</h1>
+    <p class="about-hero__subtitle">
+      An open-source Angular starter kit designed to accelerate frontend development
+      in alignment with Bosch's design and engineering standards.
+    </p>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-section__container">
+    <div class="about-section__text">
+      <h2>Our Mission</h2>
+      <p>
+        The Bosch HC Frontend Kit was created to provide developers with a solid,
+        production-ready starting point for building Angular applications that follow
+        Bosch's brand guidelines and best practices.
+      </p>
+      <p>
+        By standardising the project structure, design tokens, and component library,
+        we help teams build consistent, high-quality interfaces faster.
+      </p>
+    </div>
+    <div class="about-section__image">
+      <div class="about-section__placeholder">
+        <span>🏭</span>
+        <p>Bosch HC</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tech-stack">
+  <div class="tech-stack__container">
+    <h2 class="tech-stack__heading">Technology Stack</h2>
+    <div class="tech-stack__grid">
+      @for (tech of techStack; track tech.name) {
+        <div class="tech-card">
+          <span class="tech-card__badge">{{ tech.version }}</span>
+          <h3 class="tech-card__name">{{ tech.name }}</h3>
+          <p class="tech-card__description">{{ tech.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="team__container">
+    <h2 class="team__heading">Get In Touch</h2>
+    <p class="team__subtext">Have questions or want to contribute?</p>
+    <div class="team__links">
+      <a href="https://github.com/haitang-88/bosch-hc-frontend-kit" target="_blank" class="team__link">
+        <span>⭐</span> GitHub Repository
+      </a>
+      <a href="https://github.com/haitang-88/bosch-hc-frontend-kit/issues" target="_blank" class="team__link">
+        <span>🐛</span> Report an Issue
+      </a>
+      <a href="https://github.com/haitang-88/bosch-hc-frontend-kit/pulls" target="_blank" class="team__link">
+        <span>🔀</span> Contribute
+      </a>
+    </div>
+  </div>
+</section>

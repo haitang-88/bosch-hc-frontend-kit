@@ -1,0 +1,38 @@
+<section class="hero">
+  <div class="hero__content">
+    <h1 class="hero__title">Welcome to Bosch HC Frontend Kit</h1>
+    <p class="hero__subtitle">
+      A modern Angular starter kit for building scalable, high-quality frontend applications
+      with Bosch design guidelines.
+    </p>
+    <div class="hero__actions">
+      <a routerLink="/about" class="btn btn--primary">Learn More</a>
+      <a href="https://github.com/haitang-88/bosch-hc-frontend-kit" target="_blank" class="btn btn--outline">
+        View on GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="features__container">
+    <h2 class="features__heading">Key Features</h2>
+    <div class="features__grid">
+      @for (feature of features; track feature.title) {
+        <div class="feature-card">
+          <span class="feature-card__icon">{{ feature.icon }}</span>
+          <h3 class="feature-card__title">{{ feature.title }}</h3>
+          <p class="feature-card__description">{{ feature.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta__container">
+    <h2 class="cta__heading">Ready to Get Started?</h2>
+    <p class="cta__text">Explore our components and build amazing applications.</p>
+    <a routerLink="/about" class="btn btn--primary">Get Started</a>
+  </div>
+</section>
