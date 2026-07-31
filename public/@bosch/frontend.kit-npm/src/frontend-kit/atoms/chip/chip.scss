@@ -1,0 +1,140 @@
+@use "../../styles/helpers.scss";
+
+.a-chip {
+  background-color: var(--nested-minor__enabled__default__fill, var(--base-minor__enabled__default__fill));
+  color: var(--nested-minor__enabled__default__front, var(--base-minor__enabled__default__front));
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 2rem;
+  width: auto;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-inline-end: 1rem;
+
+  &:last-of-type {
+    margin-inline-end: 0;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--nested-minor__enabled__hovered__fill, var(--base-minor__enabled__hovered__fill));
+      color: var(--nested-minor__enabled__hovered__front, var(--base-minor__enabled__hovered__front));
+    }
+  }
+
+  &:active {
+    background-color: var(--nested-minor__enabled__pressed__fill, var(--base-minor__enabled__pressed__fill));
+    color: var(--nested-minor__enabled__pressed__front, var(--base-minor__enabled__pressed__front));
+  }
+
+  &:focus-visible {
+    @include helpers.focus-outside;
+    --focus-border-radius: 1rem;
+  }
+
+  &.-disabled {
+    background-color: var(--nested-minor__disabled__default__fill, var(--base-minor__disabled__default__fill));
+    color: var(--nested-minor__disabled__default__front, var(--base-minor__disabled__default__front));
+  }
+
+  &.-selected {
+    background-color: var(--nested-major__enabled__default__fill, var(--accent-major__enabled__default__fill));
+    color: var(--nested-major__enabled__default__front, var(--accent-major__enabled__default__front));
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--nested-major__enabled__hovered__fill, var(--accent-major__enabled__hovered__fill));
+        color: var(--nested-major__enabled__hovered__front, var(--accent-major__enabled__hovered__front));
+      }
+    }
+
+    &:active {
+      background-color: var(--nested-major__enabled__pressed__fill, var(--accent-major__enabled__pressed__fill));
+      color: var(--nested-major__enabled__pressed__front, var(--accent-major__enabled__pressed__front));
+    }
+
+    &.-disabled {
+      background-color: var(--nested-major__disabled__default__fill, var(--accent-major__disabled__default__fill));
+      color: var(--nested-major__disabled__default__front, var(--accent-major__disabled__default__front));
+    }
+  }
+
+  &.-dragged {
+    background-color: var(--g-gray-100);
+
+    @include helpers.box-shadow-s;
+  }
+
+  &.-icon {
+    .a-chip__label {
+      margin-inline-start: 0;
+    }
+
+    &.-btnClose .a-chip__label {
+      margin-inline-end: 0.375rem;
+    }
+  }
+
+  &__close {
+    position: relative;
+    margin-block: auto;
+    margin-inline-start: 0;
+    margin-inline-end: 0.375rem;
+  }
+
+  &--fixed {
+    width: 6.0625rem;
+
+    &.-image,
+    &.-btnClose {
+      width: 7.375rem;
+    }
+
+    &.-image.-btnClose {
+      width: 8.5625rem;
+      justify-content: space-between;
+    }
+
+    .fixed-width-image-label-group {
+      width: calc(100% - 0.5rem);
+      display: flex;
+    }
+
+    .a-chip__close {
+      margin: unset;
+    }
+  }
+
+  &__label {
+    margin-block: auto;
+    margin-inline: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .-btnClose & {
+      margin-inline-end: 0.375rem;
+    }
+
+    .-image & {
+      margin-inline-start: 0.5rem;
+    }
+  }
+
+  &__image {
+    width: 1.5rem;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    margin-block: auto;
+    margin-inline-start: 0.25rem;
+    margin-inline-end: 0;
+    border-radius: 0.75rem;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  &__icon {
+    margin: 0.375rem;
+  }
+}

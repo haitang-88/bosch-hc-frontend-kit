@@ -1,0 +1,113 @@
+@use "../../styles/helpers.scss";
+
+.a-option-bar {
+  // reset the ul
+  margin-bottom: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 1rem;
+
+  // then reset the li elements
+  &__item {
+    margin: 0;
+    padding: 0;
+
+    /* stylelint-disable-next-line a11y/content-property-no-static-value */
+    &::before {
+      content: none;
+    }
+  }
+
+  input {
+    position: absolute;
+    z-index: -1;
+  }
+
+  label {
+    font-size: inherit;
+  }
+
+  &__label {
+    padding-block: 1rem;
+    padding-inline: 0 0.75rem;
+
+    &:only-child {
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  &__icon+&__label {
+    text-align: start;
+    margin-inline-start: 0.5rem;
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+    padding-block: 1rem;
+    padding-inline: 0.75rem 0;
+
+    &:only-child {
+      padding: 0.75rem;
+    }
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  &__option {
+    display: inline-flex;
+    color: var(--nested-minor__enabled__default__front, var(--base-minor__enabled__default__front));
+    background-color: var(--nested-minor__enabled__default__fill, var(--base-minor__enabled__default__fill));
+    cursor: pointer;
+    letter-spacing: 0;
+    margin: 0;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--nested-minor__enabled__hovered__front, var(--base-minor__enabled__hovered__front));
+        background-color: var(--nested-minor__enabled__hovered__fill, var(--base-minor__enabled__hovered__fill));
+      }
+    }
+
+    &:active {
+      color: var(--nested-minor__enabled__pressed__front, var(--base-minor__enabled__pressed__front));
+      background-color: var(--nested-minor__enabled__pressed__fill, var(--base-minor__enabled__pressed__fill));
+    }
+  }
+
+  :focus-visible {
+    outline: none;
+
+    & + .a-option-bar__option {
+      @include helpers.focus-inside;
+    }
+  }
+
+  :disabled + &__option {
+    color: var(--nested-minor__disabled__default__front, var(--base-minor__disabled__default__front));
+    background-color: var(--nested-minor__disabled__default__fill, var(--base-minor__disabled__default__fill));
+    cursor: default;
+  }
+
+  :checked + &__option {
+    color: var(--nested-major__enabled__default__front, var(--accent-major__enabled__default__front));
+    background-color: var(--nested-major__enabled__default__fill, var(--accent-major__enabled__default__fill));
+  }
+
+  @media (hover: hover) {
+    :checked + &__option:hover {
+      color: var(--nested-major__enabled__hovered__front, var(--accent-major__enabled__hovered__front));
+      background-color: var(--nested-major__enabled__hovered__fill, var(--accent-major__enabled__hovered__fill));
+    }
+  }
+
+  :checked + &__option:active {
+    color: var(--nested-major__enabled__pressed__front, var(--accent-major__enabled__pressed__front));
+    background-color: var(--nested-major__enabled__pressed__fill, var(--accent-major__enabled__pressed__fill));
+  }
+
+  :disabled:checked + &__option {
+    color: var(--nested-major__disabled__default__front, var(--accent-major__disabled__default__front));
+    background-color: var(--nested-major__disabled__default__fill, var(--accent-major__disabled__default__fill));
+    cursor: default;
+  }
+}

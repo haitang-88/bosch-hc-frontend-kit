@@ -1,0 +1,25 @@
+.a-text {
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 2.5rem 0 1.5rem;
+  }
+
+  p {
+    margin: 0 0 1.5rem;
+  }
+
+  .a-list {
+    margin-inline-start: 1.5rem;
+  }
+}

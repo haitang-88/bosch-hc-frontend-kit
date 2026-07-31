@@ -1,0 +1,135 @@
+@use "../../styles/helpers.scss";
+
+@mixin read-only-styles {
+  background-color: var(--nested-pure__enabled__default__fill, var(--integrated-pure__enabled__default__fill));
+
+  ~.a-text-field__icon-edit {
+    display: none;
+  }
+}
+
+/* stylelint-disable no-descending-specificity */
+.a-text-field {
+  @include helpers.text-field;
+
+  &--integrated {
+    input {
+      color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+      background-color: var(--nested-pure__enabled__default__fill, var(--integrated-pure__enabled__default__fill));
+      border-bottom: none;
+      padding-inline: 0.3125rem 2rem;
+
+      &:focus-visible {
+        padding-inline: 0.1875rem 2rem;
+        padding-block-end: 0;
+      }
+
+      @media (hover: hover) {
+        &:hover[readonly] {
+          @include read-only-styles();
+        }
+      }
+
+      &[readonly],
+      &:active[readonly],
+      &:focus[readonly],
+      &:disabled[readonly] {
+        @include read-only-styles();
+      }
+
+      &::placeholder {
+        color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--nested-pure__enabled__hovered__front, var(--integrated-pure__enabled__hovered__front));
+          background-color: transparent;
+
+          &::placeholder {
+            color: var(--nested-pure__enabled__hovered__front, var(--integrated-pure__enabled__hovered__front));
+          }
+
+          ~.a-text-field__icon-edit {
+            color: var(--nested-pure__enabled__hovered__front, var(--integrated-pure__enabled__hovered__front));
+            background-color: transparent;
+          }
+        }
+      }
+
+      &:active {
+        color: var(--nested-pure__enabled__pressed__front, var(--integrated-pure__enabled__pressed__front));
+        background-color: var(--nested-pure__enabled__pressed__fill, var(--integrated-pure__enabled__pressed__fill));
+
+        &::placeholder {
+          color: var(--nested-pure__enabled__pressed__front, var(--integrated-pure__enabled__pressed__front));
+        }
+      }
+
+      &:focus {
+        color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+        background-color: var(--nested-pure__enabled__default__fill, var(--integrated-pure__enabled__default__fill));
+
+        &::placeholder {
+          color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+        }
+      }
+
+      &:disabled {
+        color: var(--nested-pure__disabled__default__front, var(--integrated-pure__disabled__default__front));
+        background-color: var(--nested-pure__disabled__default__fill, var(--integrated-pure__disabled__default__fill));
+
+        &::placeholder {
+          color: var(--nested-pure__disabled__default__front, var(--integrated-pure__disabled__default__front));
+        }
+      }
+
+      ~.a-text-field__icon-edit,
+      ~.a-text-field__icon-close {
+        color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+        background-color: var(--nested-pure__enabled__default__fill, var(--integrated-pure__enabled__default__fill));
+        padding-inline: 0.5rem 0;
+        position: absolute;
+        inset-inline-end: 0;
+        border-bottom: none;
+        width: auto;
+
+        &:focus-visible {
+          outline: none;
+
+          &::after {
+            outline: none;
+          }
+
+          .a-icon {
+            @include helpers.focus-inside;
+          }
+        }
+
+        &:hover {
+          color: var(--nested-pure__enabled__hovered__front, var(--integrated-pure__enabled__hovered__front));
+          background-color: transparent;
+          text-shadow:
+            0.009375rem 0 0 currentColor,
+            -0.009375rem 0 0 currentColor,
+            0 0.009375rem 0 currentColor,
+            0 -0.009375rem 0 currentColor;
+        }
+
+        &:active {
+          color: var(--nested-pure__enabled__pressed__front, var(--integrated-pure__enabled__pressed__front));
+        }
+
+        &:disabled {
+          color: var(--nested-pure__disabled__default__front, var(--integrated-pure__disabled__default__front));
+          background-color: var(--nested-pure__disabled__default__fill, var(--integrated-pure__disabled__default__fill));
+          pointer-events: none;
+        }
+      }
+
+      ~.a-text-field__icon-close {
+        display: none;
+      }
+    }
+  }
+}

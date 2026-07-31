@@ -1,0 +1,101 @@
+{
+  "name": "input telephone",
+  "default": {
+    "id": "1",
+    "name": "input telephone",
+    "value": "0711 40040990"
+  },
+  "variants": [
+    {
+      "id": "2",
+      "name": "input telephone readonly",
+      "value": "0711 40040990",
+      "readOnly": true
+    },
+    {
+      "id": "3",
+      "name": "input telephone disabled",
+      "value": "0711 40040990",
+      "disabled": true
+    },
+
+    {
+      "id": "4",
+      "name": "input telephone with label",
+      "value": "0711 40040990",
+      "label": "Phone no."
+    },
+    {
+      "id": "5",
+      "name": "input telephone with label readonly",
+      "value": "0711 40040990",
+      "label": "Phone no.",
+      "readOnly": true
+    },
+    {
+      "id": "6",
+      "name": "input telephone with label disabled",
+      "value": "0711 40040990",
+      "label": "Phone no.",
+      "disabled": true
+    },
+    {
+      "id": "7",
+      "name": "input telephone with very long label",
+      "value": "0711 40040990",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!"
+    },
+    {
+      "id": "8",
+      "name": "input telephone with very long label readonly",
+      "value": "0711 40040990",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "readOnly": true
+    },
+    {
+      "id": "9",
+      "name": "input telephone with very long label disabled",
+      "value": "0711 40040990",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "disabled": true
+    },
+
+    {
+      "id": "10",
+      "name": "input telephone with placeholder",
+      "placeholder": "e.g.: hint"
+    },
+    {
+      "id": "11",
+      "name": "input telephone with placeholder readonly",
+      "placeholder": "e.g.: hint",
+      "readOnly": true
+    },
+    {
+      "id": "12",
+      "name": "input telephone with placeholder disabled",
+      "placeholder": "e.g.: hint",
+      "disabled": true
+    },
+    {
+      "id": "13",
+      "name": "input telephone with placeholder and label",
+      "label": "Phone no.",
+      "placeholder": "e.g.: hint"
+    },
+    {
+      "id": "15",
+      "name": "input telephone with placeholder and label readonly",
+      "label": "Phone no.",
+      "placeholder": "e.g.: hint",
+      "readOnly": true
+    },
+    {
+      "id": "14",
+      "name": "input telephone with placeholder and label disabled",
+      "label": "Phone no.",
+      "placeholder": "e.g.: hint",
+      "disabled": true
+    }
+  ]
+}

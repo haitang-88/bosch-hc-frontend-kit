@@ -1,0 +1,75 @@
+@use "../../styles/helpers.scss";
+
+/* stylelint-disable a11y/line-height-is-vertical-rhythmed */
+
+.m-table {
+  border-collapse: collapse;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%;
+
+  td,
+  th {
+
+    @include helpers.text-regular;
+
+    text-align: start;
+    height: 3rem;
+    box-sizing: border-box;
+    padding-block: 0.75rem 0.6875rem;
+    padding-inline: 1rem;
+    border: 0;
+    border-bottom: 0.0625rem;
+    border-style: solid;
+    border-color: var(--nested-pure__disabled__default__front, var(--base-pure__enabled__default__front));
+
+    > .a-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+      vertical-align: text-bottom;
+    }
+  }
+
+  .-with-icon {
+    line-height: 1;
+  }
+
+  .-with-icon-and-label {
+    align-items: center;
+    display: flex;
+    min-height: 3rem;
+    height: auto;
+
+    .a-icon {
+      align-self: flex-start;
+      padding-inline-end: 0.5rem;
+    }
+  }
+
+  th {
+    font-weight: 700;
+  }
+
+  thead th {
+    border-color: var(--nested-pure__enabled__default__front, var(--plain-pure__enabled__default__front));
+  }
+
+  th:first-child,
+  td:first-child {
+    padding-inline-start: 1rem;
+  }
+
+  th:last-child,
+  td:last-child {
+    padding-inline-end: 1rem;
+  }
+
+  caption {
+
+    @include helpers.size-s;
+
+    caption-side: bottom;
+    margin-top: 0.5rem;
+    text-align: start;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "background",
+  "default": {
+    "name": "primary",
+    "type": "primary"
+  },
+  "variants": [
+    {
+      "name": "secondary",
+      "type": "secondary"
+    },
+    {
+      "name": "contrast",
+      "type": "contrast"
+    },
+    {
+      "name": "floating shadow s",
+      "type": "floating-shadow-s"
+    },
+    {
+      "name": "floating shadow m",
+      "type": "floating-shadow-m"
+    },
+    {
+      "name": "floating shadow l",
+      "type": "floating-shadow-l"
+    },
+    {
+      "name": "dimmed",
+      "demonstrator": "dimmedBackgroundDemonstrator"
+    }
+  ]
+}

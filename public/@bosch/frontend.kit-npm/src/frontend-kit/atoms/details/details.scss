@@ -1,0 +1,75 @@
+@use "../../styles/helpers.scss";
+
+.a-details {
+
+  @include helpers.size-m;
+
+  // Hide the native arrow
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary {
+    align-items: center;
+    background: var(--nested-pure__enabled__default__fill, var(--integrated-pure__enabled__default__fill));
+    color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--nested-pure__enabled__hovered__front, var(--integrated-pure__enabled__hovered__front));
+      }
+    }
+
+    &:active {
+      color: var(--nested-pure__enabled__pressed__front, var(--integrated-pure__enabled__pressed__front));
+    }
+
+    &:focus-visible {
+      @include helpers.focus-outside;
+    }
+  }
+
+  .a-icon {
+
+    @include helpers.size-m;
+
+    margin-inline-end: 0.5rem;
+  }
+
+  // Open state
+  &[open] {
+    .a-icon {
+      &::before {
+        content: var(--boschicon-bosch-ic-up);
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+    padding-block: 0.5rem 1rem;
+    padding-inline: 1.5rem 0;
+  }
+
+  &--small {
+
+    @include helpers.size-s;
+
+    .a-icon {
+
+      @include helpers.size-s;
+
+      margin-inline-end: 0.375rem;
+    }
+
+    p {
+
+      @include helpers.size-s;
+
+      padding-inline-start: 1.125rem;
+    }
+  }
+}

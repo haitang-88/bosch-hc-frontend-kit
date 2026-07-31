@@ -1,0 +1,330 @@
+@use "../../styles/helpers.scss";
+
+.o-footer {
+  &__search-container {
+    padding-block-start: 2rem;
+    padding-block-end: 2rem;
+
+    .m-search-form {
+      margin-block-end: 0;
+    }
+  }
+
+  &__search-cta {
+    @include helpers.size-l;
+
+    font-weight: bold;
+    margin-block-end: 1rem;
+  }
+
+  &__claim {
+    @include helpers.size-xl;
+  }
+
+  &__top {
+    padding-block-start: 3rem;
+    padding-block-end: 1.5rem;
+  }
+
+  .m-language-selector,
+  &__links,
+  &__share {
+    margin-block-start: 2rem;
+  }
+
+  &__share {
+    margin-inline-start: -0.75rem;
+  }
+
+  &__bottom {
+    @include helpers.size-s;
+
+    padding-block-start: 1.5rem;
+    padding-block-end: 2rem;
+    position: relative;
+  }
+
+  &__back-to-top {
+    position: absolute;
+    inset-block-start: -0.25rem;
+    inset-inline-end: -0.75rem;
+
+    .a-icon {
+      font-size: 2.25rem;
+    }
+
+    &:focus-visible {
+      position: absolute;
+    }
+  }
+
+  &__links {
+    padding: 0;
+    margin-block-end: 0;
+
+    > li {
+      font-size: inherit;
+      padding: 0;
+
+      /* stylelint-disable-next-line a11y/content-property-no-static-value */
+      &::before {
+        content: none;
+      }
+    }
+
+    // again, we invent an "integrated link" here that can be replaced once the component exists
+    a,
+    a:visited {
+      color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--nested-pure__enabled__hovered__front, var(--integrated-pure__enabled__hovered__front));
+        }
+      }
+
+      /* stylelint-disable-next-line no-descending-specificity */
+      &:active {
+        color: var(--nested-pure__enabled__pressed__front, var(--integrated-pure__enabled__pressed__front));
+      }
+    }
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    .-external a {
+      // we do _not_ want the underline below the external link icon, so
+      // see https://stackoverflow.com/questions/1238881/text-decoration-and-the-after-pseudo-element-revisited,
+      // and in particular the answer
+      // https://stackoverflow.com/a/15688237
+      display: inline-block;
+
+      /* stylelint-disable-next-line a11y/content-property-no-static-value */
+      &::after {
+        /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+
+        @include helpers.uiIconForComponents();
+
+        content: var(--ui-ic-inline-externallink);
+        display: inline-block;
+
+        // nudge the icon into position
+        padding-inline-start: 0.5em;
+      }
+
+      /* stylelint-disable-next-line selector-max-compound-selectors */
+      @media (hover: hover) {
+        &:hover a::after {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__bottom &__links {
+    margin-block-start: 0;
+    margin-block-end: 1rem;
+  }
+
+  .m-search-form {
+    position: relative;
+
+    .a-search-input {
+      z-index: 2;
+    }
+  }
+
+  .a-search-suggestions {
+    max-height: 0;
+    background: var(--g-gray-100);
+    overflow: hidden;
+    position: absolute;
+    margin-block-start: -3rem;
+    z-index: 1;
+  }
+
+  &:not(.-show-suggestions) .a-search-suggestions__item {
+    visibility: hidden;
+  }
+
+  &.-show-suggestions .a-search-suggestions {
+    max-height: 100vh;
+    margin-block-start: 0;
+    transition: max-height helpers.$default-transition-easing helpers.$default-transition-timing;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 25%);
+  }
+
+  // Styling for the footer's minimal variant.
+  &.-minimal {
+    > .a-divider {
+      margin: 0;
+    }
+
+    .o-footer__bottom {
+      display: flex;
+      flex-direction: column;
+      padding-block: 1rem;
+      padding-inline: 0;
+
+      .a-divider {
+        margin-block: 1rem;
+        margin-inline: 0;
+        order: 2;
+      }
+    }
+
+    .o-footer__copyright {
+      align-items: center;
+      display: flex;
+      order: 1;
+
+      .a-icon {
+        font-size: 1.125rem;
+        margin-inline-end: 0.25rem;
+      }
+    }
+
+    .o-footer__links {
+      margin-block-end: 0;
+      order: 3;
+
+      li {
+        margin-block-end: 1.5rem;
+      }
+
+      li:last-child {
+        margin-block-end: 0;
+      }
+    }
+  }
+}
+
+@include helpers.tablet-and-up {
+  .o-footer {
+    &__search {
+      align-items: baseline;
+      display: flex;
+
+      .m-search-form {
+        flex: 1;
+        margin-inline-start: 2rem;
+      }
+    }
+
+    &__search-cta {
+      flex: 1;
+      margin-block-end: 0;
+    }
+
+    &__top {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-block-start: 3.5rem;
+      padding-block-end: 3.5rem;
+    }
+
+    &__claim {
+      margin-block-start: 0.5rem;
+      // take ~2/3 of the available space, we need to take into account up to 6 icons
+      width: 60%;
+    }
+
+    &__share {
+      justify-self: right;
+      margin-block-start: 0;
+      order: 1;
+      position: relative;
+      inset-inline-end: -0.75rem;
+    }
+
+    &__bottom {
+      display: flex;
+      flex-wrap: wrap-reverse;
+    }
+
+    &__copyright {
+      margin-inline-end: 1.5rem;
+      order: 1;
+    }
+
+    .m-language-selector {
+      order: 2;
+      width: 100%;
+    }
+
+    &__links {
+      order: 3;
+    }
+
+    &__top &__links,
+    &__bottom &__links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      > li {
+        display: inline-block;
+        margin-block-end: 0;
+
+        &:not(:last-child) {
+          margin-inline-end: 1.5rem;
+        }
+      }
+    }
+
+    &__bottom &__links {
+      // do no slide "under " the back-to-top arrow
+      padding-inline-end: 3rem;
+    }
+
+    &.-minimal {
+      .o-footer__copyright {
+        margin-inline-end: 0;
+      }
+
+      .o-footer__links {
+        padding-inline-end: 0;
+
+        li {
+          margin-inline-end: 2rem;
+          margin-block-end: 0;
+        }
+
+        li:last-child {
+          margin-inline-end: 0;
+        }
+      }
+    }
+  }
+}
+
+@include helpers.large-desktop-and-up {
+  .o-footer {
+    .m-language-selector {
+      width: unset;
+    }
+    &__search-cta {
+      @include helpers.size-xl;
+    }
+
+    &__top &__links {
+      align-self: start;
+      justify-self: end;
+      margin-block-start: 1.9375rem; // baseline-align with the language selector
+    }
+
+    &.-minimal {
+      .o-footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-block: 0.5rem;
+        padding-inline: 0;
+
+        /* stylelint-disable-next-line a11y/no-display-none */
+        .a-divider {
+          display: none;
+        }
+      }
+    }
+  }
+}

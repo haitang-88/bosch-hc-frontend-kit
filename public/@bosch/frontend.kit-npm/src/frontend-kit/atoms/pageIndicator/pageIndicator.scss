@@ -1,0 +1,207 @@
+@use "../../styles/helpers.scss";
+
+.a-page-indicator {
+  display: flex;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &.-disabled {
+    pointer-events: none;
+  }
+
+  &__indicator {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0.5rem;
+    background-color: var(--nested-major__enabled__default__fill, var(--base-major__enabled__default__fill));
+    color: var(--nested-major__enabled__default__front, var(--base-major__enabled__default__front));
+    border: none;
+    padding: 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--nested-major__enabled__hovered__fill, var(--base-major__enabled__hovered__fill));
+        color: var(--nested-major__enabled__hovered__front, var(--base-major__enabled__hovered__front));
+      }
+    }
+
+    &:active {
+      background-color: var(--nested-major__enabled__pressed__fill, var(--base-major__enabled__pressed__fill));
+      color: var(--nested-major__enabled__pressed__front, var(--base-major__enabled__pressed__front));
+    }
+
+    &:focus-visible {
+      @include helpers.focus-outside;
+      --focus-border-radius: 50%;
+    }
+
+    &.-selected {
+      width: 0.75rem;
+      height: 0.75rem;
+      margin: 0.375rem;
+      background-color: var(--nested-major__enabled__default__fill, var(--accent-major__enabled__default__fill));
+      color: var(--nested-major__enabled__default__front, var(--accent-major__enabled__default__front));
+      border-radius: 0.375rem;
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: var(--nested-major__enabled__hovered__fill, var(--accent-major__enabled__hovered__fill));
+          color: var(--nested-major__enabled__hovered__front, var(--accent-major__enabled__hovered__front));
+        }
+      }
+
+      &:active {
+        background-color: var(--nested-major__enabled__pressed__fill, var(--accent-major__enabled__pressed__fill));
+        color: var(--nested-major__enabled__pressed__front, var(--accent-major__enabled__pressed__front));
+      }
+
+      .-disabled & {
+        background-color: var(--nested-major__disabled__default__fill, var(--accent-major__disabled__default__fill));
+        color: var(--nested-major__disabled__default__front, var(--accent-major__disabled__default__front));
+      }
+    }
+
+    .-disabled & {
+      background-color: var(--nested-major__disabled__default__fill, var(--base-major__disabled__default__fill));
+      color: var(--nested-major__disabled__default__front, var(--base-major__disabled__default__front));
+    }
+  }
+
+  &__caret {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: var(--nested-pure__enabled__default__fill, var(--integrated-pure__enabled__default__fill));
+    border: none;
+    padding: 0;
+
+    &::after {
+      @include helpers.uiIconForComponents();
+
+      color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+      position: relative;
+      cursor: pointer;
+      content: "";
+    }
+
+    &:first-child {
+      margin-inline-end: 0.5rem;
+    }
+
+    &:last-child {
+      margin-inline-start: 0.5rem;
+    }
+
+    @media (hover: hover) {
+      &:hover::after {
+        color: var(--nested-pure__enabled__hovered__front, var(--integrated-pure__enabled__hovered__front));
+      }
+    }
+
+    &:active::after {
+      color: var(--nested-pure__enabled__pressed__front, var(--integrated-pure__enabled__pressed__front));
+    }
+
+    &:focus-visible {
+      @include helpers.focus-outside;
+    }
+
+    &.-left::after {
+      content: var(--ui-ic-backward);
+    }
+
+    &.-right::after {
+      content: var(--ui-ic-forward);
+    }
+
+    &.-end {
+      &::after {
+        cursor: auto;
+        color: var(--nested-pure__disabled__default__front, var(--integrated-pure__disabled__default__front));
+      }
+    }
+  }
+}
+
+.a-page-indicator--numbered {
+  .a-page-indicator__indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    min-width: 2rem;
+    width: auto;
+    border-radius: 1rem;
+    padding: 0 0.5rem;
+    margin: 0 0.25rem;
+    background-color: var(--nested-pure__enabled__default__fill, var(--plain-pure__enabled__default__fill));
+    color: var(--nested-pure__enabled__default__front, var(--plain-pure__enabled__default__front));
+
+    &:not([data-index]) {
+      pointer-events: none;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--nested-pure__enabled__hovered__fill, var(--plain-pure__enabled__hovered__fill));
+        color: var(--nested-pure__enabled__hovered__front, var(--plain-pure__enabled__hovered__front));
+      }
+    }
+
+    &:active {
+      background-color: var(--nested-pure__enabled__pressed__fill, var(--plain-pure__enabled__pressed__fill));
+      color: var(--nested-pure__enabled__pressed__front, var(--plain-pure__enabled__pressed__front));
+    }
+
+    &:focus-visible {
+      --focus-border-radius: 1rem;
+    }
+
+    span {
+      user-select: none;
+    }
+
+    &.-selected {
+      background-color: var(--nested-major__enabled__default__fill, var(--accent-major__enabled__default__fill));
+      color: var(--nested-major__enabled__default__front, var(--accent-major__enabled__default__front));
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: var(--nested-major__enabled__hovered__fill, var(--accent-major__enabled__hovered__fill));
+          color: var(--nested-major__enabled__hovered__front, var(--accent-major__enabled__hovered__front));
+        }
+      }
+
+      &:active {
+        background-color: var(--nested-major__enabled__pressed__fill, var(--accent-major__enabled__pressed__fill));
+        color: var(--nested-major__enabled__pressed__front, var(--accent-major__enabled__pressed__front));
+      }
+    }
+  }
+
+  &.-disabled .a-page-indicator {
+    &__caret {
+      background-color: var(--nested-pure__disabled__default__fill, var(--integrated-pure__disabled__default__fill));
+
+      &::after {
+        cursor: auto;
+        color: var(--nested-pure__disabled__default__front, var(--integrated-pure__disabled__default__front));
+      }
+    }
+
+    &__indicator {
+      background-color: var(--nested-pure__disabled__default__fill, var(--plain-pure__disabled__default__fill));
+      color: var(--nested-pure__disabled__default__front, var(--plain-pure__disabled__default__front));
+
+      &.-selected {
+        background-color: var(--nested-major__disabled__default__fill, var(--accent-major__disabled__default__fill));
+        color: var(--nested-major__disabled__default__front, var(--accent-major__disabled__default__front));
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "breadcrumbs",
+  "default": {
+    "name": "default",
+    "breadcrumbs": ["News and Stories", "Internet of Things", "Page Name"]
+  },
+  "variants": []
+}

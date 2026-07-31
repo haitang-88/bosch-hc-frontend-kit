@@ -1,0 +1,71 @@
+{
+  "name": "input datetime",
+  "default": {
+    "id": "1",
+    "name": "input datetime"
+  },
+  "variants": [
+    {
+      "id": "2",
+      "name": "input datetime readonly",
+      "value": "2024-08-20T08:30",
+      "readOnly": true
+    },
+    {
+      "id": "3",
+      "name": "input datetime disabled",
+      "value": "2024-08-20T08:30",
+      "disabled": true
+    },
+    {
+      "id": "4",
+      "name": "input datetime with label",
+      "label": "Choose a time for your appointment:"
+    },
+    {
+      "id": "5",
+      "name": "input datetime with label readonly",
+      "value": "2024-08-20T08:30",
+      "label": "Choose a time for your appointment:",
+      "readOnly": true
+    },
+    {
+      "id": "6",
+      "name": "input datetime with label disabled",
+      "value": "2024-08-20T08:30",
+      "label": "Choose a time for your appointment:",
+      "disabled": true
+    },
+    {
+      "id": "7",
+      "name": "input datetime with very long label",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!"
+    },
+    {
+      "id": "8",
+      "name": "input datetime with very long label readonly",
+      "value": "2024-08-20T08:30",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "readOnly": true
+    },
+    {
+      "id": "9",
+      "name": "input datetime with very long label disabled",
+      "value": "2024-08-20T08:30",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "disabled": true
+    },
+    {
+      "id": "10",
+      "name": "input datetime with min and max date",
+      "min": "2024-05-01T08:30",
+      "max": "2024-05-24T20:30"
+    },
+    {
+      "id": "11",
+      "name": "input datetime with min and max date over months",
+      "min": "2024-05-01T08:30",
+      "max": "2024-06-30T20:30"
+    }
+  ]
+}

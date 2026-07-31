@@ -1,0 +1,101 @@
+@use "../../styles/helpers.scss";
+
+/* stylelint-disable no-descending-specificity */
+.a-dropdown {
+  position: relative;
+  height: 3rem;
+  width: auto;
+  display: grid;
+  grid-template-areas: "dropdown";
+  border-radius: var(--comp__dropdown__border-radius__field);
+  overflow: hidden;
+
+  select {
+    grid-area: dropdown;
+    background-color: var(--nested-minor__enabled__default__fill, var(--base-minor__enabled__default__fill));
+    color: var(--nested-minor__enabled__default__front, var(--base-minor__enabled__default__front));
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    height: 3rem;
+    padding-block: 0;
+    padding-inline: 1rem 2.75rem;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--nested-minor__enabled__hovered__fill, var(--base-minor__enabled__hovered__fill));
+      }
+    }
+
+    &:active {
+      background-color: var(--nested-minor__enabled__pressed__fill, var(--base-minor__enabled__pressed__fill));
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 0.1875rem solid var(--background);
+      outline-offset: -0.375rem;
+    }
+  }
+
+  &:focus-within {
+    outline: 0.1875rem solid var(--nested-pure__enabled__default__front, var(--plain-pure__enabled__default__front));;
+    outline-offset: -0.1875rem;
+  }
+
+  &::after {
+    @include helpers.uiIconForComponents();
+
+    position: absolute;
+    content: var(--ui-ic-down);
+    inset-block-start: 0.75rem;
+    inset-inline-end: 0.7rem;
+    pointer-events: none;
+  }
+
+  option {
+    background-color: var(--nested-pure__enabled__default__fill, var(--plain-pure__enabled__default__fill));
+  }
+
+  label {
+    grid-area: dropdown;
+    order: 1;
+    color: var(--nested-minor__enabled__default__front, var(--base-minor__enabled__default__front));
+    margin-block: 0.25rem auto;
+    margin-inline: 1rem 2.5rem;
+    font-size: 0.75rem;
+    max-width: calc(100% - 3.5rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    + select {
+      padding-top: 1.125rem;
+      padding-bottom: 0.3125rem;
+    }
+  }
+
+  &--dynamic-width {
+    max-width: max-content;
+  }
+
+  &--disabled {
+    label {
+      color: var(--nested-minor__disabled__default__front, var(--base-minor__disabled__default__front));
+    }
+
+    select {
+      pointer-events: none;
+      color: var(--nested-minor__disabled__default__front, var(--base-minor__disabled__default__front));
+    }
+
+    &::after {
+      color: var(--nested-minor__disabled__default__front, var(--base-minor__disabled__default__front));
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@use "../../styles/helpers.scss";
+
+.a-color-input {
+  background: var(--nested-minor__enabled__default__fill, var(--base-minor__enabled__default__fill));
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: var(--comp__text-field__border-radius__container);
+
+  &:before {
+    background-color: var(
+      --before-color,
+      var(--nested-minor__enabled__default__front, var(--base-minor__enabled__default__front))
+    );
+    border: 0.0625rem solid var(--nested-minor__enabled__default__front, var(--base-minor__enabled__default__front));
+    content: '';
+    height: 1.5rem;
+    min-width: 1.5rem;
+    position: relative;
+  }
+
+  input[type='color'] {
+    border: 0;
+    height: auto; // Safari fix, with 0 the picker won't show
+    opacity: 0;
+    padding: 0;
+    width: 0;
+  }
+
+  &__label {
+    margin-inline-start: 1rem;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background: var(--nested-minor__enabled__hovered__fill, var(--base-minor__enabled__hovered__fill));
+    }
+  }
+
+  &:active {
+    background: var(--nested-minor__enabled__pressed__fill, var(--base-minor__enabled__pressed__fill));
+  }
+
+  &.-focus-visible {
+    @include helpers.focus-outside;
+    --focus-border-radius: var(--comp__text-field__border-radius__container);
+  }
+
+  &--disabled {
+    pointer-events: none;
+
+    &:before {
+      background-color: var(--nested-minor__disabled__default__fill, var(--base-minor__disabled__default__fill));
+      border: 0.0625rem solid var(--nested-minor__disabled__default__front, var(--base-minor__disabled__default__front));
+    }
+
+    .a-color-input__label {
+      color: var(--nested-minor__disabled__default__front, var(--base-minor__disabled__default__front));
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "name": "@bosch/bdds.tokens-npm",
+  "version": "2.5.0",
+  "description": "Style Dictionary setup to generate design token derived artifacts",
+  "main": "./dist/brands.js",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "*"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts"
+    },
+    "./brands": {
+      "import": "./dist/brands.js",
+      "types": "./dist/brands.d.ts"
+    },
+    "./pro": {
+      "import": "./dist/brands/pro/tokens/index.js",
+      "types": "./dist/brands/pro/tokens/types.d.ts"
+    },
+    "./pro/backgrounds/*": {
+      "import": "./dist/brands/pro/styles/backgrounds/*.css"
+    },
+    "./pro/backgrounds/*.ts": {
+      "import": "./dist/brands/pro/styles/backgrounds/*.ts"
+    },
+    "./pro/backgrounds/*.css": {
+      "style": "./dist/brands/pro/styles/backgrounds/*.css",
+      "import": "./dist/brands/pro/styles/backgrounds/*.css"
+    },
+    "./pro/gradations/*": {
+      "import": "./dist/brands/pro/styles/gradations/*.css"
+    },
+    "./pro/gradations/*.css": {
+      "style": "./dist/brands/pro/styles/gradations/*.css",
+      "import": "./dist/brands/pro/styles/gradations/*.css"
+    },
+    "./pro/gradations/*.json": {
+      "import": "./dist/brands/pro/styles/gradations/*.json"
+    },
+    "./pro/semantic/*": {
+      "import": "./dist/brands/pro/styles/semantic/*.css"
+    },
+    "./pro/semantic/*.ts": {
+      "import": "./dist/brands/pro/styles/semantic/*.ts"
+    },
+    "./pro/semantic/*.css": {
+      "style": "./dist/brands/pro/styles/semantic/*.css",
+      "import": "./dist/brands/pro/styles/semantic/*.css"
+    },
+    "./pro/fonts.scss": {
+      "sass": "./dist/brands/pro/styles/semantic/fonts.scss"
+    },
+    "./pro/components/*": {
+      "import": "./dist/brands/pro/styles/components/*.css"
+    },
+    "./pro/components/*.ts": {
+      "import": "./dist/brands/pro/styles/components/*.ts"
+    },
+    "./pro/components/*.css": {
+      "style": "./dist/brands/pro/styles/components/*.css",
+      "import": "./dist/brands/pro/styles/components/*.css"
+    },
+    "./pro/tokens/*.json": {
+      "import": "./dist/brands/pro/tokens/*.json"
+    },
+    "./dremel": {
+      "import": "./dist/brands/dremel/tokens/index.js",
+      "types": "./dist/brands/dremel/tokens/types.d.ts"
+    },
+    "./dremel/backgrounds/*": {
+      "import": "./dist/brands/dremel/styles/backgrounds/*.css"
+    },
+    "./dremel/backgrounds/*.ts": {
+      "import": "./dist/brands/dremel/styles/backgrounds/*.ts"
+    },
+    "./dremel/backgrounds/*.css": {
+      "style": "./dist/brands/dremel/styles/backgrounds/*.css",
+      "import": "./dist/brands/dremel/styles/backgrounds/*.css"
+    },
+    "./dremel/gradations/*": {
+      "import": "./dist/brands/dremel/styles/gradations/*.css"
+    },
+    "./dremel/gradations/*.css": {
+      "style": "./dist/brands/dremel/styles/gradations/*.css",
+      "import": "./dist/brands/dremel/styles/gradations/*.css"
+    },
+    "./dremel/gradations/*.json": {
+      "import": "./dist/brands/dremel/styles/gradations/*.json"
+    },
+    "./dremel/semantic/*": {
+      "import": "./dist/brands/dremel/styles/semantic/*.css"
+    },
+    "./dremel/semantic/*.ts": {
+      "import": "./dist/brands/dremel/styles/semantic/*.ts"
+    },
+    "./dremel/semantic/*.css": {
+      "style": "./dist/brands/dremel/styles/semantic/*.css",
+      "import": "./dist/brands/dremel/styles/semantic/*.css"
+    },
+    "./dremel/fonts.scss": {
+      "sass": "./dist/brands/dremel/styles/semantic/fonts.scss"
+    },
+    "./dremel/components/*": {
+      "import": "./dist/brands/dremel/styles/components/*.css"
+    },
+    "./dremel/components/*.ts": {
+      "import": "./dist/brands/dremel/styles/components/*.ts"
+    },
+    "./dremel/components/*.css": {
+      "style": "./dist/brands/dremel/styles/components/*.css",
+      "import": "./dist/brands/dremel/styles/components/*.css"
+    },
+    "./dremel/tokens/*.json": {
+      "import": "./dist/brands/dremel/tokens/*.json"
+    },
+    "./diy": {
+      "import": "./dist/brands/diy/tokens/index.js",
+      "types": "./dist/brands/diy/tokens/types.d.ts"
+    },
+    "./diy/backgrounds/*": {
+      "import": "./dist/brands/diy/styles/backgrounds/*.css"
+    },
+    "./diy/backgrounds/*.ts": {
+      "import": "./dist/brands/diy/styles/backgrounds/*.ts"
+    },
+    "./diy/backgrounds/*.css": {
+      "style": "./dist/brands/diy/styles/backgrounds/*.css",
+      "import": "./dist/brands/diy/styles/backgrounds/*.css"
+    },
+    "./diy/gradations/*": {
+      "import": "./dist/brands/diy/styles/gradations/*.css"
+    },
+    "./diy/gradations/*.css": {
+      "style": "./dist/brands/diy/styles/gradations/*.css",
+      "import": "./dist/brands/diy/styles/gradations/*.css"
+    },
+    "./diy/gradations/*.json": {
+      "import": "./dist/brands/diy/styles/gradations/*.json"
+    },
+    "./diy/semantic/*": {
+      "import": "./dist/brands/diy/styles/semantic/*.css"
+    },
+    "./diy/semantic/*.ts": {
+      "import": "./dist/brands/diy/styles/semantic/*.ts"
+    },
+    "./diy/semantic/*.css": {
+      "style": "./dist/brands/diy/styles/semantic/*.css",
+      "import": "./dist/brands/diy/styles/semantic/*.css"
+    },
+    "./diy/fonts.scss": {
+      "sass": "./dist/brands/diy/styles/semantic/fonts.scss"
+    },
+    "./diy/components/*": {
+      "import": "./dist/brands/diy/styles/components/*.css"
+    },
+    "./diy/components/*.ts": {
+      "import": "./dist/brands/diy/styles/components/*.ts"
+    },
+    "./diy/components/*.css": {
+      "style": "./dist/brands/diy/styles/components/*.css",
+      "import": "./dist/brands/diy/styles/components/*.css"
+    },
+    "./diy/tokens/*.json": {
+      "import": "./dist/brands/diy/tokens/*.json"
+    },
+    "./bosch": {
+      "import": "./dist/brands/bosch/tokens/index.js",
+      "types": "./dist/brands/bosch/tokens/types.d.ts"
+    },
+    "./bosch/backgrounds/*": {
+      "import": "./dist/brands/bosch/styles/backgrounds/*.css"
+    },
+    "./bosch/backgrounds/*.ts": {
+      "import": "./dist/brands/bosch/styles/backgrounds/*.ts"
+    },
+    "./bosch/backgrounds/*.css": {
+      "style": "./dist/brands/bosch/styles/backgrounds/*.css",
+      "import": "./dist/brands/bosch/styles/backgrounds/*.css"
+    },
+    "./bosch/gradations/*": {
+      "import": "./dist/brands/bosch/styles/gradations/*.css"
+    },
+    "./bosch/gradations/*.css": {
+      "style": "./dist/brands/bosch/styles/gradations/*.css",
+      "import": "./dist/brands/bosch/styles/gradations/*.css"
+    },
+    "./bosch/gradations/*.json": {
+      "import": "./dist/brands/bosch/styles/gradations/*.json"
+    },
+    "./bosch/semantic/*": {
+      "import": "./dist/brands/bosch/styles/semantic/*.css"
+    },
+    "./bosch/semantic/*.ts": {
+      "import": "./dist/brands/bosch/styles/semantic/*.ts"
+    },
+    "./bosch/semantic/*.css": {
+      "style": "./dist/brands/bosch/styles/semantic/*.css",
+      "import": "./dist/brands/bosch/styles/semantic/*.css"
+    },
+    "./bosch/fonts.scss": {
+      "sass": "./dist/brands/bosch/styles/semantic/fonts.scss"
+    },
+    "./bosch/components/*": {
+      "import": "./dist/brands/bosch/styles/components/*.css"
+    },
+    "./bosch/components/*.ts": {
+      "import": "./dist/brands/bosch/styles/components/*.ts"
+    },
+    "./bosch/components/*.css": {
+      "style": "./dist/brands/bosch/styles/components/*.css",
+      "import": "./dist/brands/bosch/styles/components/*.css"
+    },
+    "./bosch/tokens/*.json": {
+      "import": "./dist/brands/bosch/tokens/*.json"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.boschdevcloud.com/rb-ui/bdds.tokens-npm"
+  },
+  "author": "Robert Bosch GmbH",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=9.14.x"
+  }
+}

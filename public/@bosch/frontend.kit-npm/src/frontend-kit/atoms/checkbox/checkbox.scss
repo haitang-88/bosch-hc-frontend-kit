@@ -1,0 +1,161 @@
+@use "../../styles/helpers.scss";
+
+@mixin checkbox-icon {
+  color: var(--nested-major__enabled__default__front, var(--accent-major__enabled__default__front));
+  position: absolute;
+  content: '';
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+/* stylelint-disable selector-no-qualifying-type */
+.a-checkbox {
+  display: flex;
+  position: relative;
+  height: auto;
+
+  label {
+    color: var(--nested-pure__enabled__default__front, var(--plain-pure__enabled__default__front));
+    background-color: var(--nested-pure__enabled__default__fill, var(--plain-pure__enabled__default__fill));
+    position: relative;
+    inset-inline-start: 0;  // was: left: 0
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1rem;
+    min-height: 1.5rem;
+    padding-inline-start: 2rem;  // was: padding-left: 2rem
+    display: inline-block;
+
+    &::before {
+      position: absolute;
+      inset-block-start: 0;  // was: top: 0
+      inset-inline-start: 0;  // was: left: 0
+      background-color: var(--nested-major__enabled__default__fill, var(--base-major__enabled__default__fill));
+      content: '';
+      display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: var(--comp__checkbox__border-radius__container);
+    }
+  }
+
+  input[type='checkbox'] {
+    width: 0;
+    opacity: 0;
+    height: 0;
+    -moz-appearance: none;
+
+    // Cursors Definitions
+    @media (hover: hover) {
+      &:hover ~ label{
+        cursor: pointer;
+      }
+    }
+
+    &:active ~ label {
+      cursor: pointer;
+    }
+
+    &:disabled ~ label {
+      cursor: default;
+      color: var(--nested-pure__disabled__default__front, var(--plain-pure__disabled__default__front));
+      background-color: var(--nested-pure__disabled__default__fill, var(--plain-pure__disabled__default__fill));
+    }
+
+    @media (hover: hover) {
+      // unselected state
+      &:hover ~ label::before {
+        background-color: var(--nested-major__enabled__hovered__fill, var(--base-major__enabled__hovered__fill));
+      }
+    }
+
+    &:active ~ label::before {
+      background-color: var(--nested-major__enabled__pressed__fill, var(--base-major__enabled__pressed__fill));
+    }
+
+    &:disabled ~ label::before {
+      background-color: var(--nested-major__disabled__default__fill, var(--base-major__disabled__default__fill));
+      pointer-events: none;
+    }
+
+    // Default Icon Rules
+    &:checked ~ label::after {
+
+      @include helpers.uiIconForComponents();
+      @include checkbox-icon();
+
+      content: var(--ui-ic-checkmark);
+    }
+
+    // selected state
+    &:checked ~ label::before {
+      background-color: var(--nested-major__enabled__default__fill, var(--accent-major__enabled__default__fill));
+    }
+
+    @media (hover: hover) {
+      &:checked:hover ~ label::before {
+        background-color: var(--nested-major__enabled__hovered__fill, var(--accent-major__enabled__hovered__fill));
+      }
+    }
+
+    &:checked:active ~ label::before {
+      background-color: var(--nested-major__enabled__pressed__fill, var(--accent-major__enabled__pressed__fill));
+    }
+
+    &:checked:disabled {
+      ~ label::before {
+        background-color: var(--nested-major__disabled__default__fill, var(--accent-major__disabled__default__fill));
+      }
+
+      ~ label::after {
+        color: var(--nested-major__disabled__default__front, var(--accent-major__disabled__default__front));
+      }
+    }
+
+    // Outline for keyboard navigation
+    &:focus-visible ~ label::before {
+      outline: 0.1875rem solid var(--nested-pure__enabled__default__front, var(--plain-pure__enabled__default__front));
+      outline-offset: 0.1875rem;
+    }
+    &:focus-visible ~ label::after {
+      outline: 0.1875rem solid var(--background);
+      border-radius: var(--comp__checkbox__border-radius__container);
+    }
+  }
+
+  /* stylelint-disable no-descending-specificity */
+  &--indeterminate input[type='checkbox'],
+  input[type='checkbox']:indeterminate {
+    ~ label::after {
+
+      @include helpers.uiIconForComponents();
+      @include checkbox-icon();
+
+      content: var(--ui-ic-indeterminate);
+    }
+
+    ~ label::before {
+      background-color: var(--nested-major__enabled__default__fill, var(--accent-major__enabled__default__fill));
+    }
+
+    @media (hover: hover) {
+      &:hover ~ label::before {
+        background-color: var(--nested-major__enabled__hovered__fill, var(--accent-major__enabled__hovered__fill));
+      }
+    }
+
+    &:active ~ label::before {
+      background-color: var(--nested-major__enabled__pressed__fill, var(--accent-major__enabled__pressed__fill));
+    }
+
+    &:disabled {
+      ~ label::before {
+        background-color: var(--nested-major__disabled__default__fill, var(--accent-major__disabled__default__fill));
+      }
+
+      ~ label::after {
+        color: var(--nested-major__disabled__default__front, var(--accent-major__disabled__default__front));
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "name": "dialog",
+  "default": {
+    "name": "Default dialog",
+    "dialogId": "default-non-modal-dialog",
+    "title": "Title Text M Bold",
+    "headline": "Content Headline Text XL Bold",
+    "closeBtn": true,
+    "optionalButton": true,
+    "demonstrator": "ModalDialogDemonstrator"
+  },
+  "variants": [
+    {
+      "name": "Default dialog without close button",
+      "dialogId": "default-dialog-without-close-button",
+      "title": "Title Text M Bold",
+      "headline": "Content Headline Text XL Bold",
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Default dialog with long title",
+      "dialogId": "default-dialog-with-long-title",
+      "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem accusamus modi possimus!",
+      "headline": "Content Headline Text XL Bold",
+      "closeBtn": true,
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Default dialog with long title without close button",
+      "dialogId": "default-dialog-with-long-title-without-close-button",
+      "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem accusamus modi possimus!",
+      "headline": "Content Headline Text XL Bold",
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Default dialog without header",
+      "dialogId": "default-dialog-without-header",
+      "headline": "Content Headline Text XL Bold",
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Dialog info",
+      "dialogId": "alert-dialog-info",
+      "title": "Info Title Text M Bold",
+      "variant": "info",
+      "headline": "Info Headline Text XL Bold",
+      "closeBtn": true,
+      "dialogCode": "Error code 01 B0 5C H0 23 04",
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Dialog info without close button",
+      "dialogId": "alert-dialog-info-without-close-button",
+      "title": "Info Title Text M Bold",
+      "variant": "info",
+      "headline": "Info Headline Text XL Bold",
+      "dialogCode": "Error code 01 B0 5C H0 23 04",
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Dialog success",
+      "dialogId": "alert-dialog-success",
+      "title": "Success Title Text M Bold",
+      "closeBtn": true,
+      "variant": "success",
+      "headline": "Success Headline Text XL Bold",
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Dialog success without close button",
+      "dialogId": "alert-dialog-success-without-close-button",
+      "title": "Success Title Text M Bold",
+      "variant": "success",
+      "headline": "Success Headline Text XL Bold",
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Dialog warning",
+      "dialogId": "alert-dialog-warning",
+      "title": "Warning Title Text M Bold",
+      "variant": "warning",
+      "headline": "Warning Headline Text XL Bold",
+      "closeBtn": true,
+      "dialogCode": "Error code 01 B0 5C H0 23 04",
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Dialog warning without close button",
+      "dialogId": "alert-dialog-warning-without-close-button",
+      "title": "Warning Title Text M Bold",
+      "variant": "warning",
+      "headline": "Warning Headline Text XL Bold",
+      "dialogCode": "Error code 01 B0 5C H0 23 04",
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Dialog error",
+      "dialogId": "alert-dialog-error",
+      "title": "Error Title Text M Bold",
+      "variant": "error",
+      "headline": "Error Headline Text XL Bold",
+      "closeBtn": true,
+      "dialogCode": "Error code 01 B0 5C H0 23 04",
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Dialog error without close button",
+      "dialogId": "alert-dialog-error-without-close-button",
+      "title": "Error Title Text M Bold",
+      "variant": "error",
+      "headline": "Error Headline Text XL Bold",
+      "dialogCode": "Error code 01 B0 5C H0 23 04",
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Dialog Non-Modal",
+      "dialogId": "dialog-non-modal",
+      "title": "Non-Modal Title Text M Bold",
+      "headline": "Non-Modal Headline Text XL Bold",
+      "isNonModal": true,
+      "demonstrator": "ModalDialogDemonstrator"
+    },
+    {
+      "name": "Dialog Modal-less",
+      "dialogId": "dialog-modal-less-dialog",
+      "title": "Modal-less Title Text M Bold",
+      "headline": "Modal-less Headline Text XL Bold",
+      "isModalLess": true
+    },
+    {
+      "name": "All Dialog demonstrator",
+      "demonstrator": "allDialogDemonstrator"
+    }
+  ]
+}

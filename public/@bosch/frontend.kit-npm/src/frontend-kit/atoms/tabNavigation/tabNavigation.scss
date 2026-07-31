@@ -1,0 +1,192 @@
+@use "../../styles/helpers.scss";
+
+.a-tab-navigation {
+  // Define the navigation itself
+  background-color: var(--nested-pure__enabled__default__fill, var(--integrated-pure__enabled__default__fill));
+  border-bottom: 0.0625rem solid var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 0;
+  position: relative;
+  scrollbar-width: none; // Hide native scrollbar on Firefox
+  width: 100%;
+
+  // Hide native scrollbar on Chrome, Edge and Safari
+  &::-webkit-scrollbar {
+    /* stylelint-disable-line */
+    height: 0;
+  }
+
+  // in FF, the ol element is focusable -> provide a proper focus for that case
+  &:focus-visible {
+    @include helpers.focus-inside;
+  }
+
+  // Define the wrapper
+  &__wrapper {
+    position: relative;
+    margin-block: 1em;
+  }
+
+  // Reset the li elements
+  &__item {
+    margin: 0;
+    padding: 0;
+
+    /* stylelint-disable-next-line a11y/content-property-no-static-value */
+    &::before {
+      content: none;
+    }
+  }
+
+  // Reset the button elements
+  button {
+    background: transparent;
+    border: 0;
+    color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+
+    &:focus-visible {
+      @include helpers.focus-inside;
+    }
+  }
+
+  // Reset the links elements
+  a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+
+    &:focus-visible {
+      @include helpers.focus-inside;
+    }
+  }
+
+  &__button-left,
+  &__button-right {
+    position: absolute;
+    display: none;
+    inset-block-start: 0;
+    background-color: var(--background);
+    height: calc(100% - 0.0625rem);
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--background);
+      }
+    }
+
+    &:active {
+      background-color: var(--background);
+    }
+
+    &:focus-visible {
+      position: absolute;
+    }
+
+    &.a-button .a-button__icon {
+      display: inline-block;
+      padding-block: 0.75rem 0.625rem;
+      padding-inline: 0.25rem;
+    }
+  }
+
+  &__button-left {
+    left: 0;
+    z-index: 1;
+  }
+
+  &__button-right {
+    right: 0;
+  }
+
+  &--scrollLeft {
+    .a-tab-navigation__button-left {
+      display: block;
+    }
+  }
+
+  &--scrollRight {
+    .a-tab-navigation__button-right {
+      display: block;
+    }
+  }
+
+  &__tab {
+    cursor: pointer;
+    padding-block: 0.75rem 0;
+    padding-inline: 1rem;
+    white-space: nowrap;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--nested-pure__enabled__hovered__front, var(--integrated-pure__enabled__hovered__front));
+      }
+    }
+
+    &:active {
+      color: var(--nested-pure__enabled__pressed__front, var(--integrated-pure__enabled__pressed__front));
+    }
+
+    &.-disabled {
+      color: var(--nested-pure__disabled__default__front, var(--integrated-pure__disabled__default__front));
+      background-color: var(--nested-pure__disabled__default__fill, var(--integrated-pure__disabled__default__fill));
+      cursor: default;
+      pointer-events: none;
+    }
+
+    &.-selected {
+      color: var(--nested-pure__enabled__default__front, var(--accent-pure__enabled__default__front));
+      background-color: var(--nested-pure__enabled__default__fill, var(--accent-pure__enabled__default__fill));
+    }
+
+    @media (hover: hover) {
+      &.-selected:hover {
+        color: var(--nested-pure__enabled__hovered__front, var(--accent-pure__enabled__hovered__front));
+      }
+    }
+
+    &.-selected:active {
+      color: var(--nested-pure__enabled__pressed__front, var(--accent-pure__enabled__pressed__front));
+    }
+
+    &.-only-icon {
+      padding-inline: 0.75rem;
+    }
+  }
+
+  &__tab-content {
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 0;
+    border: 0;
+    border-bottom: solid 0.125rem var(--nested-pure__enabled__default__fill, var(--integrated-pure__enabled__default__fill));
+    // The value below is the result of the following calculation.
+    // Total height (48px) - Padding top (12px) - Line height (24px) -
+    // Border bottom (2px) - Outer border of the ordered list (1px)
+    padding-block-end: 0.5625rem;
+  }
+
+  .-selected &__tab-content {
+    border-color: var(--nested-pure__enabled__default__front, var(--accent-pure__enabled__default__front));
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: var(--nested-pure__enabled__hovered__front, var(--accent-pure__enabled__hovered__front));
+      }
+    }
+
+    &:active {
+      border-color: var(--nested-pure__enabled__pressed__front, var(--accent-pure__enabled__pressed__front));
+    }
+  }
+
+  &__icon+&__label {
+    text-align: start;
+    margin-inline-start: 0.5rem;
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,113 @@
+$progress-indicator_indeterminate_width: 2rem;
+$progress-indicator_height: 0.5rem;
+
+@mixin dynamic-bar-animation-mixin {
+  @keyframes dynamic-bar-animation {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(
+        calc(100% - $progress-indicator_indeterminate_width)
+      );
+    }
+  }
+}
+
+.a-progress-indicator-container,
+.a-progress-indicator__inner-bar,
+progress {
+  height: $progress-indicator_height;
+}
+
+.a-progress-indicator-container {
+  min-width: 8rem;
+  overflow: hidden; // Firefox's styling support
+  position: relative;
+}
+
+progress {
+  appearance: none; // Safari's styling support
+  background-color: var(--nested-pure__enabled__default__fill, var(--accent-pure__enabled__default__fill));
+  border: 0; // Firefox support
+  box-shadow: inset 0 0 0 0.0625rem var(--nested-pure__enabled__default__front, var(--accent-pure__enabled__default__front)); // Firefox's styling support
+  display: block;
+  min-width: 8rem;
+  width: 100%;
+
+  // Chrome's styling support
+  &::-webkit-progress-bar {
+    background-color: var(--nested-pure__enabled__default__fill, var(--accent-pure__enabled__default__fill));
+    box-shadow: inset 0 0 0 0.0625rem
+      var(--nested-pure__enabled__default__front, var(--accent-pure__enabled__default__front));
+  }
+
+  &::-webkit-progress-value {
+    background-color: var(--nested-pure__enabled__default__front, var(--accent-pure__enabled__default__front));
+  }
+
+  // Firefox's styling support
+  &.-indeterminate::-moz-progress-bar {
+    background-color: var(--nested-pure__enabled__default__fill, var(--accent-pure__enabled__default__fill));
+    box-shadow: inset 0 0 0 0.0625rem
+      var(--nested-pure__enabled__default__front, var(--accent-pure__enabled__default__front));
+  }
+
+  &.-disabled {
+    box-shadow: inset 0 0 0 0.0625rem
+      var(--nested-pure__disabled__default__front, var(--accent-pure__disabled__default__front)); // Firefox
+
+    // Chrome
+    &::-webkit-progress-bar {
+      background-color: var(--nested-pure__disabled__default__fill, var(--accent-pure__disabled__default__fill));
+      box-shadow: inset 0 0 0 0.0625rem
+        var(--nested-pure__disabled__default__front, var(--accent-pure__disabled__default__front));
+    }
+
+    &::-webkit-progress-value {
+      background-color: var(--nested-pure__disabled__default__front, var(--accent-pure__disabled__default__front));
+    }
+
+    // Firefox
+    &::-moz-progress-bar {
+      background-color: var(--nested-pure__disabled__default__front, var(--accent-pure__disabled__default__front));
+      box-shadow: inset 0 0 0 0.0625rem
+        var(--nested-pure__disabled__default__front, var(--accent-pure__disabled__default__front));
+    }
+
+    &.-indeterminate::-moz-progress-bar {
+      background-color: var(--nested-pure__disabled__default__fill, var(--accent-pure__disabled__default__fill));
+    }
+
+    + .a-progress-indicator__anim-bar .a-progress-indicator__inner-bar {
+      background-color: var(--nested-pure__disabled__default__front, var(--accent-pure__disabled__default__front));
+    }
+  }
+}
+
+.a-progress-indicator {
+  position: absolute;
+  transform: translateZ(0);
+
+  &__anim-bar {
+    animation: dynamic-bar-animation 2s infinite linear;
+
+    @include dynamic-bar-animation-mixin;
+  }
+
+  &.-indeterminate
+    + .a-progress-indicator__anim-bar
+    .a-progress-indicator__inner-bar {
+    width: $progress-indicator_indeterminate_width;
+  }
+
+  &.-indeterminate.-disabled + &__anim-bar {
+    display: none;
+  }
+
+  &__inner-bar {
+    background-color: var(--nested-pure__enabled__default__front, var(--accent-pure__enabled__default__front));
+    position: absolute;
+  }
+}

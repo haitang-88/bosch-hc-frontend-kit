@@ -1,0 +1,40 @@
+/* stylelint-disable a11y/no-display-none */
+.o-context-menu {
+  position: relative;
+
+  &__trigger[data-frok-action="close"] {
+    display: none;
+  }
+
+  .m-popover__content {
+    padding: 0;
+    width: 15rem;
+  }
+
+  &.-open {
+    .o-context-menu__trigger {
+      &[data-frok-action="open"] {
+        display: none;
+      }
+
+      &[data-frok-action="close"] {
+        display: flex;
+      }
+    }
+
+    .m-popover {
+      display: flex;
+      z-index: 999;
+    }
+  }
+
+  &.-visible .m-popover {
+    display: flex;
+  }
+
+  // Move the popover's arrow (which is made as a square) in the background
+  .m-menu-group > .a-menu-item:nth-of-type(1) {
+    z-index: 1;
+  }
+}
+/* stylelint-enable a11y/no-display-none */

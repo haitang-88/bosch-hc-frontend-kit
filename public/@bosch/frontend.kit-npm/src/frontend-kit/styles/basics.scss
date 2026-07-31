@@ -1,0 +1,28 @@
+/// basic styling
+html,
+body {
+  font-family: var(--core__font-family__primary), sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  --font-size: 1rem;
+  line-height: 1.5;
+  --line-height: 1.5;
+  font-weight: 400;
+}
+
+/// We need the extra selectors, because the user agent stylesheet overwrites the normal body font-family
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  border-radius: 0;
+}
+
+/// Set all elements to box-sizing:
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

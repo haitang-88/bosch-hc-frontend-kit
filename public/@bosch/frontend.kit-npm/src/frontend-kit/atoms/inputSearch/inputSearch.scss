@@ -1,0 +1,46 @@
+@use "../../styles/helpers.scss";
+
+.a-search-input {
+  display: flex;
+  
+  @include helpers.text-field;
+
+  input {
+    &[readonly] ~ .a-search-input__icon-search {
+      background-color: var(--nested-pure__enabled__default__fill, var(--plain-pure__enabled__default__fill));
+      border-bottom-color: var(--nested-pure__enabled__default__front, var(--plain-pure__enabled__default__front));
+      color: var(--nested-pure__enabled__default__front, var(--plain-pure__enabled__default__front));
+      border-bottom-color: var(--nested-pure__enabled__default__front, var(--plain-pure__enabled__default__front));
+      pointer-events: none;
+    }
+  }
+
+  &__icon-close {
+    display: none;
+  }
+
+  &__icon-search {
+    display: flex;
+  }
+
+  label {
+
+    // for hideSearchButton = true -> without icon, width can be 3rem more
+    &:not(:has(~ .a-search-input__icon-search)) {
+      max-width: calc(100% - 2rem);
+    }
+  }
+
+  &.--close-visible &__icon-close {
+    display: flex;
+  }
+
+  &.--close-visible label {
+    max-width: calc(100% - 8rem);
+
+    // for hideSearchButton = true -> without icon, width can be 3rem more
+    &:not(:has(~ .a-search-input__icon-search)) {
+      max-width: calc(100% - 5rem);
+    }
+  }
+}

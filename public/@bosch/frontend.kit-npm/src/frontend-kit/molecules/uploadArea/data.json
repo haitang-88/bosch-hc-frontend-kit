@@ -1,0 +1,61 @@
+{
+    "name": "upload area",
+    "default": {
+        "name": "default",
+        "labelBefore": "Drag and drop files here or ",
+        "labelAfter": " to upload.",
+        "labelFileUpload": "browse",
+        "inputId": "upload-input-1",
+        "items": []
+    },
+    "variants": [
+        {
+            "name": "Upload area with global error",
+            "labelBefore": "Drag and drop files here or ",
+            "labelAfter": " to upload.",
+            "labelFileUpload": "browse",
+            "errorNotification": "This is an optional global upload error notification.",
+            "inputId": "upload-input-2",
+            "items": []
+        },
+        {
+            "name": "Upload area with items",
+            "labelBefore": "Drag and drop files here or ",
+            "labelAfter": " to upload.",
+            "labelFileUpload": "browse",
+            "inputId": "upload-input-3",
+            "items": [
+                {
+                    "fileName": "ready-to-upload-file.jpg",
+                    "fileSize": "32.4 MB",
+                    "state": "upload"
+                },
+                {
+                    "fileName": "uploading-file.jpg",
+                    "fileSize": "16.8 MB",
+                    "state": "uploading"
+                },
+                {
+                    "fileName": "uploaded-file.jpg",
+                    "fileSize": "13.1 MB",
+                    "state": "uploaded"
+                },
+                {
+                    "fileName": "upload-failed-file.jpg",
+                    "fileSize": "3.6 MB",
+                    "state": "error",
+                    "uploadErrorNotification": "File failed to load. Please try again!"
+                }
+            ]
+        },
+        {
+            "name": "Upload area demonstrator with custom event example",
+            "demonstrator": "UploadAreaDemonstrator",
+            "labelBefore": "Drag and drop files here or ",
+            "labelAfter": " to upload.",
+            "labelFileUpload": "browse",
+            "inputId": "upload-input-4",
+            "items": []
+        }
+    ]
+}

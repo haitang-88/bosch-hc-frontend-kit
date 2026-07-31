@@ -1,0 +1,26 @@
+@use './boschicon' as boschicon;
+@use "./helpers.scss";
+
+/**
+  no generic font family (see original BoschIcon font styles);
+  use !important to prevent issues with browser extensions that change fonts
+*/
+[class^='boschicon-bosch-ic'],
+[class*=' boschicon-bosch-ic'] {
+  /* stylelint-disable-next-line declaration-no-important */
+  font-family: 'Bosch-Icon', sans-serif !important;
+
+  @include boschicon.core-styles;
+}
+
+:root {
+  --bosch-ic-version: '#{boschicon.$icon-version}';
+
+  @include boschicon.generateIconVariables(boschicon.$icons);
+}
+
+.bosch-ic-version::before {
+  content: var(--bosch-ic-version);
+}
+
+@include boschicon.generateIconClasses(boschicon.$icons);

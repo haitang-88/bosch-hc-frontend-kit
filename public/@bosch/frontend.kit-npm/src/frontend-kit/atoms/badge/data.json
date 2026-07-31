@@ -1,0 +1,109 @@
+{
+  "name": "badge",
+  "default": {
+    "name": "Signal Info",
+    "label": "1"
+  },
+  "variants": [
+    {
+      "name": "Signal Info empty"
+    },
+    {
+      "name": "Signal Info small",
+      "label": "345",
+      "size": "s"
+    },
+    {
+      "name": "Signal Info small label left",
+      "label": "345",
+      "labelLeft": true,
+      "size": "s"
+    },
+    {
+      "name": "Signal Info large",
+      "label": "1456",
+      "size": "l"
+    },
+    {
+      "name": "Signal Info large single char",
+      "label": "W",
+      "size": "l",
+      "singleChar": true
+    },
+    {
+      "name": "Signal Info extra large",
+      "label": "2667",
+      "size": "xl"
+    },
+    {
+      "name": "Signal Info extra large single char",
+      "label": "W",
+      "size": "xl",
+      "singleChar": true
+    },
+    {
+      "name": "Signal Success",
+      "label": "1",
+      "type": "success"
+    },
+    {
+      "name": "Signal Warning",
+      "label": "1",
+      "type": "warning"
+    },
+    {
+      "name": "Signal Error",
+      "label": "1",
+      "type": "error"
+    },
+    {
+      "name": "Emphasis 00",
+      "label": "1",
+      "type": "emphasis-00"
+    },
+    {
+      "name": "Emphasis 01",
+      "label": "1",
+      "type": "emphasis-01"
+    },
+    {
+      "name": "Emphasis 02",
+      "label": "1",
+      "type": "emphasis-02"
+    },
+    {
+      "name": "Emphasis 03",
+      "label": "1",
+      "type": "emphasis-03"
+    },
+    {
+      "name": "Emphasis 04",
+      "label": "1",
+      "type": "emphasis-04"
+    },
+    {
+      "name": "Long label",
+      "label": "A badge with an unlimited label text lorem ipsum"
+    },
+    {
+      "name": "Long label large",
+      "label": "A badge with an unlimited label text lorem ipsum",
+      "size": "l"
+    },
+    {
+      "name": "Badge on a Integrated Button",
+      "demonstrator": "badgeIconDemonstrator",
+      "label": "999+"
+    },
+    {
+      "name": "Badge small on a Integrated Button",
+      "demonstrator": "badgeSmallIconDemonstrator",
+      "size": "s"
+    },
+    {
+      "name": "inline Badge",
+      "demonstrator": "badgeInlineDemonstrator",
+      "label": "lorem ipsum"
+    }
+  ]
+}

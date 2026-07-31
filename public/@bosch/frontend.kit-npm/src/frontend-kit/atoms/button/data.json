@@ -1,0 +1,593 @@
+{
+  "name": "button",
+  "default": {
+    "name": "brand primary label icon",
+    "group": "brand",
+    "groupType": "primary",
+    "isDisabled": false,
+    "label": "Button label",
+    "fixedWidth": false,
+    "icon": "emoji-happy"
+  },
+  "variants": [
+    {
+      "name": "brand primary label",
+      "group": "brand",
+      "groupType": "primary",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": false
+    },
+    {
+      "name": "brand primary label icon fixed",
+      "group": "brand",
+      "groupType": "primary",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": true,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand primary icon",
+      "group": "brand",
+      "groupType": "primary",
+      "isDisabled": false,
+      "fixedWidth": false,
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "name": "brand primary label icon disabled",
+      "group": "brand",
+      "groupType": "primary",
+      "isDisabled": true,
+      "label": "Button label",
+      "fixedWidth": false,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand primary label icon size small",
+      "group": "brand",
+      "groupType": "primary",
+      "size": "small",
+      "isDisabled": false,
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand primary label size small",
+      "group": "brand",
+      "groupType": "primary",
+      "size": "small",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": false
+    },
+    {
+      "name": "brand primary label icon fixed size small",
+      "group": "brand",
+      "groupType": "primary",
+      "size": "small",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": true,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand primary icon size small",
+      "group": "brand",
+      "groupType": "primary",
+      "size": "small",
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "name": "brand primary label icon disabled size small",
+      "group": "brand",
+      "groupType": "primary",
+      "size": "small",
+      "isDisabled": true,
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand secondary label icon",
+      "group": "brand",
+      "groupType": "secondary",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": false,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand secondary label",
+      "group": "brand",
+      "groupType": "secondary",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": false
+    },
+    {
+      "name": "brand secondary label icon fixed",
+      "group": "brand",
+      "groupType": "secondary",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": true,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand secondary icon",
+      "group": "brand",
+      "groupType": "secondary",
+      "isDisabled": false,
+      "fixedWidth": false,
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "name": "brand secondary label icon disabled",
+      "group": "brand",
+      "groupType": "secondary",
+      "isDisabled": true,
+      "label": "Button label",
+      "fixedWidth": false,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand secondary label icon size small",
+      "group": "brand",
+      "groupType": "secondary",
+      "size": "small",
+      "isDisabled": false,
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand secondary label size small",
+      "group": "brand",
+      "groupType": "secondary",
+      "size": "small",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": false
+    },
+    {
+      "name": "brand secondary label icon fixed size small",
+      "group": "brand",
+      "groupType": "secondary",
+      "size": "small",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": true,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand secondary icon size small",
+      "group": "brand",
+      "groupType": "secondary",
+      "size": "small",
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "name": "brand secondary label icon disabled size small",
+      "group": "brand",
+      "groupType": "secondary",
+      "size": "small",
+      "isDisabled": true,
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand tertiary label icon",
+      "group": "brand",
+      "groupType": "tertiary",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": false,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand tertiary label",
+      "group": "brand",
+      "groupType": "tertiary",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": false
+    },
+    {
+      "name": "brand tertiary label icon fixed",
+      "group": "brand",
+      "groupType": "tertiary",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": true,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand tertiary icon",
+      "group": "brand",
+      "groupType": "tertiary",
+      "isDisabled": false,
+      "fixedWidth": false,
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "name": "brand tertiary label icon disabled",
+      "group": "brand",
+      "groupType": "tertiary",
+      "isDisabled": true,
+      "label": "Button label",
+      "fixedWidth": false,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand tertiary label icon size small",
+      "group": "brand",
+      "groupType": "tertiary",
+      "size": "small",
+      "isDisabled": false,
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand tertiary label size small",
+      "group": "brand",
+      "groupType": "tertiary",
+      "size": "small",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": false
+    },
+    {
+      "name": "brand tertiary label icon fixed size small",
+      "group": "brand",
+      "groupType": "tertiary",
+      "size": "small",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": true,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "brand tertiary icon size small",
+      "group": "brand",
+      "groupType": "tertiary",
+      "size": "small",
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "name": "brand tertiary label icon disabled size small",
+      "group": "brand",
+      "groupType": "tertiary",
+      "size": "small",
+      "isDisabled": true,
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "neutral primary label icon",
+      "group": "neutral",
+      "groupType": "primary",
+      "label": "Button label",
+      "fixedWidth": false,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "neutral primary label icon disabled",
+      "group": "neutral",
+      "groupType": "primary",
+      "isDisabled": true,
+      "label": "Button label",
+      "fixedWidth": false,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "destructive primary label icon",
+      "group": "destructive",
+      "groupType": "primary",
+      "label": "Button label",
+      "fixedWidth": false,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "destructive primary label icon disabled",
+      "group": "destructive",
+      "groupType": "primary",
+      "isDisabled": true,
+      "label": "Button label",
+      "fixedWidth": false,
+      "icon": "emoji-happy"
+    },
+    {
+      "name": "all buttons",
+      "demonstrator": "allButtonsDemonstrator"
+    },
+    {
+      "deprecated": true,
+      "name": "primary label",
+      "mode": "primary",
+      "isDisabled": false,
+      "label": "Button label",
+      "fixedWidth": false
+    },
+    {
+      "deprecated": true,
+      "name": "primary label icon",
+      "mode": "primary",
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "deprecated": true,
+      "name": "primary icon",
+      "mode": "primary",
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "deprecated": true,
+      "name": "primary label fixed",
+      "mode": "primary",
+      "label": "Button label",
+      "fixedWidth": true
+    },
+    {
+      "deprecated": true,
+      "name": "primary icon fixed",
+      "mode": "primary",
+      "icon": "emoji-happy",
+      "fixedWidth": true,
+      "aria-label": "accessibility label"
+    },
+    {
+      "deprecated": true,
+      "name": "primary label icon fixed",
+      "mode": "primary",
+      "label": "Button label",
+      "icon": "emoji-happy",
+      "fixedWidth": true
+    },
+    {
+      "deprecated": true,
+      "name": "primary label disabled",
+      "mode": "primary",
+      "isDisabled": true,
+      "label": "Button label"
+    },
+    {
+      "deprecated": true,
+      "name": "primary icon disabled",
+      "mode": "primary",
+      "isDisabled": true,
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "deprecated": true,
+      "name": "primary label icon disabled",
+      "mode": "primary",
+      "isDisabled": true,
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "deprecated": true,
+      "name": "secondary label",
+      "mode": "secondary",
+      "label": "Button label"
+    },
+    {
+      "deprecated": true,
+      "name": "secondary icon",
+      "mode": "secondary",
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "deprecated": true,
+      "name": "secondary label icon",
+      "mode": "secondary",
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "deprecated": true,
+      "name": "secondary label fixed",
+      "mode": "secondary",
+      "label": "Button label",
+      "fixedWidth": true
+    },
+    {
+      "deprecated": true,
+      "name": "secondary icon fixed",
+      "mode": "secondary",
+      "icon": "emoji-happy",
+      "fixedWidth": true,
+      "aria-label": "accessibility label"
+    },
+    {
+      "deprecated": true,
+      "name": "secondary label icon fixed",
+      "mode": "secondary",
+      "label": "Button label",
+      "icon": "emoji-happy",
+      "fixedWidth": true
+    },
+    {
+      "deprecated": true,
+      "name": "secondary label disabled",
+      "mode": "secondary",
+      "isDisabled": true,
+      "label": "Button label"
+    },
+    {
+      "deprecated": true,
+      "name": "secondary icon disabled",
+      "mode": "secondary",
+      "isDisabled": true,
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "deprecated": true,
+      "name": "secondary label icon disabled",
+      "mode": "secondary",
+      "isDisabled": true,
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "deprecated": true,
+      "name": "tertiary label",
+      "mode": "tertiary",
+      "label": "Button label"
+    },
+    {
+      "deprecated": true,
+      "name": "tertiary icon",
+      "mode": "tertiary",
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "deprecated": true,
+      "name": "tertiary label icon",
+      "mode": "tertiary",
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "deprecated": true,
+      "name": "tertiary label fixed",
+      "mode": "tertiary",
+      "label": "Button label",
+      "fixedWidth": true
+    },
+    {
+      "deprecated": true,
+      "name": "tertiary icon fixed",
+      "mode": "tertiary",
+      "icon": "emoji-happy",
+      "fixedWidth": true,
+      "aria-label": "accessibility label"
+    },
+    {
+      "deprecated": true,
+      "name": "tertiary label icon fixed",
+      "mode": "tertiary",
+      "label": "Button label",
+      "icon": "emoji-happy",
+      "fixedWidth": true
+    },
+    {
+      "deprecated": true,
+      "name": "tertiary label disabled",
+      "mode": "tertiary",
+      "isDisabled": true,
+      "label": "Button label"
+    },
+    {
+      "deprecated": true,
+      "name": "tertiary icon disabled",
+      "mode": "tertiary",
+      "isDisabled": true,
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "deprecated": true,
+      "name": "tertiary label icon disabled",
+      "mode": "tertiary",
+      "isDisabled": true,
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "deprecated": true,
+      "name": "integrated label",
+      "mode": "integrated",
+      "label": "Button label"
+    },
+    {
+      "deprecated": true,
+      "name": "integrated icon",
+      "mode": "integrated",
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "deprecated": true,
+      "name": "integrated label icon",
+      "mode": "integrated",
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "deprecated": true,
+      "name": "integrated label fixed",
+      "mode": "integrated",
+      "label": "Button label",
+      "fixedWidth": true
+    },
+    {
+      "deprecated": true,
+      "name": "integrated icon fixed",
+      "mode": "integrated",
+      "icon": "emoji-happy",
+      "fixedWidth": true,
+      "aria-label": "accessibility label"
+    },
+    {
+      "deprecated": true,
+      "name": "integrated label icon fixed",
+      "mode": "integrated",
+      "label": "Button label",
+      "icon": "emoji-happy",
+      "fixedWidth": true
+    },
+    {
+      "deprecated": true,
+      "name": "integrated label disabled",
+      "mode": "integrated",
+      "isDisabled": true,
+      "label": "Button label"
+    },
+    {
+      "deprecated": true,
+      "name": "integrated icon disabled",
+      "mode": "integrated",
+      "isDisabled": true,
+      "icon": "emoji-happy",
+      "aria-label": "accessibility label"
+    },
+    {
+      "deprecated": true,
+      "name": "integrated label icon disabled",
+      "mode": "integrated",
+      "isDisabled": true,
+      "label": "Button label",
+      "icon": "emoji-happy"
+    },
+    {
+      "deprecated": true,
+      "name": "close",
+      "mode": "integrated",
+      "icon": "close",
+      "isUiIcon": true,
+      "aria-label": "close"
+    },
+    {
+      "deprecated": true,
+      "name": "close disabled",
+      "mode": "integrated",
+      "icon": "close",
+      "isUiIcon": true,
+      "isDisabled": true,
+      "aria-label": "close"
+    }
+  ]
+}

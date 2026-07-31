@@ -1,0 +1,37 @@
+/// This file contains basic css / functions / mixin / variables
+/// form related variables
+$formFieldSpacing: 1rem;
+
+/// side navigation variables
+$m-side-navigation--open-width: 19rem;
+
+/// transitions
+$default-transition-easing: cubic-bezier(.38, .04, .35, .96);
+$default-transition-timing: 250ms;
+
+/// font path
+$font-base-path: "../fonts";
+
+/// mixin to generate box shadow and dimmed background
+@mixin box-shadow-s {
+  box-shadow: var(--sem__box-shadow__small);
+}
+
+@mixin box-shadow-m {
+  box-shadow: var(--sem__box-shadow__medium);
+}
+
+@mixin box-shadow-l {
+  box-shadow: var(--sem__box-shadow__large);
+}
+
+@mixin background-dimmed {
+  /// because we can use CSS custom properties here,
+  /// we need to implement here the hex value with alpha channel directly
+  background-color: var(--dimmer-background);
+  backdrop-filter: blur(var(--sem__background-blur__dim));
+}
+
+@mixin floating-outline {
+  outline: 0.0625rem solid var(--floating-outline);
+}

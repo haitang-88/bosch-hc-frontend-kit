@@ -1,0 +1,34 @@
+.a-animated-icon {
+    position: relative;
+    display: grid;
+
+    &__container,
+ 
+    &__placeholder {
+        grid-row: 1;
+        grid-column: 1;
+
+        .a-icon {
+            display: block;
+        }
+    }
+
+    &__container {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        svg {
+            display: block;
+
+            path {
+                fill: currentcolor;
+                stroke: currentcolor;
+            }
+        }
+    }
+
+    &.-loaded &__placeholder {
+        display: none;
+    }
+
+}

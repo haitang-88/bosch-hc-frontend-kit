@@ -1,0 +1,36 @@
+{
+  "name": "input color",
+  "default": {
+    "id": "1",
+    "name": "input color"
+  },
+  "variants": [
+    {
+      "id": "2",
+      "name": "input color with label",
+      "label": "Label"
+    },
+    {
+      "id": "3",
+      "name": "input color disabled",
+      "isDisabled": true
+    },
+    {
+      "id": "4",
+      "name": "input color with label disabled",
+      "label": "Label",
+      "isDisabled": true
+    },
+    {
+      "id": "5",
+      "name": "input color with very long label",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!"
+    },
+    {
+      "id": "6",
+      "name": "input color with very long label disabled",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "isDisabled": true
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "toggle (switch)",
+  "default": {
+    "name": "default",
+    "id": "toggle-1",
+    "rightLabel": "Right text"
+  },
+  "variants": [
+    {
+      "name": "left label",
+      "id": "toggle-left-label",
+      "leftLabel": "Left text"
+    },
+    {
+      "name": "label both sides",
+      "id": "toggle-label-both-sides",
+      "leftLabel": "Left text",
+      "rightLabel": "Right text"
+    },
+    {
+      "name": "disabled",
+      "rightLabel": "Right text",
+      "id": "toggle-disabled",
+      "disabled": true
+    },
+    {
+      "name": "disabled checked",
+      "rightLabel": "Right text",
+      "id": "toggle-disabled-checked",
+      "disabled": true,
+      "checked": true
+    }
+  ]
+}

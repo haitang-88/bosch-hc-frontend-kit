@@ -1,0 +1,147 @@
+{
+  "name": "video",
+  "default": {
+    "name": "Default video",
+    "title": "Sintel",
+    "duration": "00:49",
+    "subtitlesSrc": "/#",
+    "timelineId": "timeline-id",
+    "sources": [
+      {
+        "type": "mp4",
+        "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.mp4"
+      },
+      {
+        "type": "webm",
+        "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.webm"
+      },
+      {
+        "type": "ogv",
+        "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.ogv"
+      }
+    ],
+    "transcriptionUrl": "/#"
+  },
+  "variants": [
+    {
+      "name": "Video with playback setting only",
+      "title": "Sintel",
+      "duration": "00:49",
+      "subtitlesSrc": "/#",
+      "timelineId": "timeline-id-2",
+      "sources": [
+        {
+          "type": "mp4",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.mp4"
+        },
+        {
+          "type": "webm",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.webm"
+        },
+        {
+          "type": "ogv",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.ogv"
+        }
+      ],
+      "transcriptionUrl": "/#",
+      "isDownloadDisabled": true,
+      "isPictureInPictureDisabled": true
+    },
+    {
+      "name": "Video with download setting only",
+      "title": "Sintel",
+      "duration": "00:49",
+      "subtitlesSrc": "/#",
+      "timelineId": "timeline-id-3",
+      "sources": [
+        {
+          "type": "mp4",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.mp4"
+        },
+        {
+          "type": "webm",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.webm"
+        },
+        {
+          "type": "ogv",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.ogv"
+        }
+      ],
+      "transcriptionUrl": "/#",
+      "isPlaybackRateDisabled": true,
+      "isPictureInPictureDisabled": true
+    },
+    {
+      "name": "Video with picture-in-picture setting only",
+      "title": "Sintel",
+      "duration": "00:49",
+      "subtitlesSrc": "/#",
+      "timelineId": "timeline-id-4",
+      "sources": [
+        {
+          "type": "mp4",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.mp4"
+        },
+        {
+          "type": "webm",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.webm"
+        },
+        {
+          "type": "ogv",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.ogv"
+        }
+      ],
+      "transcriptionUrl": "/#",
+      "isDownloadDisabled": true,
+      "isPlaybackRateDisabled": true
+    },
+    {
+      "name": "Video without settings",
+      "title": "Sintel",
+      "duration": "00:49",
+      "subtitlesSrc": "/#",
+      "timelineId": "timeline-id-5",
+      "sources": [
+        {
+          "type": "mp4",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.mp4"
+        },
+        {
+          "type": "webm",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.webm"
+        },
+        {
+          "type": "ogv",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.ogv"
+        }
+      ],
+      "transcriptionUrl": "/#",
+      "isDownloadDisabled": true,
+      "isPlaybackRateDisabled": true,
+      "isPictureInPictureDisabled": true
+    },
+    {
+      "name": "Video with caption",
+      "title": "Sintel",
+      "duration": "00:49",
+      "subtitlesSrc": "/#",
+      "timelineId": "timeline-id-6",
+      "caption": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.",
+      "sources": [
+        {
+          "type": "mp4",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.mp4"
+        },
+        {
+          "type": "webm",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.webm"
+        },
+        {
+          "type": "ogv",
+          "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Sintel.ogv"
+        }
+      ],
+      "transcriptionUrl": "/#"
+    }
+  ]
+}

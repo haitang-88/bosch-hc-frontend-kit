@@ -1,0 +1,22 @@
+{
+  "name": "icon",
+  "default": {
+    "name": "single icon",
+    "iconName": "emoji-happy"
+  },
+  "variants": [
+    {
+      "name": "ui icons",
+      "demonstrator": "uiIconsDemonstrator"
+    },
+    {
+      "name": "ui icons rtl",
+      "isRtl": true,
+      "demonstrator": "uiIconsDemonstrator"
+    },
+    {
+      "name": "all icons",
+      "demonstrator": "allIconsDemonstrator"
+    }
+  ]
+}

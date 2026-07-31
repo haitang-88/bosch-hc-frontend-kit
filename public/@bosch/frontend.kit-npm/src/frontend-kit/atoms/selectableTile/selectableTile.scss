@@ -1,0 +1,193 @@
+@use "../../styles/helpers.scss";
+
+@mixin checkbox-icon-tile {
+  color: var(--nested-major__enabled__default__front, var(--accent-major__enabled__default__front));
+  position: absolute;
+  content: '';
+  left: .75rem;
+}
+
+/* stylelint-disable no-descending-specificity */
+.a-selectable-tile {
+  position: relative;
+
+  input {
+    width: 0;
+    opacity: 0;
+    height: 0;
+    -moz-appearance: none;
+    position: absolute;
+  }
+
+  .a-image__ratioWrapper {
+    border-radius: 0;
+  }
+
+  &.-small {
+    label {
+      display: flex;
+    }
+
+    .a-text {
+      flex: auto;
+      padding: 0.75rem;
+
+      &__headline {
+        margin: 0;
+      }
+    }
+  }
+
+  /* stylelint-disable selector-max-compound-selectors */
+  &--radio input:focus-visible + label {
+    @include helpers.focus-outside;
+
+    --focus-offset-inner: 0.0625rem;
+    --focus-offset-outer: 0.25rem;
+  }
+
+  &--checkbox input:focus-visible + label .checkbox-container {
+    &::after {
+      position: absolute;
+      content: '';
+      height: 1.5rem;
+      width: 1.5rem;
+      outline: 0.1875rem solid var(--background);
+      outline-offset: 0rem;
+    }
+
+    &::before {
+      outline: 0.1875rem solid var(--nested-pure__enabled__default__front, var(--plain-pure__enabled__default__front));
+      outline-offset: 0.1875rem;
+    }
+  }
+  /* stylelint-enable selector-max-compound-selectors */
+
+  &--checkbox {
+    // visualy hide checkbox button
+    input[type='checkbox'] {
+      // Cursors Definitions
+      @media (hover: hover) {
+        &:hover + label {
+          cursor: pointer;
+        }
+      }
+
+      &:active + label {
+        cursor: pointer;
+      }
+
+      @media (hover: hover) {
+        // unselected state
+        &:hover + label .checkbox-container::before {
+          background-color: var(--nested-major__enabled__hovered__fill, var(--base-major__enabled__hovered__fill));
+        }
+      }
+
+      &:active + label .checkbox-container::before {
+        background-color: var(--nested-major__enabled__pressed__fill, var(--base-major__enabled__pressed__fill));
+      }
+
+      &:disabled + label .checkbox-container::before {
+        background-color: var(--nested-major__disabled__default__fill, var(--base-major__disabled__default__fill));
+        pointer-events: none;
+      }
+
+      &:checked + label .checkbox-container::after {
+
+        @include helpers.uiIconForComponents();
+        @include checkbox-icon-tile();
+
+        content: var(--ui-ic-checkmark);
+      }
+
+      // selected state
+      &:checked + label .checkbox-container::before {
+        background-color: var(--nested-major__enabled__default__fill, var(--accent-major__enabled__default__fill));
+      }
+
+      @media (hover: hover) {
+        &:checked:hover + label .checkbox-container::before {
+          background-color: var(--nested-major__enabled__hovered__fill, var(--accent-major__enabled__hovered__fill));
+        }
+      }
+
+      &:checked:active + label .checkbox-container::before {
+        background-color: var(--nested-major__enabled__pressed__fill, var(--accent-major__enabled__pressed__fill));
+      }
+
+      &:checked:disabled {
+        + label .checkbox-container::before {
+          background-color: var(--nested-major__disabled__default__fill, var(--accent-major__disabled__default__fill));
+        }
+
+        + label .checkbox-container::after {
+          color: var(--nested-major__disabled__default__front, var(--accent-major__disabled__default__front));
+        }
+      }
+    }
+
+    .checkbox-container {
+      padding: .75rem;
+      display: flex;
+
+      &::before {
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: var(--nested-major__enabled__default__fill, var(--base-major__enabled__default__fill));
+        content: '';
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+
+    &.-small {
+      .a-text {
+        padding: 0.75rem 0.75rem 0.75rem 0;
+      }
+    }
+  }
+
+  label {
+    display: block;
+    border: .0625rem solid var(--nested-major__enabled__default__fill, var(--base-major__enabled__default__fill));
+    cursor: pointer;
+    position: relative;
+    border-radius: var(--comp__tile__border-radius__container);
+    overflow: hidden;
+
+    @media (hover: hover) {
+      &:hover {
+        border: .0625rem solid var(--nested-major__enabled__hovered__fill, var(--base-major__enabled__hovered__fill));
+      }
+    }
+  }
+
+  input[type='radio']:checked,
+  input[type='checkbox']:checked {
+    + label::before {
+      content: '';
+      position: absolute;
+      background: transparent;
+      border: .125rem solid var(--nested-major__enabled__default__fill, var(--accent-major__enabled__default__fill));
+      top: -.125rem;
+      left: -.125rem;
+      right: -.125rem;
+      bottom: -.125rem;
+    }
+
+    + label {
+      border-color: var(--nested-major__enabled__default__fill, var(--accent-major__enabled__default__fill));
+    }
+  }
+
+  .a-text {
+    padding: .5rem .75rem .75rem;
+
+    &__headline {
+      margin: 0;
+    }
+  }
+}

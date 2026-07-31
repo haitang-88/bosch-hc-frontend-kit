@@ -1,0 +1,16 @@
+.a-divider {
+  background-color: var(--nested-major__enabled__default__fill, var(--base-major__enabled__default__fill));
+  border: 0;
+  height: 0.0625rem;
+  margin: 0.5rem 0;
+
+  &.-within-text {
+    margin: 2rem 0;
+  }
+
+  &--vertical {
+    min-width: 0.0625rem;
+    height: auto;
+    margin: 0 1rem;
+  }
+}

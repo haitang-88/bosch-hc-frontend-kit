@@ -1,0 +1,51 @@
+@use "../../styles/helpers.scss";
+
+.m-breadcrumbs {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  /*  reset list items to make the usable for our case */
+  > li {
+    /* stylelint-disable-next-line a11y/content-property-no-static-value */
+    &::before {
+      content: none;
+    }
+
+    @include helpers.size-s;
+
+    padding-block: 0;
+    padding-inline: 0 0.5rem;
+    margin: 0;
+  }
+
+  .a-link,
+  .a-link:visited {
+    a:not(:hover, :active, :focus) {
+      /* stylelint-disable-next-line custom-property-pattern */
+      color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+
+      &::after {
+        border-color: currentcolor;
+      }
+    }
+
+    a:focus-visible {
+      color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+    }
+  }
+
+  /* Overrides the margin left to have equal distance from both sides */
+  /* stylelint-disable-next-line selector-max-compound-selectors */
+  a span .a-icon,
+  .a-link span .a-icon {
+    margin-inline-start: 0.5rem;
+  }
+
+  /* remove the arrow from the last link */
+  /* stylelint-disable-next-line a11y/no-display-none */
+  li:last-child .a-icon {
+    display: none;
+  }
+}

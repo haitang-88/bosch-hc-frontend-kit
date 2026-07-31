@@ -1,0 +1,28 @@
+{
+  "name": "meter",
+  "default": {
+    "id": "1",
+    "name": "meter with optimum value",
+    "label": "Label",
+    "innerText": "Inner text",
+    "optimum": 80,
+    "value": 50
+  },
+  "variants": [
+    {
+      "id": "2",
+      "name": "meter without optimum value",
+      "label": "Label",
+      "innerText": "Inner text",
+      "value": 50
+    },
+    {
+      "name": "meter with optimum value demonstrator",
+      "demonstrator": "meterWithOptimumValueDemonstrator"
+    },
+    {
+      "name": "meter without optimum value demonstrator",
+      "demonstrator": "meterWithoutOptimumValueDemonstrator"
+    }
+  ]
+}

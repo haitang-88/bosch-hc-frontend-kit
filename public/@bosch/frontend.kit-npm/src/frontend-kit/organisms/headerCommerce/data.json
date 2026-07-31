@@ -1,0 +1,27 @@
+{
+  "name": "header commerce",
+  "default": {
+    "name": "Default"
+  },
+  "variants": [
+    {
+      "name": "Sticky",
+      "isSticky": true
+    },
+    {
+      "name": "Only mandatory elements",
+      "minimalistic": true
+    },
+    {
+      "name": "Dremel specific",
+      "navigationBackground": "contrast",
+      "logo": "dremel"
+    },
+    {
+      "name": "Dremel specific sticky",
+      "isSticky": true,
+      "navigationBackground": "contrast",
+      "logo": "dremel"
+    }
+  ]
+}

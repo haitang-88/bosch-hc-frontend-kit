@@ -1,0 +1,301 @@
+@use "../../styles/helpers.scss";
+
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable selector-max-compound-selectors */
+/* stylelint-disable a11y/line-height-is-vertical-rhythmed */
+
+a,
+.a-link {
+  span:last-of-type:not(:first-of-type) {
+    display: inline-block;
+  }
+
+  .a-icon {
+    display: inline-block;
+    font-size: calc(var(--font-size) * var(--line-height));
+    line-height: 1;
+    margin-inline-end: calc(var(--font-size) * var(--line-height) / 3);
+    vertical-align: bottom;
+  }
+
+  span .a-icon {
+    margin-inline-start: calc(var(--font-size) * var(--line-height) / 3);
+    margin-inline-end: unset;
+  }
+}
+
+a {
+  display: inline;
+  color: var(--nested-pure__enabled__default__front, var(--accent-pure__enabled__default__front));
+
+  span + span {
+    // This is needed for inline links to be completly underlined. it will be overwritten for .a-link later on
+    text-decoration: underline;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--nested-pure__enabled__hovered__front, var(--accent-pure__enabled__hovered__front));
+    }
+  }
+
+  &:active {
+    color: var(--nested-pure__enabled__pressed__front, var(--accent-pure__enabled__pressed__front));
+  }
+
+  &:focus-visible {
+    @include helpers.focus-outside;
+  }
+}
+
+.a-link {
+  position: relative;
+  display: block;
+  width: fit-content;
+  color: var(--nested-pure__enabled__default__front, var(--accent-pure__enabled__default__front));
+
+  /*
+    The next block is needed for multi-line-links to have the correct padding.
+    It should only apply to links with an icon and iconPosition = left.
+    */
+  > a {
+    > i {
+      position: absolute;
+
+      + span {
+        display: inline-block;
+
+        /*
+          This calculation is needed to get the correct spacing between the icon and the text.
+          Since the icon is positioned 'absolute' in this case, we need to add the icon's width
+          to the default spacing between the icon and the link.
+        */
+        --icon-size: calc(1em * var(--line-height));
+        --default-spacing: calc(1em * var(--line-height) / 3);
+
+        padding-inline-start: calc(var(--icon-size) + var(--default-spacing));
+      }
+    }
+  }
+
+  &:not(.-icon, .a-link--button, .a-link--button-secondary, .a-link--integrated, .-disabled) a {
+    text-decoration: underline;
+  }
+
+  a {
+    display: inline-block;
+    color: currentColor;
+    text-decoration: none;
+
+    span,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--nested-pure__enabled__hovered__front, var(--accent-pure__enabled__hovered__front));
+
+      a {
+        text-decoration: underline;
+
+        span:last-of-type:not(:first-of-type) {
+          text-decoration: underline;
+        }
+
+        > i + span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &:active {
+    color: var(--nested-pure__enabled__pressed__front, var(--accent-pure__enabled__pressed__front));
+  }
+
+  &.-disabled,
+  &.-disabled a {
+    pointer-events: none;
+    color: var(--nested-pure__disabled__default__front, var(--accent-pure__disabled__default__front));
+  }
+}
+
+.a-link--integrated {
+  a {
+    color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--nested-pure__enabled__hovered__front, var(--integrated-pure__enabled__hovered__front));
+      }
+    }
+
+    &:active {
+      color: var(--nested-pure__enabled__pressed__front, var(--integrated-pure__enabled__pressed__front));
+    }
+  }
+
+  &.-disabled,
+  &.-disabled a {
+    pointer-events: none;
+    color: var(--nested-pure__disabled__default__front, var(--integrated-pure__disabled__default__front));
+  }
+
+  @media (hover: hover) {
+    &.highlight:hover {
+      a,
+      span:last-of-type:not(:first-of-type) {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.a-link--button,
+%a-link--button {
+  background-color: var(--nested-major__enabled__default__fill, var(--accent-major__enabled__default__fill));
+  color: var(--nested-major__enabled__default__front, var(--accent-major__enabled__default__front));
+  cursor: pointer;
+  border-radius: var(--comp__button__border-radius__container);
+  --border-size: 0rem;
+
+  a {
+    color: currentColor;
+    padding: calc(0.75rem - var(--border-size)) 1rem;
+    border-radius: var(--comp__button__border-radius__container);
+  }
+
+  a:focus-visible {
+    --focus-border-radius: var(--comp__button__border-radius__container);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--nested-major__enabled__hovered__fill, var(--accent-major__enabled__hovered__fill));
+      color: var(--nested-major__enabled__default__front, var(--accent-major__enabled__default__front));
+
+      a {
+        color: currentColor;
+        text-decoration: none;
+
+        span,
+        > i + span,
+        span:last-of-type:not(:first-of-type) {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &:active {
+    background-color: var(--nested-major__enabled__pressed__fill, var(--accent-major__enabled__pressed__fill));
+  }
+
+  &.-disabled {
+    background-color: var(--nested-major__disabled__default__fill, var(--accent-major__disabled__default__fill));
+    color: var(--nested-major__disabled__default__front, var(--accent-major__disabled__default__front));
+
+    a {
+      color: currentColor;
+    }
+  }
+}
+
+.a-link--button-secondary {
+
+  @extend %a-link--button;
+  --border-size: 0.0625rem;
+
+  background-color: var(--nested-pure__enabled__default__fill, var(--accent-pure__enabled__default__fill));
+  color: var(--nested-pure__enabled__default__front, var(--accent-pure__enabled__default__front));
+  border: 0.0625rem solid var(--nested-pure__enabled__default__front, var(--accent-pure__enabled__default__front));
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--nested-pure__enabled__hovered__fill, var(--accent-pure__enabled__hovered__fill));
+      color: var(--nested-pure__enabled__hovered__front, var(--accent-pure__enabled__hovered__front));
+      border-color: var(--nested-pure__enabled__hovered__front, var(--accent-pure__enabled__hovered__front));
+
+      a {
+        span,
+        > i + span,
+        span:last-of-type:not(:first-of-type) {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &:active {
+    background-color: var(--nested-pure__enabled__pressed__fill, var(--accent-pure__enabled__pressed__fill));
+    color: var(--nested-pure__enabled__pressed__front, var(--accent-pure__enabled__pressed__front));
+    border-color: var(--nested-pure__enabled__pressed__front, var(--accent-pure__enabled__pressed__front));
+  }
+
+  a:focus-visible {
+    --focus-offset-inner: 0.0625rem;
+    --focus-offset-outer: 0.25rem;
+  }
+
+  &.-disabled {
+    background-color: var(--nested-pure__disabled__default__fill, var(--accent-pure__disabled__default__fill));
+    color: var(--nested-pure__disabled__default__front, var(--accent-pure__disabled__default__front));
+    border-color: var(--nested-pure__disabled__default__front, var(--accent-pure__disabled__default__front));
+  }
+}
+
+.a-link--button-integrated {
+
+  @extend %a-link--button;
+
+  a:focus-visible {
+    @include helpers.focus-inside;
+    --focus-border-radius: var(--comp__button__border-radius__container);
+  }
+
+  // we need here for some reasons a very specific override
+  &.a-link a {
+    text-decoration: none;
+  }
+
+  &.a-link {
+    a {
+      padding: 0.75rem;
+    }
+
+    span:first-of-type:last-of-type {
+      .a-icon:first-of-type:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  color: var(--nested-pure__enabled__default__front, var(--integrated-pure__enabled__default__front));
+  background-color: transparent;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--nested-pure__enabled__hovered__front, var(--integrated-pure__enabled__hovered__front));
+      background-color: transparent;
+
+      a {
+        span,
+        > i + span,
+        span:last-of-type:not(:first-of-type) {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
+  &:active {
+    color: var(--nested-pure__enabled__pressed__front, var(--integrated-pure__enabled__pressed__front));
+    background-color: transparent;
+  }
+
+  &.-disabled {
+    color: var(--nested-pure__disabled__default__front, var(--integrated-pure__disabled__default__front));
+  }
+}

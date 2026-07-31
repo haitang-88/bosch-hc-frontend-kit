@@ -1,0 +1,17 @@
+{
+  "name": "table",
+  "default": {
+    "name": "table default",
+    "variant": "header-top"
+  },
+  "variants": [
+    {
+      "name": "table with highlighted row",
+      "highlightedRow": true
+    },
+    {
+      "name": "table with caption",
+      "caption": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+    }
+  ]
+}

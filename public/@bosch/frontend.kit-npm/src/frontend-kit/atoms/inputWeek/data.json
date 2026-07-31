@@ -1,0 +1,78 @@
+{
+  "name": "input week",
+  "default": {
+    "id": "1",
+    "name": "input week"
+  },
+  "variants": [
+    {
+      "id": "2",
+      "name": "input week readonly",
+      "value": "2024-W20",
+      "readOnly": true
+    },
+    {
+      "id": "3",
+      "name": "input week disabled",
+      "value": "2024-W20",
+      "disabled": true
+    },
+    {
+      "id": "4",
+      "name": "input week with label",
+      "label": "Choose a week:"
+    },
+    {
+      "id": "5",
+      "name": "input week with label readonly",
+      "value": "2024-W20",
+      "label": "Choose a week:",
+      "readOnly": true
+    },
+    {
+      "id": "6",
+      "name": "input week with label disabled",
+      "value": "2024-W20",
+      "label": "Choose a week:",
+      "disabled": true
+    },
+    {
+      "id": "7",
+      "name": "input week with very long label",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!"
+    },
+    {
+      "id": "8",
+      "name": "input week with very long label readonly",
+      "value": "2024-W20",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "readOnly": true
+    },
+    {
+      "id": "9",
+      "name": "input week with very long label disabled",
+      "value": "2024-W20",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "disabled": true
+    },
+    {
+      "id": "10",
+      "name": "input week with min and max date",
+      "min": "2024-W31",
+      "max": "2024-W35"
+    },
+    {
+      "id": "11",
+      "name": "input week with min and max date over months",
+      "min": "2024-W24",
+      "max": "2024-W35"
+    },
+    {
+      "id": "12",
+      "name": "input week with min and max date with step",
+      "min": "2024-W24",
+      "max": "2024-W35",
+      "step": 2
+    }
+  ]
+}

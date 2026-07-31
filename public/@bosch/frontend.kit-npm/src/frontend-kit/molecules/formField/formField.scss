@@ -1,0 +1,52 @@
+@use "../../styles/basics.mixin.scss" as basics;
+
+.m-form-field {
+  margin-bottom: basics.$formFieldSpacing;
+  flex-shrink: 1;
+  flex-grow: 1;
+
+  &:has( > .a-notification) > :is(.a-text-field, .a-value-modificator, .a-text-area, [class*="-input"], .a-dropdown) {
+    border-end-start-radius: unset;
+    border-end-end-radius: unset;
+  }
+
+  &.-quarter {
+    flex-basis: 25%;
+    flex-grow: 0;
+  }
+
+  &.-half {
+    flex-basis: 50%;
+  }
+
+  &--radio,
+  &--checkbox,
+  &--dropdown,
+  &--toggle {
+    margin-top: 1.5rem;
+  }
+
+  &--radio,
+  &--toggle {
+    .a-notification {
+      margin-top: 1rem;
+    }
+  }
+
+  &--checkbox {
+    label {
+      position: unset; // Unset the label on the checkbox's demo
+    }
+
+    .a-notification {
+      margin-top: 1rem;
+    }
+  }
+
+  &--value {
+    .a-value-modificator {
+      margin: 0;
+      width: auto;
+    }
+  }
+}

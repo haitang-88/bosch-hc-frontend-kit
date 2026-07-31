@@ -1,0 +1,44 @@
+{
+  "default": {
+    "headline": "Accordion Headline",
+    "name": "accordion",
+    "label": "accordion",
+    "open": false,
+    "size": "large"
+  },
+  "name": "accordion",
+  "variants": [
+    {
+      "headline": "Accordion Headline",
+      "name": "accordion open",
+      "label": "accordion-open",
+      "open": true,
+      "size": "large"
+    },
+    {
+      "headline": "Accordion Headline",
+      "name": "accordion small",
+      "label": "accordion-small",
+      "open": false,
+      "size": "small"
+    },
+    {
+      "headline": "Accordion Headline",
+      "name": "accordion small open",
+      "label": "accordion-small-open",
+      "open": true,
+      "size": "small"
+    },
+    {
+      "demonstrator": "multiAccordionDemonstrator",
+      "name": "Multi-Accordion Demo",
+      "label": "multi-accordion-demo"
+    },
+    {
+      "demonstrator": "multiAccordionDemonstrator",
+      "name": "Multi-Accordion small Demo",
+      "label": "multi-accordion-small-demo",
+      "size": "small"
+    }
+  ]
+}

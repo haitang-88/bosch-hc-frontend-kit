@@ -1,0 +1,192 @@
+@use "../../styles/helpers.scss";
+
+.m-audio {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-inline: 0.5rem;
+  direction: ltr;
+
+  audio {
+    display: none;
+  }
+
+  &__play-button,
+  &__pause-button {
+    display: none;
+  }
+
+  &__play-button.-show,
+  &__pause-button.-show {
+    display: inline-flex;
+  }
+
+  &__timeDisplay {
+    align-items: center;
+    display: flex;
+    padding: 0 1rem;
+  }
+
+  &__timeline {
+    padding-inline: 1rem;
+    flex: 1;
+  }
+
+  &__volume-controllers {
+    position: relative;
+  }
+
+  &__volume-high-button,
+  &__volume-disabled-button {
+    display: none;
+  }
+
+  &__volume-high-button.-show,
+  &__volume-disabled-button.-show {
+    display: inline-flex;
+  }
+
+  &__volume-slider {
+    bottom: 5.65rem;
+    cursor: pointer;
+    display: none;
+    left: -2.65625rem;
+    padding: 1rem 0.75rem;
+    position: absolute;
+    z-index: 99;
+
+    input {
+      cursor: pointer;
+      width: 6.75rem;
+    }
+
+    &.-show {
+      display: flex;
+    }
+  }
+
+  &__settings-controllers {
+    position: relative;
+  }
+
+  &__settings-flyout {
+    bottom: 3rem;
+    display: none;
+    min-width: 15rem;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    gap: 0.5rem;
+
+    &.-show {
+      display: grid;
+    }
+
+    .a-button {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .a-button__label,
+    .a-button__icon {
+      margin: 0;
+      padding: 0;
+    }
+
+    .a-button__icon {
+      order: 1;
+    }
+
+    .a-button.a-button--integrated:focus-visible {
+      @include helpers.focus-outside;
+    }
+  }
+
+  &__setting {
+    width: 100%;
+
+    a {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__playback-rate-options {
+    bottom: 3rem;
+    display: none;
+    margin: 0;
+    min-width: 15rem;
+    overflow: auto;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+
+    &.-show {
+      display: block;
+    }
+
+    li {
+      margin-bottom: 0.625rem;
+      padding: 0;
+
+      &::before {
+        content: '';
+      }
+
+      .a-button .a-button__label {
+        padding: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .a-button.a-button--integrated:focus-visible {
+      @include helpers.focus-outside;
+    }
+  }
+
+  &__playback-rate-go-back-button {
+    display: flex;
+    width: 100%;
+
+    .a-icon {
+      left: -0.5rem;
+      margin-right: 0.25rem;
+      padding: 0;
+      position: relative;
+    }
+  }
+
+  &__playback-rate-option {
+    display: flex;
+    width: 100%;
+
+    span {
+      display: flex;
+      width: 100%;
+    }
+
+    .m-audio__playback-rate-checkmark {
+      flex: 1;
+      margin-right: 0.5rem;
+      visibility: hidden;
+
+      &.active-rate {
+        visibility: visible;
+      }
+    }
+  }
+
+  .a-link:not(.m-audio__transcript-button) {
+    width: 100%;
+
+    @media (hover: hover) {
+      &:hover a {
+        text-decoration: none;
+      }
+    }
+  }
+}

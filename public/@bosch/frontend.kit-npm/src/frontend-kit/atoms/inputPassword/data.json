@@ -1,0 +1,103 @@
+{
+  "name": "input password",
+  "default": {
+    "id": "1",
+    "name": "input password",
+    "value": "Bosch0711"
+  },
+  "variants": [
+    {
+      "id": "2",
+      "name": "input password readonly",
+      "value": "Bosch0711",
+      "readOnly": true
+    },
+    {
+      "id": "3",
+      "name": "input password disabled",
+      "value": "Bosch0711",
+      "disabled": true
+    },
+    {
+      "id": "4",
+      "name": "input password with label",
+      "value": "Bosch0711",
+      "label": "Password"
+    },
+    {
+      "id": "5",
+      "name": "input password with label readonly",
+      "value": "Bosch0711",
+      "label": "Password",
+      "readOnly": true
+    },
+    {
+      "id": "6",
+      "name": "input password with label disabled",
+      "value": "Bosch0711",
+      "label": "Password",
+      "disabled": true
+    },
+    {
+      "id": "7",
+      "name": "input password with very long label",
+      "value": "Bosch0711",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!"
+    },
+    {
+      "id": "8",
+      "name": "input password with very long label readonly",
+      "value": "Bosch0711",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "readOnly": true
+    },
+    {
+      "id": "9",
+      "name": "input password with very long label disabled",
+      "value": "Bosch0711",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "disabled": true
+    },
+    {
+      "id": "10",
+      "name": "input password with placeholder",
+      "placeholder": "e.g.: hint"
+    },
+    {
+      "id": "11",
+      "name": "input password with placeholder readonly",
+      "placeholder": "e.g.: hint",
+      "readOnly": true
+    },
+    {
+      "id": "12",
+      "name": "input password with placeholder disabled",
+      "placeholder": "e.g.: hint",
+      "disabled": true
+    },
+    {
+      "id": "13",
+      "name": "input password with placeholder and label",
+      "label": "Password",
+      "placeholder": "e.g.: hint"
+    },
+    {
+      "id": "14",
+      "name": "input password with placeholder and label readonly",
+      "label": "Password",
+      "placeholder": "e.g.: hint",
+      "readOnly": true
+    },
+    {
+      "id": "15",
+      "name": "input password with placeholder and label disabled",
+      "label": "Password",
+      "placeholder": "e.g.: hint",
+      "disabled": true
+    },
+    {
+      "name": "confirm password example",
+      "demonstrator": "confirmPasswordExampleDemonstrator"
+    }
+  ]
+}

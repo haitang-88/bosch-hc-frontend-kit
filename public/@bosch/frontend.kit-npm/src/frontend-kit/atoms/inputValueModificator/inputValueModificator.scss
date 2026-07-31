@@ -1,0 +1,44 @@
+@use "../../styles/helpers.scss";
+
+/* stylelint-disable no-descending-specificity */
+.a-value-modificator {
+  display: flex;
+
+  @include helpers.text-field;
+
+  input {
+    // case: input is not disabled, but button is disabled due to min/max limit
+    &:not(:disabled) {
+      ~ .a-value-modificator__minus-button,
+      ~ .a-value-modificator__plus-button {
+        &:disabled {
+          background-color: var(--nested-minor__enabled__default__fill, var(--base-minor__enabled__default__fill));
+          border-bottom-color: var(--nested-minor__enabled__default__front, var(--base-minor__enabled__default__front));
+        }
+      }
+
+      // case: input is not disabled, but readonly
+      &[readonly] {
+        ~ .a-value-modificator__minus-button,
+        ~ .a-value-modificator__plus-button {
+          background-color: var(--nested-pure__enabled__default__fill, var(--plain-pure__enabled__default__fill));
+          color: var(--nested-pure__enabled__default__front, var(--plain-pure__enabled__default__front));
+          border-bottom-color: var(--nested-pure__enabled__default__front, var(--plain-pure__enabled__default__front));
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  label {
+    max-width: calc(100% - 8rem);
+  }
+}

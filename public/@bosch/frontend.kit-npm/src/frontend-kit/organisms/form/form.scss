@@ -1,0 +1,38 @@
+@use "sass:math";
+@use "../../styles/helpers.scss";
+
+.o-form {
+  margin: 4rem 0;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+
+    .m-form-field {
+      margin-inline-start: math.div(helpers.$formFieldSpacing, 2);
+      margin-inline-end: math.div(helpers.$formFieldSpacing, 2);
+
+      &:first-child {
+        margin-inline-start: 0;
+      }
+
+      &:last-child {
+        margin-inline-end: 0;
+      }
+    }
+  }
+
+  form {
+    width: 100%;
+  }
+
+  h4 {
+    margin-block: 3rem 1.5rem;
+    margin-inline: 0;
+  }
+
+  /* stylelint-disable-next-line selector-no-qualifying-type */
+  button[type="submit"] {
+    margin: 3rem 0;
+  }
+}

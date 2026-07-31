@@ -1,0 +1,40 @@
+@use "./helpers.scss";
+@use './boschicon' as boschicon;
+
+[class^='ui-ic'],
+[class*=' ui-ic'] {
+  /* stylelint-disable-next-line declaration-no-important */
+  font-family: 'Bosch-UI-Icon', sans-serif !important;
+
+  @include boschicon.core-styles;
+}
+
+[dir='rtl'] [class^='ui-ic'],
+[dir='rtl'] [class*=' ui-ic'] {
+  /* stylelint-disable-next-line declaration-no-important */
+  font-family: 'Bosch-UI-Icon-RTL', sans-serif !important;
+
+  @include boschicon.core-styles;
+}
+
+:root {
+  --ui-icon-font: 'Bosch-UI-Icon';
+}
+
+[dir='rtl'] {
+  --ui-icon-font: 'Bosch-UI-Icon-RTL';
+}
+
+:root {
+  --bosch-ui-ic-version: '#{boschicon.$ui-icon-version}';
+  --bosch-ui-ic-rtl-version: '#{boschicon.$ui-icon-rtl-version}';
+
+  @include boschicon.generateIconVariables(boschicon.$ui-icons);
+  @include boschicon.generateIconVariables(boschicon.$ui-icon-rtls);
+}
+
+.bosch-ui-ic-version::before {
+  content: var(--bosch-ui-ic-version);
+}
+
+@include boschicon.generateIconClasses(boschicon.$ui-icons);

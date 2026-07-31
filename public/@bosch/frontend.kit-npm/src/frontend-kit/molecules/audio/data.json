@@ -1,0 +1,53 @@
+{
+  "name": "audio",
+  "default": {
+    "name": "Default audio",
+    "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Bosch-Warteschleifenmusik.mp3",
+    "title": "Bosch-Warteschleifenmusik",
+    "duration": "2:06",
+    "ariaLabel": "audio element",
+    "timelineId": "timeline-id",
+    "volumeSlider": "volume-slider-id",
+    "transcriptionUrl": "/#",
+    "demonstrator": "FullWidthAudioDemonstrator"
+  },
+  "variants": [
+    {
+      "name": "Audio with playback rate setting only",
+      "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Bosch-Warteschleifenmusik.mp3",
+      "title": "Bosch-Warteschleifenmusik",
+      "duration": "2:06",
+      "ariaLabel": "audio element",
+      "isDownloadDisabled": true,
+      "timelineId": "timeline-id-2",
+      "volumeSliderId": "volume-slider-id-2",
+      "transcriptionUrl": "/#",
+      "demonstrator": "FullWidthAudioDemonstrator"
+    },
+    {
+      "name": "Audio with download setting only",
+      "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Bosch-Warteschleifenmusik.mp3",
+      "title": "Bosch-Warteschleifenmusik",
+      "duration": "2:06",
+      "ariaLabel": "audio element",
+      "isPlaybackRateDisabled": true,
+      "timelineId": "timeline-id-3",
+      "volumeSliderId": "volume-slider-id-3",
+      "transcriptionUrl": "/#",
+      "demonstrator": "FullWidthAudioDemonstrator"
+    },
+    {
+      "name": "Audio without settings",
+      "src": "https://brandguide-cdn.azureedge.net/frontend-kit/Bosch-Warteschleifenmusik.mp3",
+      "title": "Bosch-Warteschleifenmusik",
+      "duration": "2:06",
+      "ariaLabel": "audio element",
+      "isDownloadDisabled": true,
+      "isPlaybackRateDisabled": true,
+      "timelineId": "timeline-id-4",
+      "volumeSliderId": "volume-slider-id-4",
+      "transcriptionUrl": "/#",
+      "demonstrator": "FullWidthAudioDemonstrator"
+    }
+  ]
+}

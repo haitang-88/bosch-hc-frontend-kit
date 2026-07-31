@@ -1,0 +1,305 @@
+/* stylelint-disable custom-property-empty-line-before */
+/* stylelint-disable declaration-empty-line-before */
+// Font Classes' Mixins
+
+@mixin text-highlight {
+  font-weight: 700;
+}
+
+@mixin text-regular {
+  font-weight: 400;
+}
+
+@mixin text-quote {
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin text-em {
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin list-element {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+@mixin label {
+  font-weight: 400;
+}
+
+// Size Mixins - Regular
+@mixin size-6xl {
+  font: var(--sem__typography__regular__6xl);
+  --font-size: var(--sem__typography__regular__6xl__font-size);
+  --line-height: var(--sem__typography__regular__6xl__line-height);
+}
+
+@mixin size-5xl {
+  font: var(--sem__typography__regular__5xl);
+  --font-size: var(--sem__typography__regular__5xl__font-size);
+  --line-height: var(--sem__typography__regular__5xl__line-height);
+}
+
+@mixin size-4xl {
+  font: var(--sem__typography__regular__4xl);
+  --font-size: var(--sem__typography__regular__4xl__font-size);
+  --line-height: var(--sem__typography__regular__4xl__line-height);
+}
+
+@mixin size-3xl {
+  font: var(--sem__typography__regular__3xl);
+  --font-size: var(--sem__typography__regular__3xl__font-size);
+  --line-height: var(--sem__typography__regular__3xl__line-height);
+}
+
+@mixin size-2xl {
+  font: var(--sem__typography__regular__2xl);
+  --font-size: var(--sem__typography__regular__2xl__font-size);
+  --line-height: var(--sem__typography__regular__2xl__line-height);
+}
+
+@mixin size-xl {
+  font: var(--sem__typography__regular__xl);
+  --font-size: var(--sem__typography__regular__xl__font-size);
+  --line-height: var(--sem__typography__regular__xl__line-height);
+}
+
+@mixin size-l {
+  font: var(--sem__typography__regular__l);
+  --font-size: var(--sem__typography__regular__l__font-size);
+  --line-height: var(--sem__typography__regular__l__line-height);
+}
+
+@mixin size-m {
+  font: var(--sem__typography__regular__m);
+  --font-size: var(--sem__typography__regular__m__font-size);
+  --line-height: var(--sem__typography__regular__m__line-height);
+}
+
+@mixin size-sm {
+  font: var(--sem__typography__regular__sm);
+  --font-size: var(--sem__typography__regular__sm__font-size);
+  --line-height: var(--sem__typography__regular__sm__line-height);
+}
+
+@mixin size-s {
+  font: var(--sem__typography__regular__s);
+  --font-size: var(--sem__typography__regular__s__font-size);
+  --line-height: var(--sem__typography__regular__s__line-height);
+}
+
+// Size Mixins - Bold
+@mixin size-6xl-bold {
+  font: var(--sem__typography__bold__6xl);
+  --font-size: var(--sem__typography__bold__6xl__font-size);
+  --line-height: var(--sem__typography__bold__6xl__line-height);
+}
+
+@mixin size-5xl-bold {
+  font: var(--sem__typography__bold__5xl);
+  --font-size: var(--sem__typography__bold__5xl__font-size);
+  --line-height: var(--sem__typography__bold__5xl__line-height);
+}
+
+@mixin size-4xl-bold {
+  font: var(--sem__typography__bold__4xl);
+  --font-size: var(--sem__typography__bold__4xl__font-size);
+  --line-height: var(--sem__typography__bold__4xl__line-height);
+}
+
+@mixin size-3xl-bold {
+  font: var(--sem__typography__bold__3xl);
+  --font-size: var(--sem__typography__bold__3xl__font-size);
+  --line-height: var(--sem__typography__bold__3xl__line-height);
+}
+
+@mixin size-2xl-bold {
+  font: var(--sem__typography__bold__2xl);
+  --font-size: var(--sem__typography__bold__2xl__font-size);
+  --line-height: var(--sem__typography__bold__2xl__line-height);
+}
+
+@mixin size-xl-bold {
+  font: var(--sem__typography__bold__xl);
+  --font-size: var(--sem__typography__bold__xl__font-size);
+  --line-height: var(--sem__typography__bold__xl__line-height);
+}
+
+@mixin size-l-bold {
+  font: var(--sem__typography__bold__l);
+  --font-size: var(--sem__typography__bold__l__font-size);
+  --line-height: var(--sem__typography__bold__l__line-height);
+}
+
+@mixin size-m-bold {
+  font: var(--sem__typography__bold__m);
+  --font-size: var(--sem__typography__bold__m__font-size);
+  --line-height: var(--sem__typography__bold__m__line-height);
+}
+
+@mixin size-sm-bold {
+  font: var(--sem__typography__bold__sm);
+  --font-size: var(--sem__typography__bold__sm__font-size);
+  --line-height: var(--sem__typography__bold__sm__line-height);
+}
+
+@mixin size-s-bold {
+  font: var(--sem__typography__bold__s);
+  --font-size: var(--sem__typography__bold__s__font-size);
+  --line-height: var(--sem__typography__bold__s__line-height);
+}
+
+// Size Mixins - Italic
+@mixin size-6xl-italic {
+  font: var(--sem__typography__italic__6xl);
+  --font-size: var(--sem__typography__italic__6xl__font-size);
+  --line-height: var(--sem__typography__italic__6xl__line-height);
+}
+
+@mixin size-5xl-italic {
+  font: var(--sem__typography__italic__5xl);
+  --font-size: var(--sem__typography__italic__5xl__font-size);
+  --line-height: var(--sem__typography__italic__5xl__line-height);
+}
+
+@mixin size-4xl-italic {
+  font: var(--sem__typography__italic__4xl);
+  --font-size: var(--sem__typography__italic__4xl__font-size);
+  --line-height: var(--sem__typography__italic__4xl__line-height);
+}
+
+@mixin size-3xl-italic {
+  font: var(--sem__typography__italic__3xl);
+  --font-size: var(--sem__typography__italic__3xl__font-size);
+  --line-height: var(--sem__typography__italic__3xl__line-height);
+}
+
+@mixin size-2xl-italic {
+  font: var(--sem__typography__italic__2xl);
+  --font-size: var(--sem__typography__italic__2xl__font-size);
+  --line-height: var(--sem__typography__italic__2xl__line-height);
+}
+
+@mixin size-xl-italic {
+  font: var(--sem__typography__italic__xl);
+  --font-size: var(--sem__typography__italic__xl__font-size);
+  --line-height: var(--sem__typography__italic__xl__line-height);
+}
+
+@mixin size-l-italic {
+  font: var(--sem__typography__italic__l);
+  --font-size: var(--sem__typography__italic__l__font-size);
+  --line-height: var(--sem__typography__italic__l__line-height);
+}
+
+@mixin size-m-italic {
+  font: var(--sem__typography__italic__m);
+  --font-size: var(--sem__typography__italic__m__font-size);
+  --line-height: var(--sem__typography__italic__m__line-height);
+}
+
+@mixin size-sm-italic {
+  font: var(--sem__typography__italic__sm);
+  --font-size: var(--sem__typography__italic__sm__font-size);
+  --line-height: var(--sem__typography__italic__sm__line-height);
+}
+
+@mixin size-s-italic {
+  font: var(--sem__typography__italic__s);
+  --font-size: var(--sem__typography__italic__s__font-size);
+  --line-height: var(--sem__typography__italic__s__line-height);
+}
+
+// Size Mixins - Bold Italic
+@mixin size-6xl-bold-italic {
+  font: var(--sem__typography__bold-italic__6xl);
+  --font-size: var(--sem__typography__bold-italic__6xl__font-size);
+  --line-height: var(--sem__typography__bold-italic__6xl__line-height);
+}
+
+@mixin size-5xl-bold-italic {
+  font: var(--sem__typography__bold-italic__5xl);
+  --font-size: var(--sem__typography__bold-italic__5xl__font-size);
+  --line-height: var(--sem__typography__bold-italic__5xl__line-height);
+}
+
+@mixin size-4xl-bold-italic {
+  font: var(--sem__typography__bold-italic__4xl);
+  --font-size: var(--sem__typography__bold-italic__4xl__font-size);
+  --line-height: var(--sem__typography__bold-italic__4xl__line-height);
+}
+
+@mixin size-3xl-bold-italic {
+  font: var(--sem__typography__bold-italic__3xl);
+  --font-size: var(--sem__typography__bold-italic__3xl__font-size);
+  --line-height: var(--sem__typography__bold-italic__3xl__line-height);
+}
+
+@mixin size-2xl-bold-italic {
+  font: var(--sem__typography__bold-italic__2xl);
+  --font-size: var(--sem__typography__bold-italic__2xl__font-size);
+  --line-height: var(--sem__typography__bold-italic__2xl__line-height);
+}
+
+@mixin size-xl-bold-italic {
+  font: var(--sem__typography__bold-italic__xl);
+  --font-size: var(--sem__typography__bold-italic__xl__font-size);
+  --line-height: var(--sem__typography__bold-italic__xl__line-height);
+}
+
+@mixin size-l-bold-italic {
+  font: var(--sem__typography__bold-italic__l);
+  --font-size: var(--sem__typography__bold-italic__l__font-size);
+  --line-height: var(--sem__typography__bold-italic__l__line-height);
+}
+
+@mixin size-m-bold-italic {
+  font: var(--sem__typography__bold-italic__m);
+  --font-size: var(--sem__typography__bold-italic__m__font-size);
+  --line-height: var(--sem__typography__bold-italic__m__line-height);
+}
+
+@mixin size-sm-bold-italic {
+  font: var(--sem__typography__bold-italic__sm);
+  --font-size: var(--sem__typography__bold-italic__sm__font-size);
+  --line-height: var(--sem__typography__bold-italic__sm__line-height);
+}
+
+@mixin size-s-bold-italic {
+  font: var(--sem__typography__bold-italic__s);
+  --font-size: var(--sem__typography__bold-italic__s__font-size);
+  --line-height: var(--sem__typography__bold-italic__s__line-height);
+}
+
+// Size Mixins - Medium (s through xl only)
+@mixin size-xl-medium {
+  font: var(--sem__typography__medium__xl);
+  --font-size: var(--sem__typography__medium__xl__font-size);
+  --line-height: var(--sem__typography__medium__xl__line-height);
+}
+
+@mixin size-l-medium {
+  font: var(--sem__typography__medium__l);
+  --font-size: var(--sem__typography__medium__l__font-size);
+  --line-height: var(--sem__typography__medium__l__line-height);
+}
+
+@mixin size-m-medium {
+  font: var(--sem__typography__medium__m);
+  --font-size: var(--sem__typography__medium__m__font-size);
+  --line-height: var(--sem__typography__medium__m__line-height);
+}
+
+@mixin size-sm-medium {
+  font: var(--sem__typography__medium__sm);
+  --font-size: var(--sem__typography__medium__sm__font-size);
+  --line-height: var(--sem__typography__medium__sm__line-height);
+}
+
+@mixin size-s-medium {
+  font: var(--sem__typography__medium__s);
+  --font-size: var(--sem__typography__medium__s__font-size);
+  --line-height: var(--sem__typography__medium__s__line-height);
+}

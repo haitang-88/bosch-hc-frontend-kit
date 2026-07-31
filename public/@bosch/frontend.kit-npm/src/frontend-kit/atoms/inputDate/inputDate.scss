@@ -1,0 +1,50 @@
+@use "../../styles/helpers.scss";
+
+.a-date-input {
+  display: flex;
+  min-width: 8.5rem;
+
+  @include helpers.text-field;
+
+  @supports (-moz-appearance:none) {
+    min-width: 11rem;
+  }
+
+  input {
+    text-transform: uppercase;
+    text-align: start;
+
+    &::-webkit-datetime-edit-day-field:focus,
+    &::-webkit-datetime-edit-month-field:focus,
+    &::-webkit-datetime-edit-year-field:focus {
+      color: var(--nested-minor__enabled__default__front, var(--base-minor__enabled__default__front));
+      background-color: var(--nested-minor__enabled__default__fill, var(--accent-minor__enabled__default__fill));
+      mix-blend-mode: multiply;
+    }
+
+    &[readonly],
+    &:disabled {
+      +.a-date-input__button {
+        display: none;
+      }
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+  }
+
+  @supports (-moz-appearance:none) {
+    &__button {
+      display: none;
+    }
+  }
+}
+
+/* Chrome + Safari only hack — Firefox ignores @supports with -webkit- selectors oddly,
+   but this is the most reliable discriminator */
+@supports (-webkit-appearance: none) and (not (-moz-appearance: none)) {
+  [dir="rtl"] input[type="date"] {
+    text-align: end;
+  }
+}

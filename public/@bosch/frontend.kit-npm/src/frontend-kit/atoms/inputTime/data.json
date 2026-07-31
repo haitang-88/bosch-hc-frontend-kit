@@ -1,0 +1,59 @@
+{
+  "name": "input time",
+  "default": {
+    "id": "1",
+    "name": "input time"
+  },
+  "variants": [
+    {
+      "id": "2",
+      "name": "input time readonly",
+      "value": "15:23",
+      "readOnly": true
+    },
+    {
+      "id": "3",
+      "name": "input time disabled",
+      "value": "15:23",
+      "disabled": true
+    },
+    {
+      "id": "4",
+      "name": "input time with label",
+      "label": "Start time:"
+    },
+    {
+      "id": "5",
+      "name": "input time with label readonly",
+      "value": "15:23",
+      "label": "Start time:",
+      "readOnly": true
+    },
+    {
+      "id": "6",
+      "name": "input time with label disabled",
+      "value": "15:23",
+      "label": "Start time:",
+      "disabled": true
+    },
+    {
+      "id": "7",
+      "name": "input time with very long label",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!"
+    },
+    {
+      "id": "8",
+      "name": "input time with very long label readonly",
+      "value": "15:23",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "readOnly": true
+    },
+    {
+      "id": "9",
+      "name": "input time with very long label disabled",
+      "value": "15:23",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "disabled": true
+    }
+  ]
+}

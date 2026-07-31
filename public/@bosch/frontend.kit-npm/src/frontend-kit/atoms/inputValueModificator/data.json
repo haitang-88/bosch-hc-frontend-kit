@@ -1,0 +1,58 @@
+{
+  "name": "input value modificator",
+  "default": {
+    "id": "1",
+    "name": "input value modificator"
+  },
+  "variants": [
+    {
+      "id": "2",
+      "name": "Input value modificator readonly",
+      "readOnly": true
+    },
+    {
+      "id": "3",
+      "name": "Input value modificator disabled",
+      "disabled": true
+    },
+    {
+      "id": "4",
+      "name": "Input value modificator with start value",
+      "value": "20"
+    },
+    {
+      "id": "5",
+      "name": "Input value modificator with label",
+      "label": "Select amount"
+    },
+    {
+      "id": "6",
+      "name": "Input value modificator with label readonly",
+      "label": "Select amount",
+      "readOnly": true
+    },
+    {
+      "id": "7",
+      "name": "Input value modificator with label disabled",
+      "label": "Select amount",
+      "disabled": true
+    },
+    {
+      "id": "8",
+      "name": "Input value modificator with very log label",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!"
+    },
+    {
+      "id": "9",
+      "name": "Input value modificator with very long label readonly",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "readOnly": true
+    },
+    {
+      "id": "10",
+      "name": "Input value modificator with very long label disabled",
+      "label": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae omnis labore consequatur distinctio provident voluptatum nisi recusandae quod asperiores quo, architecto cum nesciunt nemo, vel minima possimus et blanditiis numquam, cupiditate deserunt fugit delectus earum ducimus alias! Quam atque laborum tempore alias magnam tenetur fuga facere totam, harum, ipsa sit!",
+      "disabled": true
+    }
+  ]
+}

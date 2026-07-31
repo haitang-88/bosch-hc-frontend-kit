@@ -1,0 +1,124 @@
+{
+  "name": "Minimal Header",
+  "default": {
+    "name": "Minimal Header",
+    "actions": [
+      {
+        "label": "Action 1",
+        "icon": "emoji-happy",
+        "url": "#",
+        "id": "action-1"
+      },
+      {
+        "label": "Action 2",
+        "icon": "emoji-happy",
+        "url": "#",
+        "id": "action-2"
+      },
+      {
+        "label": "Action 3",
+        "icon": "emoji-happy",
+        "url": "#",
+        "id": "action-3"
+      },
+      {
+        "label": "Action 4",
+        "icon": "emoji-happy",
+        "url": "#",
+        "id": "action-4"
+      },
+      {
+        "label": "Action 5",
+        "icon": "emoji-happy",
+        "url": "#",
+        "id": "action-5"
+      }
+    ],
+    "sideNavigation": {
+      "appName": "App name",
+      "menuItems": [
+        {
+          "label": "Login",
+          "iconName": "login",
+          "url": "#"
+        },
+        {
+          "label": "Contact",
+          "iconName": "chat",
+          "url": "#"
+        },
+        {
+          "groupId": "1",
+          "hasGroup": true,
+          "label": "Group",
+          "iconName": "battery-0",
+          "subItems": [
+            {
+              "label": "label 1",
+              "url": "#"
+            },
+            {
+              "label": "label 2",
+              "url": "#",
+              "isDisabled": true
+            },
+            {
+              "label": "label 3",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "groupId": "2",
+          "hasGroup": true,
+          "label": "Group 2 with some extended labels",
+          "iconName": "bicycle-e",
+          "subItems": [
+            {
+              "label": "label 1",
+              "url": "#"
+            },
+            {
+              "label": "label 2",
+              "url": "#"
+            }
+          ],
+          "isDisabled": true
+        },
+        {
+          "groupId": "3",
+          "hasGroup": true,
+          "label": "Group 3 with some extended labels",
+          "iconName": "agility",
+          "subItems": [
+            {
+              "label": "label 1",
+              "url": "#"
+            },
+            {
+              "label": "label 2",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "label": "atom",
+          "iconName": "atom",
+          "url": "#"
+        },
+        {
+          "label": "fax",
+          "iconName": "fax",
+          "url": "#",
+          "isDisabled": true
+        }
+      ]
+    }
+  },
+  "variants": [
+    {
+      "name": "Minimal Header with Content",
+      "demonstrator": "minimalHeaderWithContentDemonstrator"
+    }
+  ]
+}
