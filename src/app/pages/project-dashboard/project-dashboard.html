@@ -1,52 +1,60 @@
 <div class="row d-flex dashboard-min-height g-0">
   @if (isLeftPanelOpen) {
     <div class="col-md-2 p-2 border-end border-sm-0">
-      <h4 class="text-center">Left Menu</h4>
+      <h5 class="text-center">Left Menu</h5>
       <p>place holder</p>
     </div>
   }
   <div
-  class="position-relative p-2"
-    [class.col-md-12]="!isLeftPanelOpen && !isRightPanelOpen"
-    [class.col-md-10]="isLeftPanelOpen && !isRightPanelOpen"
-    [class.col-md-9]="!isLeftPanelOpen && isRightPanelOpen"
-    [class.col-md-7]="isLeftPanelOpen && isRightPanelOpen"
+    class="position-relative p-2"
+    [class.col-md-12]="!isLeftPanelOpen"
+    [class.col-md-10]="isLeftPanelOpen"
   >
-    <div class="">
+    <div>
       <button
         (click)="toggleLeftPanel()"
-        class="a-button a-button--secondary -without-label position-absolute -small top-0 start-0">
+        class="a-button a-button--secondary -without-label position-absolute -small top-0 start-0"
+      >
         @if (isLeftPanelOpen) {
           <i class="a-button__icon ui-ic-left-small"></i>
         } @else {
           <i class="a-button__icon ui-ic-right-small"></i>
         }
       </button>
+    </div>
 
-      <button
-        (click)="toggleRightPanel()"
-        class="a-button a-button--secondary -without-label position-absolute right-button-trans-middle  -small top-0 start-100">
-        @if (isRightPanelOpen) {
-          <i class="a-button__icon ui-ic-right-small"></i>
-        } @else {
-          <i class="a-button__icon ui-ic-left-small"></i>
-        }
-      </button>
-      <div class="">
-        <h4 class="text-center">Top Dashboard</h4>
-        <p>place holder</p>
-      </div>
+    <div class="">
+      <h5 class="text-center">Top Dashboard</h5>
+      <p>place holder</p>
       <hr />
-      <div class="">
-        <h4 class="text-center">Project Dashboard</h4>
-        <p>place holder</p>
+      <div class="position-relative">
+        <div class="row g-0 project-min-height">
+          <div
+            class="position-relative"
+            [class.col-md-12]="!isRightPanelOpen"
+            [class.col-md-9]="isRightPanelOpen"
+          >
+            <button
+              (click)="toggleRightPanel()"
+              class="a-button a-button--secondary -without-label position-absolute right-button-trans-middle -small top-0 start-100"
+            >
+              @if (isRightPanelOpen) {
+                <i class="a-button__icon ui-ic-right-small"></i>
+              } @else {
+                <i class="a-button__icon ui-ic-left-small"></i>
+              }
+            </button>
+            <h5 class="text-center">Project Dashboard</h5>
+            <p>place holder</p>
+          </div>
+          @if (isRightPanelOpen) {
+            <div class="col-md-3 p-2 border-start">
+              <h5 class="text-center">Right Menu</h5>
+              <p>place holder</p>
+            </div>
+          }
+        </div>
       </div>
     </div>
   </div>
-  @if (isRightPanelOpen) {
-    <div class="col-md-3 p-2 border-start">
-      <h4 class="text-center">Right Menu</h4>
-      <p>place holder</p>
-    </div>
-  }
 </div>
