@@ -24,9 +24,14 @@
             <button routerLink="/" type="button" class="a-button a-button--integrated">
               <i class="a-icon a-button__icon boschicon-bosch-ic-home"></i
               ><span class="a-button__label">Home</span></button
-            ><button routerLink="/about" type="button" class="a-button a-button--integrated">
+            >
+            <button routerLink="/about" type="button" class="a-button a-button--integrated">
               <i class="a-icon a-button__icon boschicon-bosch-ic-chat"></i
               ><span class="a-button__label">Contact</span>
+            </button>
+             <button routerLink="/dashboard" type="button" class="a-button a-button--integrated">
+              <i class="a-icon a-button__icon boschicon-bosch-ic-chat"></i
+              ><span class="a-button__label">Dashboard</span>
             </button>
             <div class="a-dropdown">
               <select
@@ -554,7 +559,7 @@
     </div>
   </header>
 
-  <main class="app-main e-container -full-width">
+  <main class="app-main e-container -full-width mt-4">
     <router-outlet />
   </main>
 
