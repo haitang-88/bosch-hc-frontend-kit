@@ -1,60 +1,443 @@
 <div class="row d-flex dashboard-min-height g-0">
   @if (isLeftPanelOpen) {
-    <div class="col-md-2 p-2 border-end border-sm-0">
-      <h5 class="text-center">Left Menu</h5>
-      <p>place holder</p>
+    <div class="col-md-3 p-2 border-end border-sm-0">
+      <div class="m-details-group custom-details-group">
+        <details class="a-details" open>
+          <summary class="highlight">
+            <i class="a-icon boschicon-bosch-ic-down"></i>
+            Estimate Tree
+          </summary>
+          <div class="mt-2 ms-4">
+            <img src="/estimate_tree.png" class="img-fluid" alt="Add Product" />
+          </div>
+        </details>
+        <details class="a-details" open>
+          <summary class="highlight d-flex">
+            <div class="me-auto">
+              <i class="a-icon boschicon-bosch-ic-down"></i>
+              Summary
+            </div>
+            <span> List: $304,995.50</span>
+          </summary>
+          <div class="mt-2 ms-4">
+            <div class="table-responsive">
+              <table class="table table-striped m-table-font-sm">
+                <thead class="table-secondary">
+                  <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col"></th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ducted Systems Cost</td>
+                    <td></td>
+                    <td>$243,984.80</td>
+                  </tr>
+                  <tr>
+                    <td>Legacy Applied Rooftop Co...</td>
+                    <td></td>
+                    <td>$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>User Defined Product Cost</td>
+                    <td></td>
+                    <td>$11.00</td>
+                  </tr>
+                  <tr class="total-row table-group-divider">
+                    <td>Total</td>
+                    <td></td>
+                    <td>$243,995.80</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span>Estimate Risk %</span>
+                    </td>
+                    <td>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <input type="text" class="form-control form-control-sm" value="0.0" />
+                      </div>
+                    </td>
+                    <td>$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Total Estimate Cost</td>
+                    <td></td>
+                    <td>$243,995.80</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span>Margin %</span>
+                    </td>
+                    <td>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <input type="text" class="form-control form-control-sm" value="15.0" />
+                      </div>
+                    </td>
+                    <td>$43,058.08</td>
+                  </tr>
+                  <tr class="total-row table-group-divider">
+                    <td>Estimate Sell Price</td>
+                    <td></td>
+                    <td>$287,053.88</td>
+                  </tr>
+                  <tr>
+                    <td>Freight on Line Items</td>
+                    <td></td>
+                    <td>$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Freight on Invoice</td>
+                    <td></td>
+                    <td>$0.00</td>
+                  </tr>
+                  <tr class="total-row table-group-divider">
+                    <td>Total Sell Price</td>
+                    <td></td>
+                    <td>$287,053.88</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+      </div>
     </div>
   }
   <div
-    class="position-relative p-2"
+    class="position-relative ps-md-4 ps-sm-2 pe-2"
     [class.col-md-12]="!isLeftPanelOpen"
-    [class.col-md-10]="isLeftPanelOpen"
+    [class.col-md-9]="isLeftPanelOpen"
   >
     <div>
       <button
         (click)="toggleLeftPanel()"
-        class="a-button a-button--secondary -without-label position-absolute -small top-0 start-0"
+        class="a-button a-button--primary -without-label position-absolute left-button-hc start-0"
       >
         @if (isLeftPanelOpen) {
-          <i class="a-button__icon ui-ic-left-small fs-6"></i>
+          <i class="a-button__icon ui-ic-left-small"></i>
         } @else {
-          <i class="a-button__icon ui-ic-right-small fs-6"></i>
+          <i class="a-button__icon ui-ic-right-small"></i>
         }
       </button>
     </div>
+    <div class="a-text">
+      <p class="text-left -size-s mb-1">SLT_DEMO_04-08-2026</p>
+      <h5 class="text-left mb-3 mt-0 fw-semibold">Estimate Details</h5>
+    </div>
 
-    <div class="">
-      <h5 class="text-center">Top Dashboard</h5>
-      <p>place holder</p>
-      <hr />
-      <div class="position-relative">
-        <div class="row g-0 project-min-height">
-          <div
-            class="position-relative"
-            [class.col-md-12]="!isRightPanelOpen"
-            [class.col-md-9]="isRightPanelOpen"
-          >
-            <button
-              (click)="toggleRightPanel()"
-              class="a-button a-button--secondary -without-label position-absolute right-button-trans-middle -small top-0 start-100"
-            >
-              @if (isRightPanelOpen) {
-                <i class="a-button__icon boschicon-bosch-ic-forward-right-double fs-6"></i>
-              } @else {
-                <i class="a-button__icon boschicon-bosch-ic-back-left-double fs-6"></i>
-              }
-            </button>
-            <h5 class="text-center">Project Dashboard</h5>
-            <p>place holder</p>
-          </div>
-          @if (isRightPanelOpen) {
-            <div class="col-md-3 p-2 border-start">
-              <h5 class="text-center">Right Menu</h5>
-              <p>place holder</p>
-            </div>
-          }
+    <div class="m-details-group custom-details-group">
+      <details class="a-details" open>
+        <summary class="highlight">
+          <i class="a-icon boschicon-bosch-ic-down"></i>
+          Add Product
+        </summary>
+        <div class="mt-2 ms-4">
+          <img src="/add_product.png" class="img-fluid" alt="Add Product" />
         </div>
+      </details>
+      <details class="a-details" open>
+        <summary class="highlight">
+          <i class="a-icon boschicon-bosch-ic-down"></i>
+          Summary
+        </summary>
+        <div class="mt-2 ms-4">
+          <form class="row g-3">
+            <div class="col-md-3 col-lg-3">
+              <div class="a-text-field">
+                <label for="text-input-1">Total List Price</label>
+                <input
+                  type="text"
+                  id="text-input-1"
+                  name="input text with label"
+                  value="45,087.00"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+              <div class="a-text-field">
+                <label for="text-input-2">Total Buy Price</label>
+                <input
+                  type="text"
+                  id="text-input-2"
+                  name="input text with label"
+                  value="30,000.00"
+                />
+              </div>
+              <!-- <label for="inputPassword4" class="form-label">Total Buy Price</label>
+              <input type="text" value="30,000.00" class="form-control" id="inputPassword4" /> -->
+            </div>
+            <div class="col-md-3 col-lg-3">
+              <div class="a-text-field">
+                <label for="text-input-3">Total Gross Margin</label>
+                <input type="text" id="text-input-3" name="input text with label" value="30.00" />
+              </div>
+              <!-- <label for="inputAddress" class="form-label">Total Gross Margin</label>
+              <input type="text" class="form-control" id="inputAddress" value="30.00" /> -->
+            </div>
+            <div class="col-md-3 col-lg-3">
+              <div class="a-text-field">
+                <label for="text-input-4">Total Sell Price</label>
+                <input
+                  type="text"
+                  id="text-input-4"
+                  name="input text with label"
+                  value="100,115.14"
+                />
+              </div>
+              <!-- <label for="inputAddress2" class="form-label">Total Sell Price</label>
+              <input type="text" class="form-control" id="inputAddress2" value="100,115.14" /> -->
+            </div>
+          </form>
+        </div>
+      </details>
+    </div>
+
+    <!-- Tab Navigation -->
+    <!-- Listen directly to the global Custom Element's custom events -->
+    <!-- <div class="a-tab-navigation__wrapper">
+      <a-tab-navigation (selected)="onTabSelected($event)">
+        <a-tab id="tab-1" label="Dashboard"></a-tab>
+        <a-tab id="tab-2" label="Security Options"></a-tab>
+        <a-tab id="tab-3" label="Developer Tools"></a-tab>
+      </a-tab-navigation>
+      <div class="tab-contents">
+        @if (activeTabId() === 'tab-1') {
+          <div class="frontend-kit-example_content">
+            <h3>Dashboard</h3>
+            <p>Your local Bosch environment is running successfully.</p>
+          </div>
+        }
+
+        @if (activeTabId() === 'tab-2') {
+          <div class="frontend-kit-example_content">
+            <h3>Proxy & Network Configurations</h3>
+            <p>Ensure proxy rules are properly active to avoid 407 errors.</p>
+          </div>
+        }
+
+        @if (activeTabId() === 'tab-3') {
+          <div class="frontend-kit-example_content">
+            <h3>Developer Tools</h3>
+            <p>Manage setup guides for VS Code and Copilot.</p>
+          </div>
+        }
       </div>
+    </div> -->
+    <div class="a-tab-navigation__wrapper">
+      <button
+        type="button"
+        class="a-button a-button--integrated -without-label a-tab-navigation__button-left"
+        aria-label="scroll to left"
+      >
+        <i class="a-icon a-button__icon ui-ic-left-small"></i>
+      </button>
+      <ol class="a-tab-navigation" role="tablist">
+        <li
+          [class.-selected]="activeTabId() === 'tab-1'"
+          class="a-tab-navigation__item"
+          role="none"
+        >
+          <button
+            id="tab-1"
+            type="button"
+            class="a-tab-navigation__tab"
+            data-frok-tab-identifier="1"
+            tabindex="0"
+            role="tab"
+            aria-controls="tab-1"
+            (click)="activeTabId.set('tab-1')"
+          >
+            <span class="a-tab-navigation__tab-content">
+              <span class="a-tab-navigation__label">Products</span>
+            </span>
+          </button>
+        </li>
+        <li
+          [class.-selected]="activeTabId() === 'tab-2'"
+          class="a-tab-navigation__item"
+          role="none"
+        >
+          <button
+            id="tab-2"
+            type="button"
+            class="a-tab-navigation__tab"
+            data-frok-tab-identifier="2"
+            tabindex="0"
+            role="tab"
+            aria-controls="tab-2"
+            (click)="activeTabId.set('tab-2')"
+          >
+            <span class="a-tab-navigation__tab-content">
+              <span class="a-tab-navigation__label">Information</span>
+            </span>
+          </button>
+        </li>
+        <li
+          [class.-selected]="activeTabId() === 'tab-3'"
+          class="a-tab-navigation__item"
+          role="none"
+        >
+          <button
+            id="tab-3"
+            type="button"
+            class="a-tab-navigation__tab"
+            data-frok-tab-identifier="3"
+            tabindex="0"
+            role="tab"
+            aria-controls="tab-3"
+            (click)="activeTabId.set('tab-3')"
+          >
+            <span class="a-tab-navigation__tab-content">
+              <span class="a-tab-navigation__label"> Special Requests </span>
+            </span>
+          </button>
+        </li>
+        <li
+          [class.-selected]="activeTabId() === 'tab-4'"
+          class="a-tab-navigation__item"
+          role="none"
+        >
+          <button
+            id="tab-4"
+            type="button"
+            class="a-tab-navigation__tab"
+            data-frok-tab-identifier="4"
+            tabindex="0"
+            role="tab"
+            aria-controls="tab-4"
+            (click)="activeTabId.set('tab-4')"
+          >
+            <span class="a-tab-navigation__tab-content">
+              <span class="a-tab-navigation__label">Estimate Summary</span>
+            </span>
+          </button>
+        </li>
+        <li
+          [class.-selected]="activeTabId() === 'tab-5'"
+          class="a-tab-navigation__item"
+          role="none"
+        >
+          <button
+            id="tab-5"
+            type="button"
+            class="a-tab-navigation__tab"
+            data-frok-tab-identifier="5"
+            tabindex="0"
+            role="tab"
+            aria-controls="tab-5"
+            (click)="activeTabId.set('tab-5')"
+          >
+            <span class="a-tab-navigation__tab-content">
+              <span class="a-tab-navigation__label"> Orders </span>
+            </span>
+          </button>
+        </li>
+        <li
+          [class.-selected]="activeTabId() === 'tab-6'"
+          class="a-tab-navigation__item"
+          role="none"
+        >
+          <button
+            id="tab-6"
+            type="button"
+            class="a-tab-navigation__tab"
+            data-frok-tab-identifier="6"
+            tabindex="0"
+            role="tab"
+            aria-controls="tab-6"
+            (click)="activeTabId.set('tab-6')"
+          >
+            <span class="a-tab-navigation__tab-content">
+              <span class="a-tab-navigation__label"> Appled Equipment Ordering </span>
+            </span>
+          </button>
+        </li>
+      </ol>
+      <button
+        type="button"
+        class="a-button a-button--integrated -without-label a-tab-navigation__button-right"
+        aria-label="scroll to right"
+      >
+        <i class="a-icon a-button__icon ui-ic-right-small"></i>
+      </button>
+
+      @if (activeTabId() === 'tab-1') {
+        <div
+          class="frontend-kit-example_content"
+          style="text-align: left"
+          data-frok-content-identifier="1"
+          id="panel-1"
+          aria-labelledby="panel-1"
+          role="tabpanel"
+        >
+          <div class="mt-2">
+          <img src="/product_list.png" class="img-fluid" alt="Add Product" />
+        </div>
+        </div>
+      }
+
+      @if (activeTabId() === 'tab-2') {
+        <div
+          class="frontend-kit-example_content"
+          style="text-align: center"
+          data-frok-content-identifier="2"
+          id="panel-2"
+          aria-labelledby="panel-2"
+          role="tabpanel"
+        >
+          <p>Content 2</p>
+        </div>
+      }
+      @if (activeTabId() === 'tab-3') {
+        <div
+          class="frontend-kit-example_content"
+          style="text-align: center"
+          data-frok-content-identifier="3"
+          id="panel-3"
+          aria-labelledby="panel-3"
+          role="tabpanel"
+        >
+          <p>Content 3</p>
+        </div>
+      }
+      @if (activeTabId() === 'tab-4') {
+        <div
+          class="frontend-kit-example_content"
+          style="text-align: center"
+          data-frok-content-identifier="4"
+          id="panel-4"
+          aria-labelledby="panel-4"
+          role="tabpanel"
+        >
+          <p>Content 4</p>
+        </div>
+      }
+      @if (activeTabId() === 'tab-5') {
+        <div
+          class="frontend-kit-example_content"
+          style="text-align: center"
+          data-frok-content-identifier="5"
+          id="panel-5"
+          aria-labelledby="panel-5"
+          role="tabpanel"
+        >
+          <p>Content 5</p>
+        </div>
+      }
+      @if (activeTabId() === 'tab-6') {
+        <div
+          class="frontend-kit-example_content"
+          style="text-align: center"
+          data-frok-content-identifier="6"
+          id="panel-6"
+          aria-labelledby="panel-6"
+          role="tabpanel"
+        >
+          <p>Content 6</p>
+        </div>
+      }
     </div>
   </div>
 </div>

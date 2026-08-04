@@ -2,10 +2,29 @@
   min-height: calc(100vh - 222px);
 }
 
+.custom-details-group{
+    gap: 1rem;
+}
+
 .project-min-height{
     min-height: calc(100vh - 330px);
 }
 
-.right-button-trans-middle {
-  transform: translate(-100%, -5%);
+.m-table-font-sm {
+  font-size: 12px;
+}
+
+.left-button-hc {
+    width: 8px;
+    height: 60px;
+    top: 25%;
+
+    i{
+        padding: 0;
+        margin: auto 0;
+        font-size: 14px !important;
+        position: absolute;
+        left: -3px;
+        top: 40%;
+    }
 }
