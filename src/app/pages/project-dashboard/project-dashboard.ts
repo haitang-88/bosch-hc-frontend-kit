@@ -10,16 +10,12 @@ import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core
 })
 export class ProjectDashboard implements OnInit {
   isLeftPanelOpen = true;
-  isRightPanelOpen = false;
    public activeTabId = signal<string>('tab-1');
 
   toggleLeftPanel() {
     this.isLeftPanelOpen = !this.isLeftPanelOpen;
   }
 
-  toggleRightPanel() {
-    this.isRightPanelOpen = !this.isRightPanelOpen;
-  }
   ngOnInit(): void {
     const contents = Array.from(
       document.querySelectorAll(

@@ -1,0 +1,385 @@
+<div class="row d-flex dashboard-min-height g-0">
+  <!-- left panel -->
+  @if (isLeftPanelOpen) {
+    <div class="col-md-3 p-2 border-end border-sm-0">
+      <!-- collapsible panel estimate tree -->
+      <div class="accordion accordion-flush mb-3" id="accordionExample">
+        <div class="accordion-item">
+          <h4 class="accordion-header bg-secondary">
+            <button
+              class="accordion-button px-3 py-2 text-bg-secondary text-white fw-bolder"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Estimate Tree
+            </button>
+          </h4>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body bg-transparent px-3 ps-2 pe-0">
+              <img src="/estimate_tree.png" class="img-fluid" alt="Add Product" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- collapsible panel Summary tree -->
+      <div class="accordion accordion-flush" id="accordionExample2">
+        <div class="accordion-item">
+          <h4 class="accordion-header bg-secondary">
+            <button
+              class="accordion-button px-3 py-2 text-bg-secondary text-white d-flex fw-bolder"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="true"
+              aria-controls="collapseTwo"
+            >
+              <span class="me-auto">Summary</span>
+              <span> List: $304,995.50</span>
+            </button>
+          </h4>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample2"
+          >
+            <div class="accordion-body bg-transparent px-3 ps-2 pe-0">
+              <div class="table-responsive">
+                <table class="table table-striped m-table-font-sm">
+                  <thead class="table-secondary">
+                    <tr>
+                      <th scope="col">Description</th>
+                      <th scope="col"></th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Ducted Systems Cost</td>
+                      <td></td>
+                      <td>$243,984.80</td>
+                    </tr>
+                    <tr>
+                      <td>Legacy Applied Rooftop Co...</td>
+                      <td></td>
+                      <td>$0.00</td>
+                    </tr>
+                    <tr>
+                      <td>User Defined Product Cost</td>
+                      <td></td>
+                      <td>$11.00</td>
+                    </tr>
+                    <tr class="total-row table-group-divider">
+                      <td>Total</td>
+                      <td></td>
+                      <td>$243,995.80</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>Estimate Risk %</span>
+                      </td>
+                      <td>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <input type="text" class="form-control form-control-sm" value="0.0" />
+                        </div>
+                      </td>
+                      <td>$0.00</td>
+                    </tr>
+                    <tr>
+                      <td>Total Estimate Cost</td>
+                      <td></td>
+                      <td>$243,995.80</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>Margin %</span>
+                      </td>
+                      <td>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <input type="text" class="form-control form-control-sm" value="15.0" />
+                        </div>
+                      </td>
+                      <td>$43,058.08</td>
+                    </tr>
+                    <tr class="total-row table-group-divider">
+                      <td>Estimate Sell Price</td>
+                      <td></td>
+                      <td>$287,053.88</td>
+                    </tr>
+                    <tr>
+                      <td>Freight on Line Items</td>
+                      <td></td>
+                      <td>$0.00</td>
+                    </tr>
+                    <tr>
+                      <td>Freight on Invoice</td>
+                      <td></td>
+                      <td>$0.00</td>
+                    </tr>
+                    <tr class="total-row table-group-divider">
+                      <td>Total Sell Price</td>
+                      <td></td>
+                      <td>$287,053.88</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  <!-- end left panel -->
+
+  <!-- main panel -->
+  <div
+    class="position-relative ps-md-4 ps-sm-2 pe-2"
+    [class.col-md-12]="!isLeftPanelOpen"
+    [class.col-md-9]="isLeftPanelOpen"
+  >
+    <div>
+      <button
+        (click)="toggleLeftPanel()"
+        class="btn btn-primary position-absolute left-button-hc start-0"
+      >
+        @if (isLeftPanelOpen) {
+          <i class="a-button__icon ui-ic-left-small"></i>
+        } @else {
+          <i class="a-button__icon ui-ic-right-small"></i>
+        }
+      </button>
+    </div>
+    <div class="">
+      <p class="text-left mb-1">SLT_DEMO_04-08-2026</p>
+      <h5 class="text-left mb-3 mt-0 fw-semibold">Estimate Details</h5>
+    </div>
+
+    <!-- collapsible panel add product -->
+    <div class="mb-3">
+      <div class="accordion accordion-flush" id="accordionAddProduct">
+        <div class="accordion-item">
+          <h4 class="accordion-header bg-secondary">
+            <button
+              class="accordion-button px-3 py-2 text-bg-secondary text-white fw-bolder"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseAddProduct"
+              aria-expanded="true"
+              aria-controls="collapseAddProduct"
+            >
+              Add Product
+            </button>
+          </h4>
+          <div
+            id="collapseAddProduct"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionAddProduct"
+          >
+            <div class="accordion-body bg-transparent px-3 ps-2 pe-0">
+              <img src="/add_product.png" class="img-fluid" alt="Add Product" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- collapsible panel summary -->
+    <div class="mb-4">
+      <div class="accordion accordion-flush" id="accordionSummary">
+        <div class="accordion-item">
+          <h4 class="accordion-header bg-secondary">
+            <button
+              class="accordion-button px-3 py-2 text-bg-secondary text-white fw-bolder"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSummary"
+              aria-expanded="true"
+              aria-controls="collapseSummary"
+            >
+              Summary
+            </button>
+          </h4>
+          <div
+            id="collapseSummary"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionSummary"
+          >
+            <div class="accordion-body bg-transparent px-3 ps-2 pe-0">
+              <form class="row g-3">
+                <div class="col-md-3 col-lg-3">
+                  <label for="inputText1" class="form-label">Total List Price</label>
+                  <input type="text" value="30,000.00" class="form-control" id="inputText1" />
+                </div>
+                <div class="col-md-3 col-lg-3">
+                  <label for="inputText2" class="form-label">Total Buy Price</label>
+                  <input type="text" value="30,000.00" class="form-control" id="inputText2" />
+                </div>
+                <div class="col-md-3 col-lg-3">
+                  <label for="inputText3" class="form-label">Total Gross Margin</label>
+                  <input type="text" class="form-control" id="inputText3" value="30.00" />
+                </div>
+                <div class="col-md-3 col-lg-3">
+                  <label for="inputText4" class="form-label">Total Sell Price</label>
+                  <input type="text" class="form-control" id="inputText4" value="100,115.14" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="mb-3">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <button
+            class="nav-link active"
+            id="product-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#product-tab-panel"
+            type="button"
+            role="tab"
+            aria-controls="product-tab-panel"
+            aria-selected="true"
+          >
+            Products
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            id="info-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#info-tab-panel"
+            type="button"
+            role="tab"
+            aria-controls="info-tab-panel"
+            aria-selected="true"
+          >
+            Information
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            id="request-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#request-tab-panel"
+            type="button"
+            role="tab"
+            aria-controls="request-tab-panel"
+            aria-selected="true"
+          >
+            Special Requests
+          </button>
+        </li>
+        <li class="nav-item">
+           <button
+            class="nav-link"
+            id="estimate-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#estimate-tab-panel"
+            type="button"
+            role="tab"
+            aria-controls="estimate-tab-panel"
+            aria-selected="true"
+          >
+            Estimate Summary
+          </button>
+        </li>
+        <li class="nav-item">
+           <button
+            class="nav-link"
+            id="orders-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#orders-tab-panel"
+            type="button"
+            role="tab"
+            aria-controls="orders-tab-panel"
+            aria-selected="true"
+          >
+            Orders
+          </button>
+        </li>
+        <li class="nav-item">
+           <button
+            class="nav-link"
+            id="equip-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#equip-tab-panel"
+            type="button"
+            role="tab"
+            aria-controls="equip-tab-panel"
+            aria-selected="true"
+          >
+            Appled Equipment Ordering
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="product-tab-panel"
+          role="tabpanel"
+          aria-labelledby="product-tab"
+          tabindex="0"
+        >
+          <img src="/product_list.png" class="img-fluid" alt="Add Product" />
+        </div>
+        <div
+          class="tab-pane fade"
+          id="info-tab-panel"
+          role="tabpanel"
+          aria-labelledby="info-tab"
+          tabindex="0"
+        >
+          <p>Information</p>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="request-tab-panel"
+          role="tabpanel"
+          aria-labelledby="request-tab"
+          tabindex="0"
+        >
+          <p>Special Requests</p>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="estimate-tab-panel"
+          role="tabpanel"
+          aria-labelledby="estimate-tab"
+          tabindex="0"
+        >
+          <p>Estimate Summary</p>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="orders-tab-panel"
+          role="tabpanel"
+          aria-labelledby="orders-tab"
+          tabindex="0"
+        >
+          <p>Orders</p>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="equip-tab-panel"
+          role="tabpanel"
+          aria-labelledby="equip-tab"
+          tabindex="0"
+        >
+          <p>Appled Equipment Ordering</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+.left-button-hc {
+  width: 8px;
+  height: 60px;
+  top: 25%;
+  padding: 0;
+  border-radius: 0;
+
+  i {
+    padding: 0;
+    margin: auto 0;
+    font-size: 14px !important;
+    position: absolute;
+    left: -3px;
+    top: 40%;
+  }
+}
+
+.dashboard-min-height {
+  min-height: calc(100vh - 222px);
+}
+
+.project-min-height {
+  min-height: calc(100vh - 330px);
+}
+
+.nav > li {
+  position: unset;
+  padding-inline-start: 3px;
+}
+
+.nav-tabs > .nav-item > .nav-link {
+  background-color: #e9e9e7;
+  color: #333;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.nav-tabs > .nav-item > .nav-link.active {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
