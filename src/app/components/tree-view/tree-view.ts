@@ -26,7 +26,7 @@ export class TreeView {
   newGroupName: string = '';
   // Data for the tree view
   readonly icon_level_1: string = 'bi-clipboard';
-  readonly icon_level_2: string = 'bi-file-earmark-minus';
+  readonly icon_level_2: string = 'bi-file-text';
   readonly icon_level_3: string = 'bi-diagram-3';
 
   nodes: TreeNode[] = [
