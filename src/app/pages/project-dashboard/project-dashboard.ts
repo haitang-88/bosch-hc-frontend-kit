@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
+import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, signal, ChangeDetectorRef } from '@angular/core';
+import { TreeView } from '../../components/tree-view/tree-view';
 
 @Component({
   selector: 'app-project-dashboard',
-  imports: [CommonModule],
+  imports: [CommonModule, TreeView],
   templateUrl: './project-dashboard.html',
   styleUrl: './project-dashboard.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -15,6 +16,8 @@ export class ProjectDashboard implements OnInit {
   toggleLeftPanel() {
     this.isLeftPanelOpen = !this.isLeftPanelOpen;
   }
+
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     const contents = Array.from(

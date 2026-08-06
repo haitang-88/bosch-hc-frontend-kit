@@ -29,8 +29,18 @@
                 "input": "public"
               }
             ],
-            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "src/styles.scss"],
-            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "public/@bosch/frontend.kit-npm/dist/styles/frontend-kit-complete.css",
+              "public/@bosch/frontend.kit-npm/dist/styles/brands/bosch/styles/semantic/index.css",
+              "src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "public/@bosch/frontend.kit-npm/dist/frontend-kit.js"
+            ],
+            "polyfills": ["@angular/localize/init"]
           },
           "configurations": {
             "production": {

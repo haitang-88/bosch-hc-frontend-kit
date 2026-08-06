@@ -1,0 +1,82 @@
+<div class="tree-container">
+  <ul class="list-unstyled">
+    <ng-container *ngTemplateOutlet="nodeTemplate; context: { nodes: nodes }"></ng-container>
+  </ul>
+</div>
+
+<!-- Recursive Template for Tree Nodes -->
+<ng-template #nodeTemplate let-nodes="nodes">
+  <li *ngFor="let node of nodes">
+    <div
+      class="d-flex align-items-center tree-node"
+      [class.selected]="node === selectedNode"
+      (click)="selectNode(node, $event)"
+    >
+      <!-- Toggle Icon -->
+       <!-- [class.bi-chevron-right]="!node.expanded" -->
+       <!-- [class.bi-chevron-down]="node.expanded" -->
+      <i
+        *ngIf="node.children && node.children.length > 0"
+        class="bi me-2 toggle-icon"
+        [class.bi-dash-square]="node.expanded"
+        [class.bi-plus-square]="!node.expanded"
+        (click)="toggleNode(node)"
+      ></i>
+      <div *ngIf="!node.children || node.children.length === 0" class="me-2" style="width: 16px;"></div>
+
+
+      <!-- Node Icon and Name -->
+      <i class="bi {{ node.icon }} me-2"></i>
+      <span class="flex-grow-1">{{ node.name }}</span>
+
+      <!-- Context Menu Dropdown -->
+      <div ngbDropdown container="body" class="d-inline-block">
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-secondary"
+          ngbDropdownToggle
+        ></button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button (click)="onContextMenuAction('Rename', node)" ngbDropdownItem>Rename</button>
+          <button (click)="onContextMenuAction('Delete', node)" ngbDropdownItem>Delete</button>
+          <button (click)="onContextMenuAction('Inactivate', node)" ngbDropdownItem>Inactivate</button>
+           <button (click)="onContextMenuAction('Copy', node)" ngbDropdownItem>Copy</button>
+          <div class="dropdown-divider"></div>
+          <button (click)="onContextMenuAction('Add Group', node)" ngbDropdownItem>Add Group</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Children Nodes -->
+    <ul *ngIf="node.expanded && node.children" class="list-unstyled ms-4">
+      <ng-container *ngTemplateOutlet="nodeTemplate; context: { nodes: node.children }"></ng-container>
+    </ul>
+  </li>
+</ng-template>
+
+<!-- modal template -->
+ <ng-template #modalCreateGroup let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Add New Group</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<form>
+			<div class="mb-3">
+				<label for="groupName">Enter name of new group</label>
+				<div class="input-group">
+					<input
+                        type="text"
+						id="groupName"
+                        [(ngModel)]="newGroupName"
+						class="form-control"
+						name="groupName"
+					/>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer" style="border-top: 0;padding-top: 0;">
+		<button type="button" class="btn btn-primary" (click)="modal.close(newGroupName)">Create</button>
+	</div>
+</ng-template>

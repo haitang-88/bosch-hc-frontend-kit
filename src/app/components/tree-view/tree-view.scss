@@ -1,0 +1,57 @@
+.tree-container {
+//   border: 1px solid #dee2e6;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  min-width: 300px; /* Adjust as needed */
+  li {
+    position: unset;
+    padding-inline-start: 0;
+    margin-bottom:0;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
+
+.tree-node {
+  padding: 0.15rem 0.1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.tree-node:hover {
+  background-color: #f0f0f0;
+}
+
+.tree-node.selected {
+  background-color: #e0eaf6;
+  border: 1px solid #c0d3eb;
+}
+
+.toggle-icon {
+  cursor: pointer;
+  width: 16px;
+  text-align: center;
+}
+
+/* Style for the dropdown toggle button */
+.tree-node .btn-outline-secondary {
+    --bs-btn-color: #6c757d;
+    --bs-btn-border-color: #ced4da;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #6c757d;
+    --bs-btn-hover-border-color: #6c757d;
+    --bs-btn-focus-shadow-rgb: 108,117,125;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #6c757d;
+    --bs-btn-active-border-color: #6c757d;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #6c757d;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #ced4da;
+    --bs-gradient: none;
+    border-radius: 0.15rem;
+    padding: 0.1rem 0.4rem;
+}
+

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { TreeView } from '../components/tree-view/tree-view';
 
 @Component({
   selector: 'app-project-dashboard-bootstrap',
-  imports: [],
+  imports: [TreeView],
   templateUrl: './project-dashboard-bootstrap.html',
   styleUrl: './project-dashboard-bootstrap.scss',
 })
