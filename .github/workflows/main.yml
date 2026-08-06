@@ -1,8 +1,6 @@
 name: Build and Deploy Frontend to Pages
 
 on:
-  push:
-    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -27,14 +25,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22.22.3
+          node-version: 22
           cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build project
-        run: npm run build
+        run: npm run build -- --base-href "/${{ github.event.repository.name }}/"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -42,8 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Change this path to match your framework's build output folder (e.g., 'dist', 'build', 'out')
-          path: './dist' 
+          path: './dist/bosch-frontend/browser'
 
       - name: Deploy to GitHub Pages
         id: deployment
