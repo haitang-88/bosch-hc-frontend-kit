@@ -183,8 +183,301 @@
             class="accordion-collapse collapse show"
             data-bs-parent="#accordionAddProduct"
           >
-            <div class="accordion-body bg-transparent px-3 ps-2 pe-0">
-              <img src="./add_product.png" class="img-fluid" alt="Add Product" />
+            <div class="accordion-body bg-transparent px-3 ps-2 pe-2">
+              <!-- <img src="./add_product.png" class="img-fluid" alt="Add Product" /> -->
+
+              <div id="multiItemCarousel" class="carousel">
+                <div class="carousel-inner">
+                  <!-- Slide 1 (Active) - Displays 3 Items -->
+                  <div class="carousel-item active">
+                    <div class="row g-0">
+                      <div class="col-md-12">
+                        <div class="card-group">
+                        <div class="card">
+                           <img
+                              src="./bosch-commercial.png"
+                              class="card-img-top me-auto ms-auto pt-3"
+                              style="width: 50px; height: 50px;"
+                              alt="..."
+                            />
+                          <div class="card-body">
+                             <h6 class="card-title">Commercial</h6>
+                            <div class="card-link">
+                              <select
+                                class="form-select form-select-sm mb-1"
+                                aria-label="Large select example"
+                              >
+                                <option selected>Bosch</option>
+                                <option value="1">Johnson Control</option>
+                                <option value="2">York</option>
+                                <option value="3">Luxaire</option>
+                              </select>
+                            </div>
+                            <div class="dropdown" ngbDropdown  container="body">
+                              <button
+                                class="btn btn-link btn-sm ps-0 dropdown-toggle dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                data-bs-boundary="viewport"
+                                data-bs-popper-config='{"strategy":"fixed"}'
+                                aria-expanded="false"
+                              >
+                                Add Product
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">3-6 Sunline</a></li>
+                                <li><a class="dropdown-item" href="#">3-12.5 Sun Pro</a></li>
+                                <li><a class="dropdown-item" href="#">3-12.5 Sun Core</a></li>
+                                <li><a class="dropdown-item" href="#">15-25 Sunline Magnum</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img
+                              src="./bosch-residential.png"
+                              class="card-img-top me-auto ms-auto pt-3"
+                              style="width: 50px; height: 50px;"
+                              alt="..."
+                            />
+                          <div class="card-body">
+                             <h6 class="card-title">Residential</h6>
+                            <div class="card-link">
+                              <select
+                                class="form-select form-select-sm mb-1"
+                                aria-label="Large select example"
+                              >
+                                <option selected>Bosch</option>
+                                <option value="1">Johnson Control</option>
+                                <option value="2">York</option>
+                                <option value="3">Luxaire</option>
+                              </select>
+                            </div>
+                            <div class="dropdown" ngbDropdown  container="body">
+                              <button
+                                class="btn btn-link btn-sm ps-0 dropdown-toggle dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                data-bs-boundary="viewport"
+                                data-bs-popper-config='{"strategy":"fixed"}'
+                                aria-expanded="false"
+                              >
+                                Add Product
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Residential Package</a></li>
+                                <li><a class="dropdown-item" href="#">Residential Split</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img
+                              src="./bosch-ductless.jpg"
+                              class="card-img-top me-auto ms-auto pt-3"
+                              style="width: 50px; height: 50px;"
+                              alt="..."
+                            />
+                          <div class="card-body">
+                             <h6 class="card-title">Ductless</h6>
+                            <div class="card-link">
+                              <select
+                                class="form-select form-select-sm mb-1"
+                                aria-label="Large select example"
+                              >
+                                <option selected>Bosch</option>
+                                <option value="1">Johnson Control</option>
+                                <option value="2">York</option>
+                                <option value="3">Luxaire</option>
+                              </select>
+                            </div>
+                            <div class="dropdown" ngbDropdown  container="body">
+                              <button
+                                class="btn btn-link btn-sm ps-0 dropdown-toggle dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                data-bs-boundary="viewport"
+                                data-bs-popper-config='{"strategy":"fixed"}'
+                                aria-expanded="false"
+                              >
+                                Add Product
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Duct Free</a></li>
+                                <li><a class="dropdown-item" href="#">VRF</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img
+                              src="./bosch-udp.jpeg"
+                              class="card-img-top me-auto ms-auto pt-3"
+                              style="width: 50px; height: 50px;"
+                              alt="..."
+                            />
+                          <div class="card-body">
+                             <h6 class="card-title">User Defined Product</h6>
+                            <div class="card-link">
+                              <select
+                                class="form-select hidden form-select-sm mb-1"
+                                aria-label="Large select example"
+                              >
+                                <option selected>Bosch</option>
+                                <option value="1">Johnson Control</option>
+                                <option value="2">York</option>
+                                <option value="3">Luxaire</option>
+                              </select>
+                            </div>
+                            <div class="dropdown" ngbDropdown  container="body">
+                              <button
+                                class="btn btn-link btn-sm ps-0"
+                                type="button"
+                                
+                              >
+                                Add Product
+                              </button>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 2 - Displays the next 3 Items -->
+                  <div class="carousel-item">
+                    
+                    <div class="row g-0">
+                      <div class="col-md-12">
+                        <div class="card-group">
+                           <div class="card">
+                          <img
+                              src="./bosch-udp.jpeg"
+                              class="card-img-top me-auto ms-auto pt-3"
+                              style="width: 50px; height: 50px;"
+                              alt="..."
+                            />
+                          <div class="card-body">
+                             <h6 class="card-title">Other Product 1</h6>
+                            <div class="card-link">
+                              <select
+                                class="form-select hidden form-select-sm mb-1"
+                                aria-label="Large select example"
+                              >
+                                <option selected>Bosch</option>
+                                <option value="1">Johnson Control</option>
+                                <option value="2">York</option>
+                                <option value="3">Luxaire</option>
+                              </select>
+                            </div>
+                            <div class="dropdown" ngbDropdown  container="body">
+                              <button
+                                class="btn btn-link btn-sm ps-0"
+                                type="button"
+                                
+                              >
+                                Add Product
+                              </button>
+                              
+                            </div>
+                          </div>
+                        </div>
+                         <div class="card">
+                          <img
+                              src="./bosch-udp.jpeg"
+                              class="card-img-top me-auto ms-auto pt-3"
+                              style="width: 50px; height: 50px;"
+                              alt="..."
+                            />
+                          <div class="card-body">
+                             <h6 class="card-title">Other Product 2</h6>
+                            <div class="card-link">
+                              <select
+                                class="form-select hidden form-select-sm mb-1"
+                                aria-label="Large select example"
+                              >
+                                <option selected>Bosch</option>
+                                <option value="1">Johnson Control</option>
+                                <option value="2">York</option>
+                                <option value="3">Luxaire</option>
+                              </select>
+                            </div>
+                            <div class="dropdown" ngbDropdown  container="body">
+                              <button
+                                class="btn btn-link btn-sm ps-0"
+                                type="button"
+                                
+                              >
+                                Add Product
+                              </button>
+                              
+                            </div>
+                          </div>
+                        </div>
+                         <div class="card">
+                          <img
+                              src="./bosch-udp.jpeg"
+                              class="card-img-top me-auto ms-auto pt-3"
+                              style="width: 50px; height: 50px;"
+                              alt="..."
+                            />
+                          <div class="card-body">
+                             <h6 class="card-title">Other Product 3</h6>
+                            <div class="card-link">
+                              <select
+                                class="form-select hidden form-select-sm mb-1"
+                                aria-label="Large select example"
+                              >
+                                <option selected>Bosch</option>
+                                <option value="1">Johnson Control</option>
+                                <option value="2">York</option>
+                                <option value="3">Luxaire</option>
+                              </select>
+                            </div>
+                            <div class="dropdown" ngbDropdown  container="body">
+                              <button
+                                class="btn btn-link btn-sm ps-0"
+                                type="button"
+                                
+                              >
+                                Add Product
+                              </button>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+                  </div>
+                </div>
+
+                <!-- Controls -->
+                <button
+                  class="carousel-control-prev btn-primary"
+                  type="button top-50"
+                  style="width: 30px; height: 30px; left:-1%; top: 33%"
+                  data-bs-target="#multiItemCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon bg-secondary" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  style="width: 30px; height: 30px; right:-1%; top: 33%"
+                  data-bs-target="#multiItemCarousel"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon bg-secondary" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -283,7 +576,7 @@
           </button>
         </li>
         <li class="nav-item">
-           <button
+          <button
             class="nav-link"
             id="estimate-tab"
             data-bs-toggle="tab"
@@ -297,7 +590,7 @@
           </button>
         </li>
         <li class="nav-item">
-           <button
+          <button
             class="nav-link"
             id="orders-tab"
             data-bs-toggle="tab"
@@ -311,7 +604,7 @@
           </button>
         </li>
         <li class="nav-item">
-           <button
+          <button
             class="nav-link"
             id="equip-tab"
             data-bs-toggle="tab"
@@ -333,7 +626,7 @@
           aria-labelledby="product-tab"
           tabindex="0"
         >
-              <img src="./product_list.png" class="img-fluid" alt="Add Product" />
+          <img src="./product_list.png" class="img-fluid" alt="Add Product" />
         </div>
         <div
           class="tab-pane fade"
