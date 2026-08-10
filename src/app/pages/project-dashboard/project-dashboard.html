@@ -124,8 +124,9 @@
       </button>
     </div>
     <div class="a-text">
-      <p class="text-left -size-s mb-1">SLT_DEMO_04-08-2026</p>
-      <h5 class="text-left mb-3 mt-0 fw-semibold">Estimate Details</h5>
+      <!-- <p class="text-left -size-s mb-1">SLT_DEMO_04-08-2026</p>
+      <h5 class="text-left mb-3 mt-0 fw-semibold">Estimate Details</h5> -->
+      <p class="text-left mb-2 ms-4"><strong>Estimate Details</strong> - SLT_DEMO_04-08-2026</p>
     </div>
 
     <div class="m-details-group custom-details-group">
@@ -134,8 +135,9 @@
           <i class="a-icon boschicon-bosch-ic-down"></i>
           Add Product
         </summary>
-        <div class="mt-2 ms-4">
-          <img src="./add_product.png" class="img-fluid" alt="Add Product" />
+        <div class="mt-4 ms-4">
+          <!-- <img src="./add_product.png" class="img-fluid" alt="Add Product" /> -->
+          <app-add-product></app-add-product>
         </div>
       </details>
       <details class="a-details" open>
@@ -143,7 +145,7 @@
           <i class="a-icon boschicon-bosch-ic-down"></i>
           Summary
         </summary>
-        <div class="mt-2 ms-4">
+        <div class="mt-4 ms-4">
           <form class="row g-3">
             <div class="col-md-3 col-lg-3">
               <div class="a-text-field">
@@ -255,7 +257,7 @@
             </span>
           </button>
         </li>
-        <li
+        <!-- <li
           [class.-selected]="activeTabId() === 'tab-2'"
           class="a-tab-navigation__item"
           role="none"
@@ -274,7 +276,7 @@
               <span class="a-tab-navigation__label">Information</span>
             </span>
           </button>
-        </li>
+        </li> -->
         <li
           [class.-selected]="activeTabId() === 'tab-3'"
           class="a-tab-navigation__item"
@@ -295,7 +297,7 @@
             </span>
           </button>
         </li>
-        <li
+        <!-- <li
           [class.-selected]="activeTabId() === 'tab-4'"
           class="a-tab-navigation__item"
           role="none"
@@ -314,7 +316,7 @@
               <span class="a-tab-navigation__label">Estimate Summary</span>
             </span>
           </button>
-        </li>
+        </li> -->
         <li
           [class.-selected]="activeTabId() === 'tab-5'"
           class="a-tab-navigation__item"
@@ -335,7 +337,7 @@
             </span>
           </button>
         </li>
-        <li
+        <!-- <li
           [class.-selected]="activeTabId() === 'tab-6'"
           class="a-tab-navigation__item"
           role="none"
@@ -354,7 +356,7 @@
               <span class="a-tab-navigation__label"> Appled Equipment Ordering </span>
             </span>
           </button>
-        </li>
+        </li> -->
       </ol>
       <button
         type="button"

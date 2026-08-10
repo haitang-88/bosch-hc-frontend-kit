@@ -30,21 +30,23 @@
       <span class="flex-grow-1">{{ node.name }}</span>
 
       <!-- Context Menu Dropdown -->
-      <div ngbDropdown container="body" class="d-inline-block">
-        <button
-          type="button"
-          class="btn btn-sm btn-outline-secondary"
-          ngbDropdownToggle
-        ></button>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <button (click)="onContextMenuAction('Rename', node)" ngbDropdownItem>Rename</button>
-          <button (click)="onContextMenuAction('Delete', node)" ngbDropdownItem>Delete</button>
-          <button (click)="onContextMenuAction('Inactivate', node)" ngbDropdownItem>Inactivate</button>
-           <button (click)="onContextMenuAction('Copy', node)" ngbDropdownItem>Copy</button>
-          <div class="dropdown-divider"></div>
-          <button (click)="onContextMenuAction('Add Group', node)" ngbDropdownItem>Add Group</button>
+      @if(node === selectedNode){
+        <div ngbDropdown container="body" class="d-inline-block">
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-secondary"
+            ngbDropdownToggle
+          ></button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button (click)="onContextMenuAction('Rename', node)" ngbDropdownItem>Rename</button>
+            <button (click)="onContextMenuAction('Delete', node)" ngbDropdownItem>Delete</button>
+            <button (click)="onContextMenuAction('Inactivate', node)" ngbDropdownItem>Inactivate</button>
+            <button (click)="onContextMenuAction('Copy', node)" ngbDropdownItem>Copy</button>
+            <div class="dropdown-divider"></div>
+            <button (click)="onContextMenuAction('Add Group', node)" ngbDropdownItem>Add Group</button>
+          </div>
         </div>
-      </div>
+      }
     </div>
 
     <!-- Children Nodes -->

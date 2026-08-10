@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, signal, ChangeDetectorRef } from '@angular/core';
 import { TreeView } from '../../components/tree-view/tree-view';
+import { AddProduct } from '../../components/add-product/add-product';
 
 @Component({
   selector: 'app-project-dashboard',
-  imports: [CommonModule, TreeView],
+  imports: [CommonModule, TreeView, AddProduct],
   templateUrl: './project-dashboard.html',
   styleUrl: './project-dashboard.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
