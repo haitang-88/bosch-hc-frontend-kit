@@ -1,0 +1,13 @@
+<div class="loading-overlay" [ngStyle]="{'background-color': loadingService.type === 1 ? 'rgba(0, 0, 0, 0.5)' : 'rgba(251, 251, 251, 0.5)'}" *ngIf="isLoading$ | async">
+  @if (loadingService.type === 1) {
+    <div class="loading-spinner-container">
+      <div class="loading-spinner"></div>
+      <p class="loading-text">Loading...</p>
+    </div>
+  } @else {
+    <div class="a-activity-indicator" aria-live="off">
+      <div class="a-activity-indicator__top-box"></div>
+      <div class="a-activity-indicator__bottom-box"></div>
+    </div>
+  }
+</div>

@@ -23,13 +23,13 @@
           <div class="o-header__quicklinks">
             <button routerLink="/" type="button" class="a-button a-button--integrated">
               <i class="a-icon a-button__icon boschicon-bosch-ic-home"></i
-              ><span class="a-button__label">Home</span></button
-            >
+              ><span class="a-button__label">Home</span>
+            </button>
             <button routerLink="/about" type="button" class="a-button a-button--integrated">
               <i class="a-icon a-button__icon boschicon-bosch-ic-chat"></i
               ><span class="a-button__label">Contact</span>
             </button>
-             <button routerLink="/dashboard" type="button" class="a-button a-button--integrated">
+            <button routerLink="/dashboard" type="button" class="a-button a-button--integrated">
               <i class="a-icon a-button__icon boschicon-bosch-ic-chat"></i
               ><span class="a-button__label">Dashboard</span>
             </button>
@@ -564,6 +564,8 @@
   </header>
 
   <main class="app-main e-container -full-width mt-4">
+   
+    <app-loading-indicator></app-loading-indicator>
     <router-outlet />
   </main>
 
