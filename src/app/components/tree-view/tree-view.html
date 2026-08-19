@@ -31,20 +31,20 @@
 
       <!-- Context Menu Dropdown -->
       @if(node === selectedNode){
-        <div ngbDropdown container="body" class="d-inline-block">
+        <div container="body" class="d-inline-block">
           <button
             type="button"
             class="btn btn-sm btn-outline-secondary"
-            ngbDropdownToggle
+            data-bs-toggle="dropdown"
           ></button>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button (click)="onContextMenuAction('Rename', node)" ngbDropdownItem>Rename</button>
-            <button (click)="onContextMenuAction('Delete', node)" ngbDropdownItem>Delete</button>
-            <button (click)="onContextMenuAction('Inactivate', node)" ngbDropdownItem>Inactivate</button>
-            <button (click)="onContextMenuAction('Copy', node)" ngbDropdownItem>Copy</button>
-            <div class="dropdown-divider"></div>
-            <button (click)="onContextMenuAction('Add Group', node)" ngbDropdownItem>Add Group</button>
-          </div>
+          <ul class="dropdown-menu">
+            <li><button (click)="onContextMenuAction('Rename', node)" class="dropdown-item">Rename</button></li>
+            <li><button (click)="onContextMenuAction('Delete', node)" class="dropdown-item">Delete</button></li>
+            <li><button (click)="onContextMenuAction('Inactivate', node)" class="dropdown-item">Inactivate</button></li>
+            <li><button (click)="onContextMenuAction('Copy', node)" class="dropdown-item">Copy</button></li>
+            <li><div class="dropdown-divider"></div></li>
+            <li><button (click)="onContextMenuAction('Add Group', node)" class="dropdown-item">Add Group</button></li>
+          </ul>
         </div>
       }
     </div>

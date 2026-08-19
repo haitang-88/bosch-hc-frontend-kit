@@ -31,15 +31,14 @@
               }
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-              "public/@bosch/frontend.kit-npm/dist/styles/frontend-kit-complete.css",
-              "public/@bosch/frontend.kit-npm/dist/styles/brands/bosch/styles/semantic/index.css",
+              "node_modules/bosch-hc-style-guide/dist/bosch-hc-style-guide.min.css",
+              "node_modules/bosch-hc-style-guide/dist/bosch-hc-frontend-kit.min.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "public/@bosch/frontend.kit-npm/dist/frontend-kit.js"
+              "node_modules/bosch-hc-style-guide/dist/bosch-hc-style-guide.min.js",
+              "node_modules/bosch-hc-style-guide/dist/bosch-hc-frontend-kit.min.js"
             ],
             "polyfills": ["@angular/localize/init"]
           },

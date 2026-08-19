@@ -1,8 +1,0 @@
-/// Normalize CSS
-@use "../../../node_modules/normalize.css/normalize.css";
-
-/// import of basic CSS
-@use "./bosch-ui-icon.scss";
-@use "./basics.scss";
-@use "../basics/typography/typography.scss";
-@use "../basics/layout/layout.scss";

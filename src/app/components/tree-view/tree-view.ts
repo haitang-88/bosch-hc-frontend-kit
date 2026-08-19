@@ -1,6 +1,5 @@
 import { Component, inject, TemplateRef, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgbModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 // Interface for a tree node
 export interface TreeNode {
@@ -13,12 +12,12 @@ export interface TreeNode {
 @Component({
   selector: 'app-tree-view',
   standalone: true,
-  imports: [CommonModule, NgbModule, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './tree-view.html',
   styleUrl: './tree-view.scss',
 })
 export class TreeView {
-  private modalService = inject(NgbModal);
+  //private modalService = inject(NgbModal);
   // modal
   @ViewChild('modalCreateGroup', { static: true }) modalCreateGroupTemplate:
     TemplateRef<any> | undefined;
@@ -87,16 +86,16 @@ export class TreeView {
   openCreateGroupModal() {
     if (this.modalCreateGroupTemplate) {
       this.newGroupName = ''; // Reset the input field
-      this.modalService
-        .open(this.modalCreateGroupTemplate, { ariaLabelledBy: 'modal-basic-title' })
-        .result.then(
-          (result) => {
-            this.createChildGroup(result);
-          },
-          (reason) => {
-            //this.closeResult.set(`Dismissed ${this.getDismissReason(reason)}`);
-          },
-        );
+      // this.modalService
+      //   .open(this.modalCreateGroupTemplate, { ariaLabelledBy: 'modal-basic-title' })
+      //   .result.then(
+      //     (result) => {
+      //       this.createChildGroup(result);
+      //     },
+      //     (reason) => {
+      //       //this.closeResult.set(`Dismissed ${this.getDismissReason(reason)}`);
+      //     },
+      //   );
     }
   }
 

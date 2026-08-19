@@ -1,8 +1,0 @@
-// mixin for the usage in components, where the icon is the ::before or ::after element
-@mixin uiIconForComponents {
-  font-family: var(--ui-icon-font);
-  font-size: 1.5rem;
-  line-height: 1;
-  height: 1.5rem;
-  width: 1.5rem;
-}

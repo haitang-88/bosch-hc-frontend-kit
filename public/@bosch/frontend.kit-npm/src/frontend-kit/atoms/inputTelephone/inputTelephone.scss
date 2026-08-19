@@ -1,9 +1,0 @@
-@use "../../styles/helpers.scss";
-
-.a-telephone-input {
-  @include helpers.text-field;
-}
-
-[dir="rtl"] input[type="tel"] {
-  text-align: end;
-}
