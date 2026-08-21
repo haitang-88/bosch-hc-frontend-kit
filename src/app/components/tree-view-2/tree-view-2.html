@@ -1,0 +1,165 @@
+<div class="">
+  <h5>Tree View version 2</h5>
+
+  <ul class="list-unstyled">
+    <ng-container *ngTemplateOutlet="nodeTemplate; context: { nodes: treeData }"></ng-container>
+  </ul>
+</div>
+
+<!-- Note template for tree nodes -->
+<ng-template #nodeTemplate let-nodes="nodes">
+  @for (node of nodes; track node.id) {
+    <li class="ps-0 mb-0">
+      <div
+        class="node-header-wrapper"
+        [class.selected-node]="selectedNode === node"
+        [class.drag-over]="draggedOverNode === node"
+        [igxDrag]="node"
+        (dragStart)="onDragStart($event, node)"
+        (dragEnd)="onDragEnd()"
+        igxDrop
+        [ghost]="true"
+        [ghostTemplate]="customGhost"
+        [ghostOffsetX]="-5"
+        [ghostOffsetY]="-5"
+        (ghostCreate)="onGhostCreated()"
+        [dropChannel]="'tree-nodes'"
+        [dragChannel]="'tree-nodes'"
+        (enter)="onDragEnter($event, node)"
+        (leave)="onDragLeave($event)"
+        (dropped)="onNodeDropped($event, node)"
+        (click)="selectNode(node, $event)"
+      >
+        <!-- Expand/Collapse Icon -->
+        @if (node.children && node.children.length > 0) {
+          @if (node.expanded) {
+            <igx-icon
+              igxDragIgnore
+              family="material-symbols"
+              class="node-icon"
+              (click)="toggleNode(node)"
+              >indeterminate_check_box</igx-icon
+            >
+          } @else {
+            <igx-icon
+              igxDragIgnore
+              family="material-symbols"
+              class="node-icon"
+              (click)="toggleNode(node)"
+              >add_box</igx-icon
+            >
+          }
+        } @else {
+          <div class="me-2" style="width: 20px"></div>
+        }
+
+        <!-- Node Icon -->
+        <igx-icon igxDragIgnore family="material-symbols" class="node-icon">
+          {{
+            node.children && node.children.length > 0
+              ? 'assignment'
+              : 'docs'
+          }}
+        </igx-icon>
+
+        <!-- Node Name -->
+        <span class="node-label">{{ node.name }}</span>
+        <span class="spacer"></span>
+
+        <!-- Context Menu Dropdown -->
+        @if (node === selectedNode) {
+          <div igxDragIgnore container="body" class="d-inline-block">
+            <button
+              igxDragIgnore
+              type="button"
+              class="btn ps-2 pe-2 btn-sm btn-outline-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+            ></button>
+            <ul igxDragIgnore class="dropdown-menu">
+              <li>
+                <button
+                  igxDragIgnore
+                  (click)="onContextMenuAction('Rename', node)"
+                  class="dropdown-item"
+                >
+                  Rename
+                </button>
+              </li>
+              <li>
+                <button
+                  igxDragIgnore
+                  (click)="onContextMenuAction('Delete', node)"
+                  class="dropdown-item"
+                >
+                  Delete
+                </button>
+              </li>
+              <li>
+                <button
+                  igxDragIgnore
+                  (click)="onContextMenuAction('Inactivate', node)"
+                  class="dropdown-item"
+                >
+                  Inactivate
+                </button>
+              </li>
+              <li>
+                <button
+                  igxDragIgnore
+                  (click)="onContextMenuAction('Copy', node)"
+                  class="dropdown-item"
+                >
+                  Copy
+                </button>
+              </li>
+              <li><div class="dropdown-divider"></div></li>
+              <li>
+                <button
+                  igxDragIgnore
+                  (click)="onContextMenuAction('Add Group', node)"
+                  class="dropdown-item"
+                >
+                  Add Group
+                </button>
+              </li>
+            </ul>
+          </div>
+        }
+      </div>
+
+      @if (node.expanded && node.children?.length) {
+        <ul class="list-unstyled ms-4">
+          <ng-container
+            *ngTemplateOutlet="nodeTemplate; context: { nodes: node.children }"
+          ></ng-container>
+        </ul>
+      }
+    </li>
+  }
+</ng-template>
+
+<!-- Custom ghost template -->
+<ng-template #customGhost>
+  <ul [style.cursor]="isValidDropTarget ? 'pointer' : 'default'">
+    <li class="drag-ghost">
+      <div
+        class="node-header-wrapper"
+        [class.selected-node]="isValidDropTarget"
+        [class.blocked-node]="!isValidDropTarget"
+      >
+        @if (isValidDropTarget) {
+          <igx-icon igxDragIgnore class="node-icon">check</igx-icon>
+        } @else {
+          <igx-icon igxDragIgnore class="node-icon">block</igx-icon>
+        }
+
+        @if (!isValidDropTarget) {
+          <span class="node-label">{{ selectedNode?.name }}</span>
+        } @else {
+          <span class="node-label">{{ ghostMessage }}</span>
+        }
+        <span class="spacer pe-3"></span>
+      </div>
+    </li>
+  </ul>
+</ng-template>

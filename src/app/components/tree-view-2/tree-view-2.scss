@@ -1,0 +1,150 @@
+.tree-container {
+  padding: 1.5rem;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  max-width: 500px;
+  margin: 1rem auto;
+}
+
+h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #0071bf; // Bosch Blue accent color inspiration
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+// Node element custom alignments
+.node-header-wrapper {
+  display: flex;
+  align-items: center;
+  //width: 100%;
+  padding: 6px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border 0.2s ease;
+  border: 1px solid transparent;
+  user-select: none;
+
+  &:hover {
+    background-color: #f0f0f0;
+
+    .drag-handle-icon {
+      opacity: 0.75;
+    }
+  }
+
+  // Visual highlights for current states
+  &.selected-node {
+    background-color: #e5f1fa;
+    border-color: #0071bf;
+    color: #0071bf;
+    font-weight: 500;
+  }
+
+  &.blocked-node {
+    background-color: #f9e5e5;
+    border-color: #d32f2f;
+    color: #d32f2f;
+    font-weight: 500;
+  }
+
+  &.drag-over {
+    background-color: #e8f5e9;
+    border: 1px dashed #4caf50;
+  }
+}
+
+.drag-handle-icon {
+  cursor: grab;
+  opacity: 0; // Show on hover
+  margin-right: 4px;
+  font-size: 18px;
+  transition: opacity 0.15s ease;
+  color: #888;
+}
+
+.node-icon {
+  margin-right: 4px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+
+.node-label {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+// Selected element custom action button
+.action-menu-trigger {
+  height: 24px !important;
+  width: 24px !important;
+  min-width: 24px !important;
+  padding: 0 !important;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+
+  igx-icon {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+}
+
+// Menu Styling details
+.menu-item-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+
+  igx-icon {
+    font-size: 18px;
+  }
+}
+
+.delete-action {
+  color: #d32f2f;
+}
+
+// Ghost wrapper modifications during active dragging operations
+.igx-drag--ghost {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 8px 16px !important;
+  border: 1px solid #0071bf;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #0071bf;
+  opacity: 0.95;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.tree-root {
+    max-height: 360px;
+    overflow-y: auto;
+    width: 320px;
+}
+
+ul > li:before{
+  width: 0px;
+  background-color: none; // Bosch Blue accent color inspiration
+}
