@@ -25,11 +25,4 @@ export class ProjectDashboardBootstrap {
       this.loadingIndicatorService.hide();
     }, 5000);
   }
-
-  showLoadingIndicator2() {
-    this.loadingIndicatorService.show2();
-    setTimeout(() => {
-      this.loadingIndicatorService.hide();
-    }, 5000);
-  }
 }
