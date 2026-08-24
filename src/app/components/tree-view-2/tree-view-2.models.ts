@@ -1,5 +1,6 @@
 export interface TreeNode {
   id: string;
+  parentId: string | null;
   name: string;
   expanded: boolean;
   children: TreeNode[];
@@ -17,3 +18,12 @@ export interface TreeViewController {
   onNodeDropped(event: any, node: TreeNode): void;
   onContextMenuAction(action: string, node: TreeNode): void;
 }
+
+export const treeAction = {
+  addChild: 'add-child',
+  rename: 'rename',
+  delete: 'delete',
+  inactivate: 'inactivate',
+  copy: 'copy',
+  addGroup: 'add-group',
+};

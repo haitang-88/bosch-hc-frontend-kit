@@ -11,6 +11,7 @@
   @for (node of nodes; track node.id) {
     <li class="ps-0 mb-0">
       <div
+        [id]="'node-id-' + node.id"
         class="node-header-wrapper"
         [class.selected-node]="selectedNode === node"
         [class.drag-over]="draggedOverNode === node"
@@ -79,7 +80,7 @@
               <li>
                 <button
                   igxDragIgnore
-                  (click)="onContextMenuAction('Rename', node)"
+                  (click)="onContextMenuAction(treeAction.rename, node)"
                   class="dropdown-item"
                 >
                   Rename
@@ -88,7 +89,7 @@
               <li>
                 <button
                   igxDragIgnore
-                  (click)="onContextMenuAction('Delete', node)"
+                  (click)="onContextMenuAction(treeAction.delete, node)"
                   class="dropdown-item"
                 >
                   Delete
@@ -97,7 +98,7 @@
               <li>
                 <button
                   igxDragIgnore
-                  (click)="onContextMenuAction('Inactivate', node)"
+                  (click)="onContextMenuAction(treeAction.inactivate, node)"
                   class="dropdown-item"
                 >
                   Inactivate
@@ -106,7 +107,7 @@
               <li>
                 <button
                   igxDragIgnore
-                  (click)="onContextMenuAction('Copy', node)"
+                  (click)="onContextMenuAction(treeAction.copy, node)"
                   class="dropdown-item"
                 >
                   Copy
@@ -116,7 +117,7 @@
               <li>
                 <button
                   igxDragIgnore
-                  (click)="onContextMenuAction('Add Group', node)"
+                  (click)="onContextMenuAction(treeAction.addGroup, node)"
                   class="dropdown-item"
                 >
                   Add Group
