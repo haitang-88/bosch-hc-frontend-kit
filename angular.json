@@ -28,18 +28,25 @@
                 "glob": "**/*",
                 "input": "public",
                 "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/bosch-hc-style-guide/dist/fonts",
+                "output": "/fonts"
               }
             ],
             "styles": [
+              "node_modules/bosch-hc-style-guide/dist/bosch-hc-frontend-kit.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-              "node_modules/bosch-hc-style-guide/dist/bosch-hc-style-guide.min.css",
-              "node_modules/bosch-hc-style-guide/dist/bosch-hc-frontend-kit.min.css",
+              "node_modules/bosch-hc-style-guide/dist/bosch-hc-style-guide.css",
+              "node_modules/bosch-hc-style-guide/dist/bosch-hc-fontawesome.css",
               "node_modules/igniteui-angular/styles/igniteui-angular.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/bosch-hc-style-guide/dist/bosch-hc-style-guide.min.js",
-              "node_modules/bosch-hc-style-guide/dist/bosch-hc-frontend-kit.min.js"
+              "node_modules/bosch-hc-style-guide/dist/bosch-hc-frontend-kit.min.js",
+              "node_modules/bosch-hc-style-guide/dist/bosch-hc-style-guide.min.js"
             ],
             "polyfills": ["@angular/localize/init"]
           },

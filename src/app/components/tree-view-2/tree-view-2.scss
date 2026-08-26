@@ -74,7 +74,7 @@ h3 {
 
 
 .node-label {
-  font-size: 14px;
+  // font-size: 14px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -142,9 +142,4 @@ h3 {
     max-height: 360px;
     overflow-y: auto;
     width: 320px;
-}
-
-ul > li:before{
-  width: 0px;
-  background-color: none; // Bosch Blue accent color inspiration
 }

@@ -5,7 +5,7 @@
       <!-- collapsible panel estimate tree -->
       <div class="accordion accordion-flush mb-3" id="accordionExample">
         <div class="accordion-item">
-          <h4 class="accordion-header bg-secondary">
+          <div class="accordion-header bg-secondary">
             <button
               class="accordion-button px-3 py-2 text-bg-secondary text-white fw-bolder"
               type="button"
@@ -16,7 +16,7 @@
             >
               Estimate Tree
             </button>
-          </h4>
+          </div>
           <div
             id="collapseOne"
             class="accordion-collapse collapse show"
@@ -24,7 +24,7 @@
           >
             <div class="accordion-body bg-transparent px-3 pt-0 ps-0 pe-0">
               <!-- <img src="/estimate_tree.png" class="img-fluid" alt="Add Product" /> -->
-              <app-tree-view></app-tree-view>
+              <!-- <app-tree-view></app-tree-view> -->
               <app-tree-view-new></app-tree-view-new>
             </div>
           </div>
@@ -33,7 +33,7 @@
       <!-- collapsible panel Summary tree -->
       <div class="accordion accordion-flush" id="accordionExample2">
         <div class="accordion-item">
-          <h4 class="accordion-header bg-secondary">
+          <div class="accordion-header bg-secondary">
             <button
               class="accordion-button px-3 py-2 text-bg-secondary text-white d-flex fw-bolder"
               type="button"
@@ -45,7 +45,7 @@
               <span class="me-auto">Pricing Summary</span>
               <span> List: $304,995.50</span>
             </button>
-          </h4>
+          </div>
           <div
             id="collapseTwo"
             class="accordion-collapse collapse show"
@@ -166,7 +166,7 @@
     <div class="mb-3">
       <div class="accordion accordion-flush" id="accordionAddProduct">
         <div class="accordion-item">
-          <h4 class="accordion-header bg-secondary">
+          <div class="accordion-header bg-secondary">
             <button
               class="accordion-button px-3 py-2 text-bg-secondary text-white fw-bolder"
               type="button"
@@ -177,7 +177,7 @@
             >
               Add Product
             </button>
-          </h4>
+          </div>
           <div
             id="collapseAddProduct"
             class="accordion-collapse collapse show"
@@ -197,7 +197,7 @@
     <div class="mb-4">
       <div class="accordion accordion-flush" id="accordionSummary">
         <div class="accordion-item">
-          <h4 class="accordion-header bg-secondary">
+          <div class="accordion-header bg-secondary">
             <button
               class="accordion-button px-3 py-2 text-bg-secondary text-white fw-bolder"
               type="button"
@@ -208,14 +208,15 @@
             >
             Pricing Summary
             </button>
-          </h4>
+          </div>
           <div
             id="collapseSummary"
             class="accordion-collapse collapse show"
             data-bs-parent="#accordionSummary"
           >
             <div class="accordion-body bg-transparent px-3 ps-2 pe-0">
-              <form class="row g-3">
+              <div class="row g-3">
+              <form class="">
                 <div class="col-md-3 col-lg-3">
                   <label for="inputText1" class="form-label">Total List Price</label>
                   <input type="text" value="30,000.00" class="form-control" id="inputText1" />
@@ -233,6 +234,7 @@
                   <input type="text" class="form-control" id="inputText4" value="100,115.14" />
                 </div>
               </form>
+              </div>
             </div>
           </div>
         </div>
@@ -337,6 +339,7 @@
         >
           <div>
         <button class="btn btn-secondary me-2 mt-2" (click)="showLoadingIndicator()">Show Loading Indicator</button>
+        <button data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-container="body" class="btn btn-outline-primary btn-action" title="Return to Estimate"><i _ngcontent-ng-c3161842354="" class="fa fa-reply"></i></button>
       </div>
           <img src="./product_list.png" class="img-fluid" alt="Add Product" />
         </div>
