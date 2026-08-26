@@ -21,7 +21,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
-    "bosch-hc-style-guide": "file:shared/bosch-hc-style-guide-1.0.1.tgz",
+    "bosch-hc-style-guide": "file:shared/bosch-hc-style-guide-1.0.2.tgz",
     "igniteui-angular": "^22.0.7",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
